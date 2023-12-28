@@ -1,6 +1,29 @@
-- 👋 Hi, I’m Vahid Faraji
-- 👀 interested in text data processing in HR,
-- 📫 You can reach me by vfaraji89(at)gmail(dot)com
+# Hi, It's Vahid! 👋
+
+Welcome to my GitHub profile! I'm passionate about the intersection of text data and people data. 👀
+
+## About Me
+
+- 📊 Proficient in R
+- 🐍 Learning Python
+
+## Contact Me
+
+📫 You can reach me at [vfaraji89@gmail.com](mailto:vfaraji89@gmail.com)
+
+## Target Projects
+
+Skill Taxonomy, Position Classification and Text data for Wage or compensation
+
+## Current Learning Focus
+
+I'm currently focusing on improving my Python skills and exploring the vast world of data science and NLP.
+
+## Let's Connect!
+
+Feel free to reach out if you have any questions, want to collaborate, or just chat about data! 😊
+
+
 
 <!---
 --->
