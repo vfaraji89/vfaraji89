@@ -1,6 +1,6 @@
 # Hi, It's Vahid! 👋
 
-Welcome to my GitHub profile! I'm passionate about the intersection of text and people data. 👀
+👀I'm passionate about the intersection of text and people data. 
 
 ## About Me
 
