@@ -1,10 +1,10 @@
 # Hi, It's Vahid! 👋
 
-Welcome to my GitHub profile! I'm passionate about the intersection of text data and people data. 👀
+Welcome to my GitHub profile! I'm passionate about the intersection of text and people data. 👀
 
 ## About Me
 
-- 📊 Proficient in R
+- 📊 Intermediate at R
 - 🐍 Learning Python
 
 ## Contact Me
