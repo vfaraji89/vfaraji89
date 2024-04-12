@@ -1,11 +1,12 @@
 # Hi, It's Vahid! 👋
 
-👀I'm passionate about the intersection of text and people data. 
+👀I'm passionate about the intersection of labour market, text and people data. 
 
-## About Me
+## My programming skills
 
-- 📊 Intermediate at R
-- 🐍 Learning Python
+- 📊 Intermediate at R and 🐍 Python (Numpy, Pandas, )
+- Econometrics packages 
+
 
 ## Contact Me
 
