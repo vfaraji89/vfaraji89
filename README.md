@@ -24,7 +24,5 @@ I'm currently focusing on improving my Python skills and exploring the vast worl
 
 Feel free to reach out if you have any questions, want to collaborate, or just chat about data! 😊
 
-
-
 <!---
 --->
