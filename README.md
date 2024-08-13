@@ -21,7 +21,6 @@ Text data for Wage and compensation
 📫 Contact Me
 
 Email: vfaraji89@gmail.com
-LinkedIn
 
 Feel free to reach out if you want to collaborate or chat about data! 😊
 
