@@ -1,28 +1,29 @@
-# Hi, It's Vahid! 👋
 
-👀I'm passionate about the intersection of labour market, text and people data. 
+Hi, I'm Vahid! 👋
+##About Me
 
-## My programming skills
+👀 Passionate about labour market, text and people data
+🧮 Interested in Math, Econometrics and Advanced Statistics
+🌱 Currently improving Python skills and exploring data science and LLMs
 
-- 📊 Intermediate at R and 🐍 Python (Numpy, Pandas, )
-- Econometrics packages 
+🔧 Skills
+Pandas,Numpy,Pydata,SQL
 
+🎯 Target Projects
 
-## Contact Me
+Skill Extraction
+Position Classification
+Text data for Wage and compensation
 
-📫 You can reach me at [vfaraji89@gmail.com](mailto:vfaraji89@gmail.com)
+📊 GitHub Stats
+Show Image
+📫 Contact Me
 
-## Target Projects
+Email: vfaraji89@gmail.com
+LinkedIn
 
-Skill Taxonomy, Position Classification and Text data for Wage or compensation
+Feel free to reach out if you want to collaborate or chat about data! 😊
 
-## Current Learning Focus
-
-I'm currently focusing on improving my Python skills and exploring the vast world of data science and NLP.
-
-## Let's Connect!
-
-Feel free to reach out if you have any questions, want to collaborate, or just chat about data! 😊
 
 <!---
 --->
