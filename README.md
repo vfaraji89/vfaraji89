@@ -1,6 +1,8 @@
 
 Hi, I'm Vahid! 👋
-##About Me
+
+
+**About Me**
 
 👀 Passionate about labour market, text and people data
 🧮 Interested in Math, Econometrics and Advanced Statistics
@@ -15,8 +17,7 @@ Skill Extraction
 Position Classification
 Text data for Wage and compensation
 
-📊 GitHub Stats
-Show Image
+
 📫 Contact Me
 
 Email: vfaraji89@gmail.com
