@@ -4,12 +4,12 @@ Hi, I'm Vahid!👋
 
 **About Me**
 
-👀 Passionate about labour market, text and people data
-🧮 Interested in Math, Econometrics and Advanced Statistics
-🌱 Currently improving Python skills and exploring data science and LLMs
+👀 Passionate abou people data (HR, Finance and Sales Domain)
+🧮 Interested in Math and Advanced Statistics.
+🌱 Data + LLMs but focus on more data than AI.
 
 🔧 Skills
-Pandas,Numpy,Pydata,SQL
+SQL, Python (Numpy,Langchain, Pandas).
 
 🎯 Target Projects
 
