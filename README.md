@@ -5,7 +5,7 @@
 </div>
 
 ## 🚀 About Me
-Data Product Manager specializing in People Analytics and LLM integrations. Passionate about transforming HR data into actionable insights and building scalable data products.
+Data Product Manager specializing in people as users and LLM integrations. Passionate about transforming data into actionable insights and building scalable data products.
 
 <img align="right" alt="GIF" src="https://github.com/abhisheknaiidu/abhisheknaiidu/blob/master/code.gif?raw=true" width="300" height="220" />
 
