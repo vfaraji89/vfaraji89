@@ -2,15 +2,11 @@
 
 <div align="center">
   <img src="responsive-abacus.svg" width="100%" alt="Data Products & Analytics">
-  
-  <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=500&size=24&pause=1000&color=000000&center=true&vCenter=true&width=435&lines=Data+Product+Manager;People+Data;LLM+People+Data+Learner" alt="Typing SVG" />
 </div>
 
 ## About Me
 
 Transforming text data into intelligent products. Specialized in people, user data across Finance, HR, and Tech domains.
-
-<img align="right" alt="Coding" src="https://github.com/abhisheknaiidu/abhisheknaiidu/blob/master/code.gif?raw=true" width="270" />
 
 ## Focus Areas
 
@@ -36,10 +32,8 @@ Transforming text data into intelligent products. Specialized in people, user da
 </div>
 
 ### Completed Tracks
-- 🏆 Data Scientist with Python
-- 🏆 Python Programmer
+- 🏆 Python Fundamentals
 - 🏆 Data Analyst in SQL
-- 🏆 Machine Learning Scientist
 
 ### Recent Certificates
 - [Data Science for Business](https://www.datacamp.com/statement-of-accomplishment/track/xxx)
@@ -48,21 +42,8 @@ Transforming text data into intelligent products. Specialized in people, user da
 
 ## Key Projects
 
-<div align="center">
-  <a href="https://github.com/vfaraji89/data-analytics-platform">
-    <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=vfaraji89&repo=data-analytics-platform&theme=graywhite" />
-  </a>
-</div>
-
 - **LLM Pipeline**: Data processing framework
 - **Insights**: Data Driven Products
-
-## Stats
-
-<div align="center">
-  <img height="150em" src="https://github-readme-stats.vercel.app/api?username=vfaraji89&show_icons=true&theme=graywhite&count_private=true&hide_border=true"/>
-  <img height="150em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=vfaraji89&layout=compact&theme=graywhite&hide_border=true"/>
-</div>
 
 ## Connect
 
