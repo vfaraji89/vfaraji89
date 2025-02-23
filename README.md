@@ -4,31 +4,53 @@
   <img src="responsive-abacus.svg" width="80%" alt="Data Products & Analytics">
 </div>
   
-  <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=500&size=24&pause=1000&color=000000&left=true&vCenter=true&width=435&lines=Data+Product+Manager;People+Data;LLM+People+Data+Learner" alt="Typing SVG" />
-</div>
+<img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=500&size=24&pause=1000&color=000000&left=true&vCenter=true&width=435&lines=Data+Product+Manager;People+Data;LLM+People+Data+Learner" alt="Typing SVG" />
 
 ## About Me
-
 Transforming text data into intelligent products. Specialized in people, user data across Finance, HR, and Tech domains.
 
-
 ## Focus Areas
-
 - Data Product Architecture & Governance
 - People Data and Data Monetization
-- Cross-Domain Product
+- Cross-Domain Product Development
 - LLM Solutions for HR (Skills, Hiring, Metrics)
 
-## Tech Stack
-
+## Tech Stack & Expertise
 ![Python](https://img.shields.io/badge/python-%23000000.svg?style=flat-square&logo=python&logoColor=white)
 ![SQL](https://img.shields.io/badge/sql-%23000000.svg?style=flat-square&logo=sqlite&logoColor=white)
 ![LangChain](https://img.shields.io/badge/langchain-%23000000.svg?style=flat-square&logo=chainlink&logoColor=white)
 ![Pandas](https://img.shields.io/badge/pandas-%23000000.svg?style=flat-square&logo=pandas&logoColor=white)
 ![Scikit-learn](https://img.shields.io/badge/sklearn-%23000000.svg?style=flat-square&logo=scikit-learn&logoColor=white)
 
-## 📚 DataCamp Portfolio
+### Core Competencies
+```text
+LLM Integration    ████████░░   Actively Using
+Data Pipelines     ███████░░░   Project Experience
+Agent Development  ██████░░░░   Learning & Building
+Data Governance    ███████░░░   Project Experience
+```
 
+## 🚀 Key Projects
+
+### HR Data Solutions
+- **Salary Analysis Pipeline**
+  - ETL workflows for compensation data
+  - Market analysis and benchmarking
+  - Automated data quality checks
+
+### LLM Applications
+- **Skill Extraction System**
+  - LangChain-based processing pipeline
+  - Custom prompting engineering
+  - Integration with HR systems
+
+### Position Classification
+- **Title Standardization**
+  - LLM-powered classification
+  - Taxonomy development
+  - Matching algorithms
+
+## 📚 DataCamp Portfolio
 <div align="center">
   <a href="https://www.datacamp.com/profile/vfaraji89">
     <img src="https://img.shields.io/badge/DataCamp-%23000000.svg?style=for-the-badge&logo=datacamp&logoColor=white" alt="DataCamp Profile"/>
@@ -36,29 +58,23 @@ Transforming text data into intelligent products. Specialized in people, user da
 </div>
 
 ### Completed Tracks
-- Python 
-- SQL
-- Data Literacy
+- Python Programming & Data Analysis
+- SQL Data Engineering
+- Data Literacy & Business Analytics
 
-### Recent Certificates
-- [Data Science for Business](https://www.datacamp.com/statement-of-accomplishment/track/xxx)
-- [Python Programming](https://www.datacamp.com/statement-of-accomplishment/track/xxx)
-- [SQL Fundamentals](https://www.datacamp.com/statement-of-accomplishment/track/xxx)
-
-## Key Projects
-
-- **LLM Pipeline**: Data processing for Skill Extraction
-- **Insights**: Data Product for Kariyer.net (Salary, Position Taxonomy and Skills)
+## Current Work
+- **Kariyer.net Data Products**
+  - Salary Analytics Platform
+  - Position Taxonomy System
+  - Skills Database & API
 
 ## Stats
-
 <div align="center">
   <img height="150em" src="https://github-readme-stats.vercel.app/api?username=vfaraji89&show_icons=true&theme=graywhite&count_private=true&hide_border=true"/>
   <img height="150em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=vfaraji89&layout=compact&theme=graywhite&hide_border=true"/>
 </div>
 
 ## Connect
-
 <div align="center">
   
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%23000000.svg?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/vahid-faraji-jobehdar)
