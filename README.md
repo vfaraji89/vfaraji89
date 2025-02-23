@@ -47,14 +47,8 @@ Transforming text data into intelligent products. Specialized in people, user da
 
 ## Key Projects
 
-<div align="center">
-  <a href="https://github.com/vfaraji89/peopledata">
-    <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=vfaraji89&repo=peopledata-platform&theme=graywhite" />
-  </a>
-</div>
-
-- **LLM Pipeline**: Data processing framework
-- **Insights**: Data Driven Products
+- **LLM Pipeline**: Data processing for Skill Extraction
+- **Insights**: Data Product for Kariyer.net (Salary, Position Taxonomy and Skills)
 
 ## Stats
 
