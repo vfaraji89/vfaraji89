@@ -4,7 +4,7 @@
   <img src="responsive-abacus.svg" width="80%" alt="Data Products & Analytics">
 </div>
   
-<img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=500&size=24&pause=1000&color=000000&left=true&vCenter=true&width=435&lines=Data+Product+Manager;People+Data;LLM+People+Data+Learner" alt="Typing SVG" />
+<img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=500&size=24&pause=1000&color=000000&left=true&vCenter=true&width=435&lines=Data+Product+Manager;People+Data;LLM+for+Product+Data" alt="Typing SVG" />
 
 ## About Me
 Transforming text data into intelligent products. Specialized in people, user data across Finance, HR, and Tech domains.
