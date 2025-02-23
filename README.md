@@ -1,23 +1,20 @@
 # Hi, I'm Vahid 👋
 
-<div align="center">
-  <img src="creative-data-banner.svg" width="800" alt="Data Products & Analytics">
-  
-  <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=500&size=24&pause=1000&color=000000&center=true&vCenter=true&width=435&lines=Data+Product+Manager;Analytics+Engineer;LLM+Solutions+Architect" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=500&size=24&pause=1000&color=000000&center=true&vCenter=true&width=435&lines=Data+Product+Manager;People Data;LLM+People Data Learner" alt="Typing SVG" />
 </div>
 
 ## About Me
 
-Transforming complex data into intelligent products. Specialized in people analytics across Finance, HR, and Tech domains.
+Transforming text data into intelligent products. Specialized in people, user data across Finance, HR, and Tech domains.
 
 <img align="right" alt="Coding" src="https://github.com/abhisheknaiidu/abhisheknaiidu/blob/master/code.gif?raw=true" width="270" />
 
 ## Focus Areas
 
-- Data Product Architecture & Development
-- People Analytics & Intelligence Systems
-- Cross-Domain Data Integration
-- LLM-Powered Solutions
+- Data Product Architecture & Governance
+- People Data and Data Monetization
+- Cross-Domain Product
+- LLM Solutions for HR (Skills, Hiring, Metrics)
 
 ## Tech Stack
 
@@ -35,9 +32,8 @@ Transforming complex data into intelligent products. Specialized in people analy
   </a>
 </div>
 
-- **Analytics Platform**: Unified system for cross-domain people data
-- **LLM Pipeline**: Intelligent data processing framework
-- **Insights Engine**: Predictive analytics system
+- **LLM Pipeline**: D  ata processing framework
+- **Insights**:  Data Driven Products
 
 ## Stats
 
