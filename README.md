@@ -4,7 +4,7 @@
   <img src="responsive-abacus.svg" width="80%" alt="Data Products & Analytics">
 </div>
   
-  <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=500&size=24&pause=1000&color=000000&center=true&vCenter=true&width=435&lines=Data+Product+Manager;People+Data;LLM+People+Data+Learner" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=500&size=24&pause=1000&color=000000&left=true&vCenter=true&width=435&lines=Data+Product+Manager;People+Data;LLM+People+Data+Learner" alt="Typing SVG" />
 </div>
 
 ## About Me
