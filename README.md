@@ -1,7 +1,7 @@
 # 👋 Hi, I'm Vahid
 
 <div align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=70A4FC&center=true&vCenter=true&width=435&lines=People+Data+Explorer+%F0%9F%91%A5;Data+Product+Manager+%F0%9F%9A%80;LLM+Pipeline+Architect+%F0%9F%94%AE;HR+Analytics+Specialist+%F0%9F%93%8A" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=70A4FC&center=true&vCenter=true&width=435&lines=People+Data+Explorer+%F0%9F%91%A5;Data+Product+Manager+%F0%9F%9A%80;LLM+Pipeline+Architect+%F0%9F%94%AE;People Data Engineer+%F0%9F%93%8A" alt="Typing SVG" />
 </div>
 
 ## 🚀 About Me
