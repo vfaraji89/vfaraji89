@@ -61,7 +61,7 @@ Transforming text data into intelligent products. Specialized in people, user da
 
 <div align="center">
   
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%23000000.svg?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/vahid-farajijobehdar)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%23000000.svg?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/vahid-faraji-jobehdar
 [![Email](https://img.shields.io/badge/Email-%23000000.svg?style=flat-square&logo=gmail&logoColor=white)](mailto:vfaraji89@gmail.com)
 [![GitHub](https://img.shields.io/badge/GitHub-%23000000.svg?style=flat-square&logo=github&logoColor=white)](https://github.com/vfaraji89)
 [![DataCamp](https://img.shields.io/badge/DataCamp-%23000000.svg?style=flat-square&logo=datacamp&logoColor=white)](https://www.datacamp.com/profile/vfaraji89)
