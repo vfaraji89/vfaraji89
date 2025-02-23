@@ -36,9 +36,9 @@ Transforming text data into intelligent products. Specialized in people, user da
 </div>
 
 ### Completed Tracks
-- 🏆 Data Scientist with Python
-- 🏆 Python Programmer
-- 🏆 Data Analyst in SQL
+- Python 
+- SQL
+- Data Literacy
 
 ### Recent Certificates
 - [Data Science for Business](https://www.datacamp.com/statement-of-accomplishment/track/xxx)
