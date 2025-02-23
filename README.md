@@ -7,20 +7,22 @@
 <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=500&size=24&pause=1000&color=000000&left=true&vCenter=true&width=435&lines=Data+Product+Manager;People+Data;LLM+for+Product+Data" alt="Typing SVG" />
 
 ## About Me
-Transforming text data into intelligent products. Specialized in people, user data across Finance, HR, and Tech domains.
+Map data to products. 
+Specialized in people, user and company data.
 
 ## Focus Areas
 - Data Product Architecture & Governance
 - People Data and Data Monetization
 - Cross-Domain Product Development
-- LLM Solutions for HR (Skills, Hiring, Metrics)
+- LLM Solutions for Product
 
-## Tech Stack & Expertise
+## Tech Stack
 ![Python](https://img.shields.io/badge/python-%23000000.svg?style=flat-square&logo=python&logoColor=white)
 ![SQL](https://img.shields.io/badge/sql-%23000000.svg?style=flat-square&logo=sqlite&logoColor=white)
 ![LangChain](https://img.shields.io/badge/langchain-%23000000.svg?style=flat-square&logo=chainlink&logoColor=white)
+![LangGraph](https://img.shields.io/badge/langgraph-%23000000.svg?style=flat-square&logo=chainlink&logoColor=white)
 ![Pandas](https://img.shields.io/badge/pandas-%23000000.svg?style=flat-square&logo=pandas&logoColor=white)
-![Scikit-learn](https://img.shields.io/badge/sklearn-%23000000.svg?style=flat-square&logo=scikit-learn&logoColor=white)
+![NumPy](https://img.shields.io/badge/numpy-%23000000.svg?style=flat-square&logo=numpy&logoColor=white)
 
 ### Core Competencies
 ```text
