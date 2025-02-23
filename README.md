@@ -1,7 +1,7 @@
 # Hi, I'm Vahid 👋
 
 <div align="center">
-  <img src="responsive-abacus.svg" width="80%" alt="Data Products & Analytics">
+  <img src="responsive-abacus.svg" width="60%" alt="Data Products & Analytics">
   
   <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=500&size=24&pause=1000&color=000000&center=true&vCenter=true&width=435&lines=Data+Product+Manager;People+Data;LLM+People+Data+Learner" alt="Typing SVG" />
 </div>
