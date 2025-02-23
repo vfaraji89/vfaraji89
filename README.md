@@ -1,63 +1,63 @@
 # Hi, I'm Vahid 👋
 
 <div align="center">
-  <img src="minimal-banner.svg" width="800" alt="Data Products & People Analytics">
+  <img src="creative-data-banner.svg" width="800" alt="Data Products & Analytics">
   
-  <img src="https://readme-typing-svg.herokuapp.com?font=Inter&weight=500&size=24&pause=1000&color=475569&center=true&vCenter=true&width=435&lines=Data+Product+Manager;People+Analytics+Engineer;LLM+Solutions+Architect" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=500&size=24&pause=1000&color=000000&center=true&vCenter=true&width=435&lines=Data+Product+Manager;Analytics+Engineer;LLM+Solutions+Architect" alt="Typing SVG" />
 </div>
 
 ## About Me
 
-Building data products that turn people data into actionable insights. Specialized in Finance, HR, and Tech domains.
+Transforming complex data into intelligent products. Specialized in people analytics across Finance, HR, and Tech domains.
 
-<img align="right" alt="Coding" src="https://github.com/abhisheknaiidu/abhisheknaiidu/blob/master/code.gif?raw=true" width="280" />
+<img align="right" alt="Coding" src="https://github.com/abhisheknaiidu/abhisheknaiidu/blob/master/code.gif?raw=true" width="270" />
 
 ## Focus Areas
 
-- Data Products & Analytics Platforms
-- People Data Integration & Analysis
-- LLM-Powered Intelligence Systems
-- Cross-Domain Analytics Solutions
+- Data Product Architecture & Development
+- People Analytics & Intelligence Systems
+- Cross-Domain Data Integration
+- LLM-Powered Solutions
 
 ## Tech Stack
 
-![Python](https://img.shields.io/badge/python-3670A0?style=flat-square&logo=python&logoColor=ffdd54)
-![SQL](https://img.shields.io/badge/SQL-%2300f.svg?style=flat-square&logo=sqlite&logoColor=white)
-![LangChain](https://img.shields.io/badge/LangChain-%23E34F26.svg?style=flat-square&logo=chainlink&logoColor=white)
-![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=flat-square&logo=pandas&logoColor=white)
-![Scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=flat-square&logo=scikit-learn&logoColor=white)
+![Python](https://img.shields.io/badge/python-%23000000.svg?style=flat-square&logo=python&logoColor=white)
+![SQL](https://img.shields.io/badge/sql-%23000000.svg?style=flat-square&logo=sqlite&logoColor=white)
+![LangChain](https://img.shields.io/badge/langchain-%23000000.svg?style=flat-square&logo=chainlink&logoColor=white)
+![Pandas](https://img.shields.io/badge/pandas-%23000000.svg?style=flat-square&logo=pandas&logoColor=white)
+![Scikit-learn](https://img.shields.io/badge/sklearn-%23000000.svg?style=flat-square&logo=scikit-learn&logoColor=white)
 
 ## Key Projects
 
 <div align="center">
   <a href="https://github.com/vfaraji89/data-analytics-platform">
-    <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=vfaraji89&repo=data-analytics-platform&theme=calm" />
+    <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=vfaraji89&repo=data-analytics-platform&theme=graywhite" />
   </a>
 </div>
 
-- **Analytics Platform**: Unified analytics for cross-domain people data
-- **LLM Pipeline**: Intelligent data processing and insights generation
-- **Insights Engine**: Predictive analytics for business metrics
+- **Analytics Platform**: Unified system for cross-domain people data
+- **LLM Pipeline**: Intelligent data processing framework
+- **Insights Engine**: Predictive analytics system
 
 ## Stats
 
 <div align="center">
-  <img height="150em" src="https://github-readme-stats.vercel.app/api?username=vfaraji89&show_icons=true&theme=calm&count_private=true"/>
-  <img height="150em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=vfaraji89&layout=compact&theme=calm"/>
+  <img height="150em" src="https://github-readme-stats.vercel.app/api?username=vfaraji89&show_icons=true&theme=graywhite&count_private=true&hide_border=true"/>
+  <img height="150em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=vfaraji89&layout=compact&theme=graywhite&hide_border=true"/>
 </div>
 
 ## Connect
 
 <div align="center">
   
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/vahid-farajijobehdar)
-[![Email](https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:vfaraji89@gmail.com)
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=flat-square&logo=github&logoColor=white)](https://github.com/vfaraji89)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%23000000.svg?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/vahid-farajijobehdar)
+[![Email](https://img.shields.io/badge/Email-%23000000.svg?style=flat-square&logo=gmail&logoColor=white)](mailto:vfaraji89@gmail.com)
+[![GitHub](https://img.shields.io/badge/GitHub-%23000000.svg?style=flat-square&logo=github&logoColor=white)](https://github.com/vfaraji89)
   
 </div>
 
 ---
 
 <div align="center">
-  <img src="https://komarev.com/ghpvc/?username=vfaraji89&style=flat-square&color=blue" alt="Profile views"/>
+  <img src="https://komarev.com/ghpvc/?username=vfaraji89&style=flat-square&color=000000" alt="Profile views"/>
 </div>
