@@ -32,23 +32,22 @@ Data Governance    ███████░░░   Project Experience
 
 ## 🚀 Key Projects
 
-### HR Data Solutions
-- **Salary Analysis Pipeline**
+###  Data Product
+- **Salary**
   - ETL workflows for compensation data
   - Market analysis and benchmarking
   - Automated data quality checks
 
-### LLM Applications
-- **Skill Extraction System**
-  - LangChain-based processing pipeline
-  - Custom prompting engineering
-  - Integration with HR systems
 
 ### Position Classification
 - **Title Standardization**
   - LLM-powered classification
   - Taxonomy development
-  - Matching algorithms
+ 
+### LLM Applications
+- **Skill Extraction**
+  - Custom prompting
+  - Use Cases for Product in HR 
 
 ## 📚 DataCamp Portfolio
 <div align="center">
