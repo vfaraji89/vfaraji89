@@ -26,10 +26,11 @@ Specialized in people, user and company data.
 
 ### Core Competencies
 ```text
-LLM Integration    ████████░░   Actively Using
 Data Pipelines     ███████░░░   Project Experience
-Agent Development  ██████░░░░   Learning & Building
 Data Governance    ███████░░░   Project Experience
+Agent Development  ██████░░░░   Learning & Building
+LLM Integration    ██████░░░░   Actively Using
+
 ```
 
 ## 🚀 Key Projects
