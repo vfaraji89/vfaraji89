@@ -29,7 +29,7 @@ Specialized in people, user and company data.
 Data Pipelines     ███████░░░   Project Experience
 Data Governance    ███████░░░   Project Experience
 Agent Development  ██████░░░░   Learning & Building
-LLM Integration    ██████░░░░   Actively Using
+LLM Integration    ██████░░░░   Actively Learning
 
 ```
 
