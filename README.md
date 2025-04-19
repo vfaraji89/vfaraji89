@@ -94,10 +94,10 @@
 
 <br>
 
-<h2>Prompt Engineering Philosophy</h2>
+<h2>My Philosophy</h2>
 
 <blockquote>
-  "The most valuable insights emerge when we approach data with both scientific rigor and creative curiosity. Effective agents require precise instructions balanced with contextual flexibility."
+  "The most valuable insights emerge when we approach data with both scientific rigor and creative curiosity. Effective product require precise instructions, continous iterations, hardworking balanced with smart working, not immerssed in pure AI-hype!"
 </blockquote>
 
 <div align="center">
