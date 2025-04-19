@@ -49,7 +49,7 @@
   </tr>
   <tr>
     <td><strong>Salary Analytics</strong></td>
-    <td>ETL pipelines and statistical models for market benchmarking</td>
+    <td>Advance Outlier detection and statistical models for salary benchmarking with 50 M datapoints</td>
     <td><code>Analytics</code></td>
   </tr>
 </table>
