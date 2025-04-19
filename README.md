@@ -12,7 +12,7 @@
 
 <div align="center">
   <em>Data Product Architect</em><br>
-  <em>Building intelligent systems at the intersection of data, AI, and human needs</em>
+  <em>Building intelligent systems at the intersection of data, AI, and user needs</em>
 </div>
 
 <br>
