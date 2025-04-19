@@ -2,7 +2,7 @@
 
 <div align="center">
   <em>Data Product Manager</em><br>
-  <em>Building intelligent systems at the intersection of data, AI, and human needs</em>
+  <em>Building intelligent systems at the intersection of data, AI, and product (user) needs</em>
 </div>
 
 <br>
