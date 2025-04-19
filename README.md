@@ -1,7 +1,7 @@
 <h1 align="center">Vahid Faraji</h1>
 
 <div align="center">
-  <em>Data Product Architect</em><br>
+  <em>Data Product Manager</em><br>
   <em>Building intelligent systems at the intersection of data, AI, and human needs</em>
 </div>
 
