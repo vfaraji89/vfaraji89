@@ -23,6 +23,7 @@
   <li>Data Product Architecture</li>
   <li>Agentic Systems Design</li>
   <li>LLM-Enhanced Data Solutions</li>
+  Selected Projects as:
   <li>Skill & Position Taxonomies</li>
   <li>Human-Centered Data Products</li>
 </ul>
