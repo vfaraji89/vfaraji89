@@ -1,15 +1,25 @@
-<h1 align="center">Vahid Faraji</h1>
+<h1 align="center">Vahid Faraji-Jobehdar</h1>
 
 <div align="center">
-  <em>Data Product Manager</em><br>
-  <em>Building intelligent systems at the intersection of data, AI, and product (user) needs</em>
+  <pre>
+╭───────────────────────────────────────────────╮
+│ [V][ahid] [Far][aji][-][Job][ehdar] → [🤖]     │
+├───────────────────────────────────────────────┤
+│ token_0 token_1 token_2...token_n → embedding │
+╰───────────────────────────────────────────────╯
+  </pre>
+</div>
+
+<div align="center">
+  <em>Data Product Architect</em><br>
+  <em>Building intelligent systems at the intersection of data, AI, and human needs</em>
 </div>
 
 <br>
 
 <h2>About</h2>
 
-<p>I'm curious and self-learner to transform raw data into powerful flows (now interested in agentic approach) that elevate products</p>
+<p>I transform raw data into powerful products and design agentic tools that elevate teams.</p>
 
 <div align="center">
   <code>Data</code> → <code>Knowledge</code> → <code>Intelligence</code> → <code>Value</code>
@@ -23,14 +33,14 @@
   <li>Data Product Architecture</li>
   <li>Agentic Systems Design</li>
   <li>LLM-Enhanced Data Solutions</li>
-  Selected Projects as:
   <li>Skill & Position Taxonomies</li>
   <li>Human-Centered Data Products</li>
+  <li>Agent Tools (Agno, Replit, MCP Protocol)</li>
 </ul>
 
 <br>
 
-<h2>Research</h2>
+<h2>Research & Projects</h2>
 
 <table>
   <tr>
@@ -50,8 +60,23 @@
   </tr>
   <tr>
     <td><strong>Salary Analytics</strong></td>
-    <td>Advance Outlier detection and statistical models for salary benchmarking with 50 M datapoints</td>
+    <td>ETL pipelines and statistical models for market benchmarking</td>
     <td><code>Analytics</code></td>
+  </tr>
+  <tr>
+    <td><strong>Feedback Analysis Agent</strong></td>
+    <td>LLM-powered system for automated customer feedback categorization and sentiment analysis</td>
+    <td><code>Agents</code> <code>NLP</code></td>
+  </tr>
+  <tr>
+    <td><strong>Sales Co-pilot</strong></td>
+    <td>Agent system providing real-time assistance for sales representatives with product recommendations</td>
+    <td><code>Agents</code> <code>Sales</code></td>
+  </tr>
+  <tr>
+    <td><strong>Data Quality Framework</strong></td>
+    <td>Automated system for data quality assessment and discovery for product development</td>
+    <td><code>Data Quality</code> <code>ETL</code></td>
   </tr>
 </table>
 
@@ -63,13 +88,21 @@
   <code>Python</code> • <code>SQL</code> • <code>LangChain</code> • <code>LangGraph</code> • <code>Pandas</code> • <code>NumPy</code> • <code>Vector DBs</code>
 </div>
 
+<div align="center">
+  <code>Agno</code> • <code>Replit</code> • <code>MCP Protocol</code> • <code>LLM Prompt Engineering</code> • <code>Agent Frameworks</code>
+</div>
+
 <br>
 
-<h2>Philosophy</h2>
+<h2>Prompt Engineering Philosophy</h2>
 
 <blockquote>
-  "The most valuable insights emerge when we approach data with both scientific rigor and creative curiosity."
+  "The most valuable insights emerge when we approach data with both scientific rigor and creative curiosity. Effective agents require precise instructions balanced with contextual flexibility."
 </blockquote>
+
+<div align="center">
+  <code>Clear Instructions</code> → <code>Contextual Understanding</code> → <code>Adaptive Reasoning</code> → <code>Useful Output</code>
+</div>
 
 <br>
 
