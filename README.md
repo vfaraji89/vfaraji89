@@ -1,4 +1,4 @@
-<h1 align="center">Vahid Faraji-Jobehdar</h1>
+<h1 align="center">Vahid Faraji</h1>
 
 <div align="center">
   <em>Data Product Architect</em><br>
