@@ -9,7 +9,7 @@
 
 <h2>About</h2>
 
-<p>I transform raw data into powerful products and design agentic tools that elevate teams.</p>
+<p>I'm curious and self-learner to transform raw data into powerful flows (now interested in agentic approach) that elevate products</p>
 
 <div align="center">
   <code>Data</code> → <code>Knowledge</code> → <code>Intelligence</code> → <code>Value</code>
