@@ -25,12 +25,12 @@
 <h2>Focus Areas</h2>
 
 <ul>
-  <li>Data Product Architecture</li>
-  <li>Agentic Systems Design</li>
-  <li>LLM-Enhanced Data Solutions</li>
-  <li>Skill & Position Taxonomies</li>
-  <li>Human-Centered Data Products</li>
-  <li>Agent Tools (Agno, Replit, MCP Protocol)</li>
+  <li>Data Product </li>
+  <li>Agentic Systems </li>
+  <li>LLM-Enhanced Data </li>
+  <li>Retrieval Extraction from Text Data</li>
+  <li>Vector, Database, Insights</li>
+  <li>Agent Tools (Agno, Replit, MCP Protocol, V0,)</li>
 </ul>
 
 <br>
