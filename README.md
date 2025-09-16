@@ -6,15 +6,15 @@
 </div>
 
 <div align="center">
-  <em>Data Product Architect</em><br>
-  <em>Building intelligent systems at the intersection of data, AI, and user needs</em>
+  <em>Data Product + Applied AI</em><br>
+  <em>at the intersection of user data + applied AI</em>
 </div>
 
 <br>
 
 <h2>About</h2>
 
-<p>I transform raw data into powerful products and design agentic tools that elevate teams.</p>
+<p>I'd and want to transform raw data into products with agentic-approach</p>
 
 <div align="center">
   <code>Data</code> → <code>Knowledge</code> → <code>Intelligence</code> → <code>Value</code>
