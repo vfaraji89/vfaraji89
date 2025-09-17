@@ -65,12 +65,21 @@ I build and transform raw data into products with an agentic-approach.
 ## Connect
 
 <div align="center">
-  <a href="https://www.linkedin.com/in/vahid-faraji-jobehdar">LinkedIn</a> • 
-  <a href="https://vfaraji89.github.io/vfaraji89">My Web Portfolio</a> • 
-  <a href="mailto:vfaraji89@gmail.com">Email</a> • 
-  <a href="https://www.datacamp.com/profile/vfaraji89">DataCamp</a>
-  <a href="[https://hugginface.co/vfarajii89](https://huggingface.co/vfaraji89)">Hugging Face</a>
-
+  <a href="https://www.linkedin.com/in/vahid-faraji-jobehdar" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+  </a>
+  <a href="https://vfaraji89.github.io/vfaraji89" target="_blank">
+    <img src="https://img.shields.io/badge/Portfolio-181717?style=for-the-badge&logo=github&logoColor=white" alt="Web Portfolio"/>
+  </a>
+  <a href="mailto:vfaraji89@gmail.com">
+    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/>
+  </a>
+  <a href="https://www.datacamp.com/profile/vfaraji89" target="_blank">
+    <img src="https://img.shields.io/badge/DataCamp-03EF62?style=for-the-badge&logo=datacamp&logoColor=white" alt="DataCamp"/>
+  </a>
+  <a href="https://huggingface.co/vfaraji89" target="_blank">
+    <img src="https://img.shields.io/badge/Hugging Face-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black" alt="Hugging Face"/>
+  </a>
 </div>
 
 <hr>
