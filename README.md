@@ -69,7 +69,7 @@ I build and transform raw data into products with an agentic-approach.
   <a href="https://vfaraji89.github.io/vfaraji89">My Web Portfolio</a> • 
   <a href="mailto:vfaraji89@gmail.com">Email</a> • 
   <a href="https://www.datacamp.com/profile/vfaraji89">DataCamp</a>
-  <a href="https://hugginface.co/vfarajii89">Hugging Face</a>
+  <a href="[https://hugginface.co/vfarajii89](https://huggingface.co/vfaraji89)">Hugging Face</a>
 
 </div>
 
