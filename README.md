@@ -6,17 +6,6 @@
     | |   |      V A H I D   F A R A J I           |   | |
     | |   '----------------------------------------'   | |
     | |      .____________________________________.    | |
-    | |      |[
-<div align="center">
-  <em>Data Product + Applied AI</em>
-</div>
-@Kariyer.net (Türkiye)
-]|    | |
-    | |      '------------------------------------'    | |
-    | |                __________________              | |
-    | |               |                  |             | |
-    | |               |  SELECT   START  |             | |
-    | |               '------------------'             | |
     | '------------------------------------------------' |
     '----------------------------------------------------'
   </pre>
@@ -27,14 +16,6 @@
 </div>
 
 ---
-
-<div align="center">
-<h2>Commit History</h2>
-<pre>
-PLAYER: Vahid Faraji   WORLD: 1-1   TIME: ∞
-==================================================
-</pre>
-</div>
 
 ## About
 
@@ -73,10 +54,18 @@ I build and transform raw data into products with an agentic-approach.
 ## Technical Toolbox
 
 <div align="center">
-  <code>Python</code> • <code>SQL</code> • <code>LangChain</code> • <code>LangGraph</code> • <code>Pandas</code> • <code>NumPy</code> • <code>Vector DBs</code>
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
+  <img src="https://img.shields.io/badge/SQL-025E8C?style=for-the-badge&logo=postgresql&logoColor=white" alt="SQL"/>
+  <img src="https://img.shields.io/badge/LangChain-008639?style=for-the-badge&logo=langchain&logoColor=white" alt="LangChain"/>
+  <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas"/>
+  <img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy"/>
+  <img src="https://img.shields.io/badge/Vector DBs-9333EA?style=for-the-badge" alt="Vector DBs"/>
 </div>
-<div align="center">
-  <code>Agno</code> • <code>Replit</code> • <code>MCP Protocol</code> • <code>LLM Prompt Engineering</code> • <code>Agent Frameworks</code>
+<div align="center" style="margin-top: 8px;">
+  <img src="https://img.shields.io/badge/Agno-000000?style=for-the-badge" alt="Agno"/>
+  <img src="https://img.shields.io/badge/Replit-DD1200?style=for-the-badge&logo=replit&logoColor=white" alt="Replit"/>
+  <img src="https://img.shields.io/badge/Prompt Engineering-FF6F00?style=for-the-badge" alt="Prompt Engineering"/>
+  <img src="https://img.shields.io/badge/Agent Frameworks-4B5563?style=for-the-badge" alt="Agent Frameworks"/>
 </div>
 
 <br>
