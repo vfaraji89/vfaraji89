@@ -2,21 +2,35 @@
   <h1>Hi there, I'm Vahid Faraji 👋</h1>
   <p>I build and transform raw data into products with an agentic-approach.</p>
   
-  <code>Data</code> → <code>Knowledge</code> → <code>Intelligence</code> → <code>Value</code>
+  <div style="font-family: monospace; color: #6a5b5b; margin-top: 1rem;">
+    <code style="background-color: #f7d7d7; color: #d85454; padding: 0.2rem 0.5rem; border-radius: 4px; font-weight: 600;">Data</code> → 
+    <code style="background-color: #f7d7d7; color: #d85454; padding: 0.2rem 0.5rem; border-radius: 4px; font-weight: 600;">Knowledge</code> → 
+    <code style="background-color: #f7d7d7; color: #d85454; padding: 0.2rem 0.5rem; border-radius: 4px; font-weight: 600;">Intelligence</code> → 
+    <code style="background-color: #f7d7d7; color: #d85454; padding: 0.2rem 0.5rem; border-radius: 4px; font-weight: 600;">Value</code>
+  </div>
 </div>
 
-<br>
+<br/>
 
-## 🔭 Focus Areas
+<!-- ABOUT SECTION -->
+<img src="https://gist.githubusercontent.com/YOUR_USERNAME/GIST_ID/raw/COMMIT_ID/header-about.svg" alt="About Section Header"/>
 
-- Data Product
-- Agentic Systems
-- LLM-Enhanced Data
-- Retrieval & Extraction from Text Data
+I build and transform raw data into products with an agentic-approach.
 
-<br>
+<br/>
 
-## 🚀 Research & Projects
+<!-- FOCUS AREAS SECTION -->
+<img src="https://gist.githubusercontent.com/YOUR_USERNAME/GIST_ID/raw/COMMIT_ID/header-focus-areas.svg" alt="Focus Areas Section Header"/>
+
+- **Data Product:** Designing and building data-driven solutions that create direct value.
+- **Agentic Systems:** Developing autonomous agents that can reason and execute complex tasks.
+- **LLM-Enhanced Data:** Using Large Language Models to enrich, structure, and clean datasets.
+- **Retrieval & Extraction:** Specializing in extracting structured information from unstructured text data.
+
+<br/>
+
+<!-- RESEARCH & PROJECTS SECTION -->
+<img src="https://gist.githubusercontent.com/YOUR_USERNAME/GIST_ID/raw/COMMIT_ID/header-research-projects.svg" alt="Research & Projects Section Header"/>
 
 | Project Quest                | Description                                                                                 | Tags                  |
 | ---------------------------- | ------------------------------------------------------------------------------------------- | --------------------- |
@@ -27,9 +41,10 @@
 | **Sales Co-pilot**           | Agent system providing real-time assistance for sales representatives with product recommendations. | <code>Agents</code> <code>Sales</code>      |
 | **Data Quality Framework**   | Automated system for data quality assessment and discovery for product development.       | <code>Data Quality</code> <code>ETL</code>  |
 
-<br>
+<br/>
 
-## 🛠️ Technical Toolbox
+<!-- TECHNICAL TOOLBOX SECTION -->
+<img src="https://gist.githubusercontent.com/YOUR_USERNAME/GIST_ID/raw/COMMIT_ID/header-technical-toolbox.svg" alt="Technical Toolbox Section Header"/>
 
 <div align="center">
   <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
@@ -46,26 +61,31 @@
   <img src="https://img.shields.io/badge/Agent Frameworks-4B5563?style=for-the-badge" alt="Agent Frameworks"/>
 </div>
 
-<br>
+<br/>
 
-## 💡 My Philosophy
+<!-- MY PHILOSOPHY SECTION -->
+<img src="https://gist.githubusercontent.com/YOUR_USERNAME/GIST_ID/raw/COMMIT_ID/header-my-philosophy.svg" alt="My Philosophy Section Header"/>
 
 > "The most valuable insights emerge when we approach data with both scientific rigor and creative curiosity. Effective products require precise instructions, continuous iterations, and hard work balanced with smart work—not just immersion in pure AI hype!"
 
-<div align="center">
-  <code>Clear Instructions</code> → <code>Contextual Understanding</code> → <code>Adaptive Reasoning</code> → <code>Useful Output</code>
+<div align="center" style="font-family: monospace; color: #6a5b5b; margin-top: 1rem;">
+  <code style="background-color: #f7d7d7; color: #d85454; padding: 0.2rem 0.5rem; border-radius: 4px; font-weight: 600;">Clear Instructions</code> → 
+  <code style="background-color: #f7d7d7; color: #d85454; padding: 0.2rem 0.5rem; border-radius: 4px; font-weight: 600;">Contextual Understanding</code> → 
+  <code style="background-color: #f7d7d7; color: #d85454; padding: 0.2rem 0.5rem; border-radius: 4px; font-weight: 600;">Adaptive Reasoning</code> → 
+  <code style="background-color: #f7d7d7; color: #d85454; padding: 0.2rem 0.5rem; border-radius: 4px; font-weight: 600;">Useful Output</code>
 </div>
 
-<br>
+<br/>
 
-## 🌐 Connect
+<!-- CONNECT SECTION -->
+<img src="https://gist.githubusercontent.com/YOUR_USERNAME/GIST_ID/raw/COMMIT_ID/header-connect.svg" alt="Connect Section Header"/>
 
 <div align="center">
   <a href="https://www.linkedin.com/in/vahid-faraji-jobehdar" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
   </a>
   <a href="https://vfaraji89.github.io/" target="_blank">
-    <img src="https://img.shields.io/badge/Portfolio-181717?style=for-the-badge&logo=github&logoColor=white" alt="Web Portfolio"/>
+    <img src="https://img.shields.io/badge/Portfolio-d85454?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Web Portfolio"/>
   </a>
   <a href="mailto:vfaraji89@gmail.com">
     <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/>
