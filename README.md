@@ -16,21 +16,6 @@ My toolkit includes a range of technologies for data management, automation, and
 *   **DevOps:** AzureDev, Docker (currently learning)
 *   **BI & Visualization:** PowerBI
 
-## Experience
-
-### **Kariyer.net** | Istanbul, Turkey
-
-*   **Senior Applied AI Specialist** (September 2025 - Present)
-    *   Focus on API monitoring, cost optimization, and ensuring the scalable and efficient deployment of AI solutions.
-    *   Developing reporting automation tools (e.g., text-to-SQL) to enhance profitability and empower non-technical teams.
-    *   Applying vectorization and unstructured data extraction for semantic matching and large-scale dataset processing.
-*   **Sr. Product Manager (Data for Product)** (October 2022 - September 2025)
-    *   Improved the flow and accuracy of people and company data, ensuring clarity, reliability, and consistency.
-    *   Worked with text-based data, such as job titles and skills, to enhance data usability.
-    *   Analyzed numerical data, including salaries and hiring rates, to provide actionable insights for decision-making.
-
-For a more detailed overview of my professional experience, please visit the "Experience" tab on my portfolio website.
-
 ## Projects
 
 I have worked on a variety of projects that demonstrate my skills in data analysis, AI, and product development. Some of these include:
