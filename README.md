@@ -15,8 +15,6 @@ I build and transform raw data into products with an agentic-approach.
 - » Agentic Systems
 - » LLM-Enhanced Data
 - » Retrieval & Extraction from Text Data
-- » Vector Databases & Insights
-- » Agent Tools (Agno, Replit, V0)
 
 <br>
 
