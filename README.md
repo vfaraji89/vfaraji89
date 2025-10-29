@@ -33,4 +33,3 @@ I am always open to connecting with other professionals and discussing new oppor
 
 *   **Email:** [vfaraji89@gmail.com](mailto:vfaraji89@gmail.com)
 *   **LinkedIn:** [linkedin.com/in/vahid-faraji-jobehdar](https://www.linkedin.com/in/vahid-faraji-jobehdar/)
-*   **GitHub:** [github.com/vfaraji89](https://github.com/vfaraji89)
