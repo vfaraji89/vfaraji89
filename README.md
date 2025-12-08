@@ -1,7 +1,6 @@
 
 ## About Me
 
-I specialize in transforming raw human and user data into valuable products. My focus is on organizing unstructured data, extracting meaningful insights, and building scalable, agent-based systems and automation flows. I am passionate about diving into the details to create impactful solutions.
 
 My professional background includes over eight years in product and user data, three years of experience connecting business needs with AI-powered technical solutions, and more than five years in product and applied research. This diverse experience allows me to bridge the gap between technical possibilities and user-centric value.
 
