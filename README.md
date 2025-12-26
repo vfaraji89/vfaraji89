@@ -9,15 +9,15 @@ My professional background includes over eight years in product and user data, t
 My toolkit includes a range of technologies for data management, automation, and analysis:
 
 *   **Languages:** SQL, Python (including NumPy and Pandas)
-*   **AI Frameworks & Tools:** LangChain, LangGraph, LangSmith, OpenAI APIs
+*   **AI Frameworks & Tools** LangChain, Agno, Agent Garden
 *   **Data Management:** Vector Databases, ETL processes, Data Ingestion
-*   **Workflow Automation:** n8n, Agno, Google Genkit, Vercel
+*   **Workflow Automation:** n8n, Power Automate
 *   **DevOps:** AzureDev, Docker (currently learning)
-*   **BI & Visualization:** PowerBI
+*   **BI & Visualization:** PowerBI, HTML
 
 ## Projects
 
-I have worked on a variety of projects that demonstrate my skills in data analysis, AI, and product development. Some of these include:
+I have worked on a variety of projects that demonstrate my skills in product data, AI, and product development. Some of these include:
 
 *   **Position Extraction App:** An LLM-driven application that automatically extracts and classifies position titles from unstructured text.
 *   **People Data Handbook:** A comprehensive guide to People Analytics for the Persian-speaking community.
