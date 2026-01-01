@@ -2,7 +2,8 @@
 ## About Me
 
 
-Want to be a good operator, applier by forcing productivity as we are in age of augmentation and easy to learn..
+Want to be a good operator, applier by forcing productivity as we are in age of augmentation and automation. 
+I can design and apply assistants, skills and flow to analyze.
 ## Tech Stack
 
 My toolkit includes a range of technologies for data management, automation, and analysis:
