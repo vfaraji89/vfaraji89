@@ -20,7 +20,7 @@ I pair with AI tools daily to move faster:
     - ## Tech I Use
    
     -  **Python** — actively learning, not confined to it
-      -  **AI Frameworks:** LangChain, Agno, Agent Garden
+    -   **AI Frameworks:** LangChain, Agno, Agent Garden
         -  **Automation:** n8n, Power Automate, UiPath
           - **Data:** Vector databases, ETL pipelines
             -  **Visualization:** Power BI
