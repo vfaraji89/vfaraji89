@@ -1,27 +1,34 @@
+## Hi, I'm Vahid 👋
 
-## About Me
+Applied AI practitioner turning messy problems into clean specs and working solutions.
 
+## What I Do
 
-Want to be a good operator with data and ai assistants, applier by forcing productivity as we are in age of augmentation and automation. 
-I can design and apply assistants, skills and flow to analyze.
-## Tech Stack
+I bridge the gap between business problems and AI-powered solutions. My specialty is **people data** — understanding context, designing dataflows, and translating complexity into actionable specs that teams can build from.
 
-My toolkit includes a range of technologies for data management, automation, and analysis:
+**My approach:** Problem → Spec → Manage → Ship
 
-*   **Language:** Python (including NumPy and Pandas)
-*   **AI Frameworks & Tools** LangChain, Agno, Agent Garden
-*   **Data Management:** Vector Databases, ETL processes
-*   **Workflow Automation:** n8n, Power Automate
-*   **Dev:** AzureDev, Docker (currently learning)
-*   **BI & Visualization:** PowerBI, HTML
+## How I Work
 
-## Projects
+I pair with AI tools daily to move faster:
 
-I have worked on a variety of projects that demonstrate my skills in product data, AI, and product development.
-
-## Contact
-
-You can reach me through the following channels:
-
-*   **Email:** [vfaraji89@gmail.com](mailto:vfaraji89@gmail.com)
-*   **LinkedIn:** [linkedin.com/in/vahid-faraji-jobehdar](https://www.linkedin.com/in/vahid-faraji-jobehdar/)
+- **Claude Code** & **GitHub Copilot** for development
+- - **n8n**, **Power Automate** & **UiPath** for workflow automation
+  - - Building specs, dataflows, and product data architectures
+   
+    - ## Tech I Use
+   
+    - - **Python** — actively learning, not confined to it
+      - - **AI Frameworks:** LangChain, Agno, Agent Garden
+        - - **Automation:** n8n, Power Automate, UiPath
+          - - **Data:** Vector databases, ETL pipelines
+            - - **Visualization:** Power BI
+             
+              - ## Current Focus
+             
+              - Learning to ship faster — taking broken products and fixing them efficiently with the right combination of specs, automation, and AI tools.
+             
+              - ## Let's Connect
+             
+              - - **Email:** [vfaraji89@gmail.com](mailto:vfaraji89@gmail.com)
+                - - **LinkedIn:** [vahid-faraji-jobehdar](https://www.linkedin.com/in/vahid-faraji-jobehdar/)
