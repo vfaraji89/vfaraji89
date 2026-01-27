@@ -15,7 +15,7 @@ I pair with AI tools daily to move faster:
 
 - **Claude Code** & **GitHub Copilot** for development
 - - **n8n**, **Power Automate** & **UiPath** for workflow automation
-  - - Building specs, dataflows, and product data architectures
+- - Building specs, dataflows, and product data architectures
    
     - ## Tech I Use
    
@@ -32,4 +32,4 @@ I pair with AI tools daily to move faster:
               - ## Let's Connect
              
               - - **Email:** [vfaraji89@gmail.com](mailto:vfaraji89@gmail.com)
-                - - **LinkedIn:** [Vahid-Faraji](https://www.linkedin.com/in/vahid-faraji-jobehdar/)
+              - - **LinkedIn:** [Vahid-Faraji](https://www.linkedin.com/in/vahid-faraji-jobehdar/)
