@@ -1,10 +1,11 @@
 ## Hi, I'm Vahid 👋
 
-Applied AI practitioner turning messy problems into clean specs and working solutions.
+Applied AI Operator turning messy problems into clean specs and working solutions.
 
 ## What I Do
 
-I bridge the gap between business problems and AI-powered solutions. My specialty is **people data** — understanding context, designing dataflows, and translating complexity into actionable specs that teams can build from.
+I bridge the gap between business problems and AI-assissted solutions. 
+My specialty is **people data** — understanding context, designing dataflows, and translating complexity into actionable specs that teams can build from.
 
 **My approach:** Problem → Spec → Manage → Ship
 
