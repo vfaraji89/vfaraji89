@@ -32,4 +32,4 @@ I pair with AI tools daily to move faster:
               - ## Let's Connect
              
               - - **Email:** [vfaraji89@gmail.com](mailto:vfaraji89@gmail.com)
-                - - **LinkedIn:** [vahid-faraji-jobehdar](https://www.linkedin.com/in/vahid-faraji-jobehdar/)
+                - - **LinkedIn:** [Vahid-Faraji](https://www.linkedin.com/in/vahid-faraji-jobehdar/)
