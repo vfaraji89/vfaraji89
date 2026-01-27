@@ -14,16 +14,16 @@ My specialty is **people data** — understanding context, designing dataflows, 
 I pair with AI tools daily to move faster:
 
 - **Claude Code** & **GitHub Copilot** for development
-- - **n8n**, **Power Automate** & **UiPath** for workflow automation
-- - Building specs, dataflows, and product data architectures
+- **n8n**, **Power Automate** & **UiPath** for workflow automation
+- Building specs, dataflows, and product data architectures
    
     - ## Tech I Use
    
-    - - **Python** — actively learning, not confined to it
-      - - **AI Frameworks:** LangChain, Agno, Agent Garden
-        - - **Automation:** n8n, Power Automate, UiPath
-          - - **Data:** Vector databases, ETL pipelines
-            - - **Visualization:** Power BI
+    -  **Python** — actively learning, not confined to it
+      -  **AI Frameworks:** LangChain, Agno, Agent Garden
+        -  **Automation:** n8n, Power Automate, UiPath
+          - **Data:** Vector databases, ETL pipelines
+            -  **Visualization:** Power BI
              
               - ## Current Focus
              
@@ -31,5 +31,5 @@ I pair with AI tools daily to move faster:
              
               - ## Let's Connect
              
-              - - **Email:** [vfaraji89@gmail.com](mailto:vfaraji89@gmail.com)
-              - - **LinkedIn:** [Vahid-Faraji](https://www.linkedin.com/in/vahid-faraji-jobehdar/)
+              -  **Email:** [vfaraji89@gmail.com](mailto:vfaraji89@gmail.com)
+              -  **LinkedIn:** [Vahid-Faraji](https://www.linkedin.com/in/vahid-faraji-jobehdar/)
