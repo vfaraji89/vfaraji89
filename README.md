@@ -19,11 +19,11 @@ I pair with AI tools daily to move faster:
    
     - ## Tech I Use
    
-    -  **Python** — actively learning, not confined to it
-    -   **AI Frameworks:** LangChain, Agno, Agent Garden
-        -  **Automation:** n8n, Power Automate, UiPath
-          - **Data:** Vector databases, ETL pipelines
-            -  **Visualization:** Power BI
+    -  **Python** — actively learning, not confined to it (speciality: numpy,pandas)
+    -   **AI Frameworks:** LangChain, Agno, Agent Garden (learning & applying)
+        -  **Automation:** n8n, Power Automate, UiPath (comfortable with these)
+          - **Data:** Unstructured data (text data)
+            -  **Visualization:** Anytool and framework (thanks to AI!)
              
               - ## Current Focus
              
