@@ -12,7 +12,7 @@ My toolkit includes a range of technologies for data management, automation, and
 *   **AI Frameworks & Tools** LangChain, Agno, Agent Garden
 *   **Data Management:** Vector Databases, ETL processes
 *   **Workflow Automation:** n8n, Power Automate
-*   **DevOps:** AzureDev, Docker (currently learning)
+*   **Dev:** AzureDev, Docker (currently learning)
 *   **BI & Visualization:** PowerBI, HTML
 
 ## Projects
