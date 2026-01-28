@@ -17,19 +17,19 @@ I pair with AI tools daily to move faster:
 - **n8n**, **Power Automate** & **UiPath** for workflow automation
 - Building specs, dataflows, and product data architectures
    
-    - ## Tech I Use
+## Tech I Use
    
-    -  **Python** — actively learning, not confined to it (speciality: numpy,pandas)
-    -   **AI Frameworks:** LangChain, Agno, Agent Garden (learning & applying)
-        -  **Automation:** n8n, Power Automate, UiPath (comfortable with these)
-          - **Data:** Unstructured data (text data)
-            -  **Visualization:** Anytool and framework (thanks to AI!)
+-  **Python** — actively learning, not confined to it (speciality: numpy,pandas)
+-   **AI Frameworks:** LangChain, Agno, Agent Garden (learning & applying)
+-  **Automation:** n8n, Power Automate, UiPath (comfortable with these)
+- **Data:** Unstructured data (text data)
+-  **Visualization:** Anytool and framework (thanks to AI!)
              
-              - ## Current Focus
+   ## Current Focus
              
-              - Learning to ship faster — taking broken products and fixing them efficiently with the right combination of specs, automation, and AI tools.
+- Learning to ship faster — taking broken products and fixing them efficiently with the right combination of specs, automation, and AI tools.
              
-              - ## Let's Connect
+ - ## Let's Connect
              
-              -  **Email:** [vfaraji89@gmail.com](mailto:vfaraji89@gmail.com)
-              -  **LinkedIn:** [Vahid-Faraji](https://www.linkedin.com/in/vahid-faraji-jobehdar/)
+-  **Email:** [vfaraji89@gmail.com](mailto:vfaraji89@gmail.com)
+-  **LinkedIn:** [Vahid-Faraji](https://www.linkedin.com/in/vahid-faraji-jobehdar/)
