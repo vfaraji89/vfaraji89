@@ -11,7 +11,7 @@ My specialty is **people data** — understanding context, designing dataflows, 
 
 ## How I Work
 
-I pair with AI tools daily to move faster:
+I focus on AI tools with daily operarions:
 
 - **Claude Code** & **GitHub Copilot** for development
 - **n8n**, **Power Automate** & **UiPath** for workflow automation
