@@ -7,7 +7,7 @@ Applied AI Operator turning messy problems into clean specs and working solution
 I bridge the gap between business problems and AI-assissted solutions. 
 My specialty is **people data** — understanding context, designing dataflows, and translating complexity into actionable specs that teams can build from.
 
-**My approach:** Problem → Spec → Manage → Ship
+**My approach:** Problem → Analysis → Solution → Iteration (Find Optimum) 
 
 ## How I Work
 
