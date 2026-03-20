@@ -1,6 +1,6 @@
 ## Merhaba, I'm Vahid 👋
 
-Applied AI Operator turning messy problems into clean specs and working solutions.
+Applied AI Operator to turn messy problems into clean specs and working solutions.
 
 ## What I Do
 
