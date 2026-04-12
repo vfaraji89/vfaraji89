@@ -1,4 +1,4 @@
-## Merhaba, I'm Vahid 👋
+## Hola, I'm Vahid 👋
 
 Applied AI Operator to turn messy problems into clean specs and working solutions.
 
