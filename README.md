@@ -1,45 +1,18 @@
-## Hola, I’m Vahid
+## Vahid Faraji
 
-Applied AI operator turning messy, real‑world problems into clean specs, dataflows, and working AI systems.  
-I work at the intersection of user/product data, architecture, and agentic workflows.
+Applied AI Specialist. Building multi-agent systems, publishing research, training teams.
 
-## What I Do
+Senior Applied AI Specialist at [Kariyer.net](https://kariyer.net) (ilab group) · Istanbul
 
-### Reporting Automation
-- Report pipelines over unstructured text (logs, JSON, documents)  
-- Automated insight extraction from large text corpora  
-- Document understanding and summarization for decision‑makers  
+### Now
 
-### Data Products and Text Normalization
-- Text data normalization with custom taxonomies  
-- Product and catalog data modeling for analytics and search  
-- Vector‑based similarity search using VectorDBs  
+- Presenting at [ACM CAIS '26](https://dl.acm.org/doi/10.1145/3786335.3813207) — multi-agent job classification, San Jose
+- [Tokalator](https://tokalator.wiki) — open-source context engineering toolkit, VS Code extension, [arXiv paper](https://arxiv.org/abs/2604.08290)
+- [Turkish Skill Extraction](https://arxiv.org/abs/2601.22885) — LLM-based workforce analytics on arXiv
+- Teaching applied AI at [Techcareer](https://www.techcareer.net/bootcamp/uygulamali-ai-araclar-agent-lar-ve-otomasyon-egitimi-icin-bulusuyoruz) and mentoring at TEV Foundation
 
-### Agentic Workflows and Architecture
-- Multi‑agent orchestration and agent architectures  
-- Autonomous workflow design for business processes  
-- Retrieval‑augmented and grounded flows (RAG) over enterprise data  
-- Context routing and tool routing between agents  
-- Human‑in‑the‑loop review, guardrails and policy enforcement  
+### Links
 
-### Enterprise Context and Knowledge Management
-- Context engineering and prompt orchestration  
-- Fast prototyping from BRD to spec to POC  
-- Report and knowledge‑base management  
-- Knowledge‑aware AI experiences  
-- Enterprise AI search and vector‑backed retrieval, context rotation for long‑running threads  
+[Portfolio](https://vfaraji89.github.io) · [LinkedIn](https://linkedin.com/in/vahid-faraji-jobehdar) · [X](https://x.com/vfaraji89) · [Medium](https://medium.com/@vfaraji89) · [Substack](https://substack.com/@vfaraji899) · [Hugging Face](https://huggingface.co/vfaraji89)
 
-### AI Observability and Token Economics
-- LLM cost and token‑usage monitoring across workflows  
-- Context‑window and context‑rotation optimization  
-- Quality–cost tradeoff modelling (latency, accuracy, spend)  
-- Offline and online evaluations and telemetry for AI features  
-
-
-- Shipping applied AI features into production, not just prototypes  
-- Deepening work in multi‑agent systems, context engineering, and enterprise data patterns  
-
-## Connect (open to research/work/talk)
-
-- Email: vfaraji89@gmail.com  
-- LinkedIn: https://www.linkedin.com/in/vahid-faraji-jobehdar/
+vfaraji89@gmail.com
