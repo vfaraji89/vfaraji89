@@ -2,7 +2,7 @@
 
 Applied AI Specialist. Building multi-agent systems, publishing research, training teams.
 
-Senior Applied AI Specialist at [Kariyer.net](https://kariyer.net) (ilab group) · Istanbul
+Senior Applied AI Specialist at [Kariyer.net](https://kariyer.net) (ilab ) · Istanbul
 
 ### Now
 
