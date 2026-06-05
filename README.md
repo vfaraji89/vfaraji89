@@ -4,7 +4,7 @@ Applied AI Specialist. Building multi-agent systems, publishing research, traini
 
 Senior Applied AI Specialist at [Kariyer.net](https://kariyer.net) (ilab ) · Istanbul
 
-### Now
+### Latest works
 
 - Presented at [ACM CAIS '26](https://dl.acm.org/doi/10.1145/3786335.3813207) — multi-agent position classification with tool orchestration, San Jose
 - [Tokalator](https://tokalator.wiki) — open-source context engineering toolkit, VS Code extension, [arXiv paper](https://arxiv.org/abs/2604.08290)
