@@ -8,7 +8,7 @@
 - Title: Senior Applied AI Specialist
 - Organization: Kariyer.net (ilab group), Istanbul, Turkey
 - Focus: Applied AI, Multi-Agent Systems, Context Engineering, MCP, LLM Systems
-- Website: https://vfaraji89.github.io/vfaraji89/
+- Website: https://vfaraji89.github.io/
 - Email: vfaraji89@gmail.com
 
 ## Professional Summary
@@ -23,7 +23,7 @@ Vahid Faraji is a Senior Applied AI Specialist with 9+ years of experience shipp
 - Venue: ACM Conference on AI and Agentic Systems, San Jose, May 2026
 - DOI: 10.1145/3786335.3813207
 - URL: https://dl.acm.org/doi/10.1145/3786335.3813207
-- Page: https://vfaraji89.github.io/vfaraji89/papers/cais-2026.html
+- Page: https://vfaraji89.github.io/papers/cais-2026.html
 - Key results: 95% accuracy on 14K+ positions, 72.5% faster classification, 41.8% fewer API calls
 - Architecture: MCP-based multi-agent — planner, search, extraction, evaluation agents with shared caching
 
@@ -32,7 +32,7 @@ Vahid Faraji is a Senior Applied AI Specialist with 9+ years of experience shipp
 - Author: Vahid Faraji
 - ID: arXiv 2604.08290, April 2026
 - URL: https://arxiv.org/abs/2604.08290
-- Page: https://vfaraji89.github.io/vfaraji89/papers/tokalator.html
+- Page: https://vfaraji89.github.io/papers/tokalator.html
 - Contribution: Open-source toolkit for token-aware context management, Cobb-Douglas output-quality models, caching break-even analysis
 
 ### arXiv — Skill Extraction
@@ -40,7 +40,7 @@ Vahid Faraji is a Senior Applied AI Specialist with 9+ years of experience shipp
 - Authors: Vahid Faraji et al.
 - ID: arXiv 2601.22885, January 2026
 - URL: https://arxiv.org/abs/2601.22885
-- Page: https://vfaraji89.github.io/vfaraji89/papers/skill-extraction.html
+- Page: https://vfaraji89.github.io/papers/skill-extraction.html
 - Contribution: First systematic LLM-based benchmark for Turkish NLP in workforce analytics
 
 ## Projects

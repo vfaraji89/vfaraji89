@@ -37,4 +37,4 @@ Allow: /
 User-agent: Applebot
 Allow: /
 
-Sitemap: https://vfaraji89.github.io/vfaraji89/sitemap.xml
+Sitemap: https://vfaraji89.github.io/sitemap.xml
