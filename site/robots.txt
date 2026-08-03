@@ -1,4 +1,40 @@
+# Explicitly allow AI crawlers so ChatGPT, Gemini/Google, Perplexity and Claude can index this site.
+
 User-agent: *
+Allow: /
+
+# OpenAI (ChatGPT search, GPTBot, ChatGPT-User)
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+
+# Google (Gemini / AI Overviews / Search)
+User-agent: Googlebot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+
+# Anthropic (Claude)
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-Web
+Allow: /
+User-agent: anthropic-ai
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+# Common crawl / other
+User-agent: CCBot
+Allow: /
+User-agent: DuckDuckBot
+Allow: /
+User-agent: Applebot
 Allow: /
 
 Sitemap: https://vfaraji89.github.io/sitemap.xml

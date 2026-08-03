@@ -1,6 +1,6 @@
 # Vahid Faraji — Applied AI / Researcher-Builder
 
-> Applied AI engineer shipping production agents and publishing at ACM. Multi-agent systems, context engineering, open source.
+> Applied AI Specialist shipping production agent systems and publishing at ACM. Multi-agent systems, context engineering, open source.
 
 ## About
 
@@ -15,9 +15,9 @@ Vahid Faraji is a Senior Applied AI Specialist at Kariyer.net (ilab group), Ista
 
 ## Publications
 
-- Tool-Augmented Multi-Agent Systems for Job Position Normalisation — ACM CAIS '26, peer-reviewed. DOI: 10.1145/3786335.3813207
-- Tokalator: A Context Engineering Toolkit for AI Coding Assistants — arXiv 2604.08290, April 2026
-- Leveraging LLMs For Turkish Skill Extraction — arXiv 2601.22885, January 2026
+- Multi-Agent Position Classification with Tool Orchestration: Use Case System for Occupational Taxonomy Mapping — ACM CAIS '26, peer-reviewed. DOI: 10.1145/3786335.3813207. Page: https://vfaraji89.github.io/papers/cais-2026.html
+- Tokalator: A Context Engineering Toolkit for AI Coding Assistants — arXiv 2604.08290, April 2026. Page: https://vfaraji89.github.io/papers/tokalator.html
+- Leveraging LLMs For Turkish Skill Extraction — arXiv 2601.22885, January 2026. Page: https://vfaraji89.github.io/papers/skill-extraction.html
 
 ## Key Projects
 
@@ -57,4 +57,7 @@ Vahid Faraji is a Senior Applied AI Specialist at Kariyer.net (ilab group), Ista
 - [Updates](https://vfaraji89.github.io/updates.html)
 - [Tokalator](https://tokalator.wiki)
 - [ACM Paper](https://dl.acm.org/doi/10.1145/3786335.3813207)
+- [Paper: Job Position Normalisation](https://vfaraji89.github.io/papers/cais-2026.html)
+- [Paper: Tokalator Toolkit](https://vfaraji89.github.io/papers/tokalator.html)
+- [Paper: Turkish Skill Extraction](https://vfaraji89.github.io/papers/skill-extraction.html)
 - [llms-full.txt](https://vfaraji89.github.io/llms-full.txt)

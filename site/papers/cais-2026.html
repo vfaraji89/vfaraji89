@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Agent Position Classification with Tool Orchestration: Use Case System for Occupational Taxonomy Mapping — Vahid Faraji</title>
+    <meta name="description" content="Peer-reviewed ACM CAIS '26 paper: MCP-based multi-agent system for job position normalisation achieving 95% accuracy on 14K+ positions, 72.5% faster classification, 41.8% fewer API calls.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://vfaraji89.github.io/papers/cais-2026.html">
+
+    <meta name="citation_title" content="Multi-Agent Position Classification with Tool Orchestration: Use Case System for Occupational Taxonomy Mapping">
+    <meta name="citation_author" content="Faraji, Vahid">
+    <meta name="citation_publication_date" content="2026-05-01">
+    <meta name="citation_venue" content="ACM Conference on AI and Agentic Systems (CAIS '26)">
+    <meta name="citation_doi" content="10.1145/3786335.3813207">
+    <meta name="citation_pdf_url" content="https://vfaraji89.github.io/papers/cais-2026.html">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ScholarlyArticle",
+        "headline": "Multi-Agent Position Classification with Tool Orchestration: Use Case System for Occupational Taxonomy Mapping",
+        "url": "https://vfaraji89.github.io/papers/cais-2026.html",
+        "doi": "10.1145/3786335.3813207",
+        "datePublished": "2026-05",
+        "author": {
+            "@type": "Person",
+            "name": "Vahid Faraji",
+            "jobTitle": "Senior Applied AI Specialist",
+            "url": "https://vfaraji89.github.io"
+        },
+        "isPartOf": {
+            "@type": "Periodical",
+            "name": "ACM Conference on AI and Agentic Systems (CAIS '26)"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "ACM"
+        },
+        "abstract": "A tool-augmented, MCP-based multi-agent system for job position normalisation. Achieves 95% accuracy on 14K+ positions, is 72.5% faster than baselines, and uses 41.8% fewer API calls through shared caching and specialised planner, search, extraction and evaluation agents.",
+        "keywords": ["Multi-Agent Systems", "MCP", "Job Classification", "Natural Language Processing", "LLM"],
+        "inLanguage": "en",
+        "about": ["Multi-Agent Systems", "MCP", "Job Classification"]
+    }
+    </script>
+
+    <style>
+        body { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; max-width: 46rem; margin: 0 auto; padding: 2rem 1.5rem 4rem; line-height: 1.6; color: #222; background: #fff; }
+        a { color: #e3120b; }
+        h1 { font-size: 1.8rem; line-height: 1.25; }
+        .meta { color: #555; font-size: 0.9rem; }
+        .badge { display: inline-block; background: #e3120b; color: #fff; border-radius: 4px; padding: 2px 8px; font-size: 0.75rem; font-weight: 600; margin-right: 6px; }
+        nav { margin: 1.5rem 0; font-size: 0.9rem; }
+        code { background: #f4f4f4; padding: 1px 4px; border-radius: 3px; }
+        hr { border: 0; border-top: 1px solid #ddd; margin: 2rem 0; }
+    </style>
+</head>
+<body>
+
+<nav><a href="https://vfaraji89.github.io">← Back to portfolio</a></nav>
+
+<span class="badge">ACM CAIS '26</span><span class="badge">Peer-reviewed</span>
+
+<h1>Multi-Agent Position Classification with Tool Orchestration: Use Case System for Occupational Taxonomy Mapping</h1>
+<p class="meta">Vahid Faraji · ACM Conference on AI and Agentic Systems (CAIS '26), San Jose, May 2026</p>
+<p class="meta">DOI: <a href="https://dl.acm.org/doi/10.1145/3786335.3813207">10.1145/3786335.3813207</a> · <a href="https://www.alphaxiv.org/abs/multi-agent-position-classification">alphaxiv discussion</a></p>
+
+<hr>
+
+<h2>Summary</h2>
+<p>This paper presents a <strong>tool-augmented, MCP-based multi-agent system</strong> for job position normalisation — mapping unstructured job postings to standardised positions at scale.</p>
+
+<ul>
+    <li><strong>95% accuracy</strong> on 14,000+ job positions</li>
+    <li><strong>72.5% faster</strong> classification than baseline approaches</li>
+    <li><strong>41.8% fewer API calls</strong> through shared caching</li>
+</ul>
+
+<h2>Architecture</h2>
+<p>The system orchestrates four specialised agents over the Model Context Protocol (MCP):</p>
+<ul>
+    <li><strong>Planner</strong> — decomposes the normalisation task</li>
+    <li><strong>Search</strong> — retrieves candidate standard positions</li>
+    <li><strong>Extraction</strong> — pulls structured attributes from postings</li>
+    <li><strong>Evaluation</strong> — scores and validates outputs</li>
+</ul>
+<p>A shared caching layer across agents reduces redundant LLM calls while preserving accuracy.</p>
+
+<h2>Results</h2>
+<ul>
+    <li>Accuracy: <strong>95%</strong></li>
+    <li>Speed: <strong>72.5% faster</strong> than baselines</li>
+    <li>Cost: <strong>41.8% fewer API calls</strong></li>
+</ul>
+
+<h2>References &amp; Links</h2>
+<ul>
+    <li>ACM DL: <a href="https://dl.acm.org/doi/10.1145/3786335.3813207">https://dl.acm.org/doi/10.1145/3786335.3813207</a></li>
+    <li>alphaxiv discussion: <a href="https://www.alphaxiv.org/abs/multi-agent-position-classification">https://www.alphaxiv.org/abs/multi-agent-position-classification</a></li>
+    <li>Author: <a href="https://vfaraji89.github.io">Vahid Faraji — Applied AI Specialist</a></li>
+</ul>
+
+</body>
+</html>
