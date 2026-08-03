@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latest Updates — Vahid Faraji</title>
+    <meta name="description" content="Conference demos, published papers, talks, and training events. Press-style updates from Vahid Faraji's Applied AI work.">
+    <link rel="canonical" href="https://vfaraji89.github.io/updates.html">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <meta name="author" content="Vahid Faraji">
+
+    <meta property="og:title" content="Latest Updates — Vahid Faraji">
+    <meta property="og:description" content="Conference demos, published papers, talks, and training events from Vahid Faraji's Applied AI work.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vfaraji89.github.io/updates.html">
+
+    <!-- Google Analytics — replace G-GTZW5NNEZ5 with your ID -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GTZW5NNEZ5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-GTZW5NNEZ5');
+    </script>
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'><rect x='4' y='4' width='40' height='40' rx='8' fill='none' stroke='%23e3120b' stroke-width='2.5'/><line x1='10' y1='16' x2='38' y2='16' stroke='%23ccc' stroke-width='1.5'/><line x1='10' y1='26' x2='38' y2='26' stroke='%23ccc' stroke-width='1.5'/><line x1='10' y1='36' x2='38' y2='36' stroke='%23ccc' stroke-width='1.5'/><circle cx='14' cy='16' r='3.5' fill='%23e3120b'/><circle cx='23' cy='16' r='3.5' fill='%23e3120b' opacity='0.7'/><circle cx='16' cy='26' r='3.5' fill='%23e3120b' opacity='0.8'/><circle cx='26' cy='26' r='3.5' fill='%23e3120b'/><circle cx='34' cy='26' r='3.5' fill='%23e3120b' opacity='0.5'/><circle cx='30' cy='36' r='3.5' fill='%23e3120b' opacity='0.6'/></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:CASL,CRSV,MONO,slnt,wght@0,0,0..1,0,300..1000&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --font: "Recursive", ui-monospace, "SF Mono", SFMono-Regular, monospace;
+            --black: #000000; --grey-900: #111111; --grey-800: #1a1a1a;
+            --grey-600: #555555; --grey-400: #999999; --grey-300: #bbbbbb;
+            --grey-200: #dddddd; --grey-100: #f0f0f0; --grey-50: #f8f8f8; --white: #ffffff;
+            --red: #e3120b; --red-light: rgba(227,18,11,0.08);
+            --bg: var(--white); --bg-subtle: var(--grey-50); --bg-muted: var(--grey-100);
+            --border: var(--grey-200); --border-strong: var(--grey-300);
+            --text-primary: var(--black); --text-secondary: var(--grey-600); --text-muted: var(--grey-400);
+            --accent: var(--red); --accent-bg: var(--red-light);
+            --radius: 12px; --transition: 0.2s ease;
+        }
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: var(--font); background: var(--bg); color: var(--text-primary);
+            font-size: 15px; line-height: 1.7; -webkit-font-smoothing: antialiased;
+            font-variation-settings: "MONO" 0.4, "CASL" 0;
+        }
+        .container { max-width: 780px; margin: 0 auto; padding: 0 1.5rem; }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        .back-nav {
+            padding: 1.25rem 0; border-bottom: 1px solid var(--border);
+            font-size: 0.8125rem; font-variation-settings: "MONO" 0.8, "CASL" 0;
+        }
+        .back-nav a { color: var(--text-secondary); }
+        .back-nav a:hover { color: var(--accent); }
+
+        .page-header { padding: 3rem 0 1.5rem; }
+        .page-header h1 {
+            font-size: 2rem; font-weight: 700; letter-spacing: -0.03em; line-height: 1.15;
+            margin-bottom: 0.5rem;
+        }
+        .page-header .subtitle {
+            font-size: 0.875rem; color: var(--text-muted);
+            font-variation-settings: "MONO" 0.6, "CASL" 0;
+        }
+
+        .year-label {
+            font-size: 0.6875rem; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 0.08em; color: var(--accent);
+            font-variation-settings: "MONO" 1, "CASL" 0;
+            padding: 1.5rem 0 0.75rem; border-bottom: 1px solid var(--border);
+            margin-bottom: 1.25rem;
+        }
+
+        .news-grid { display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 2.5rem; }
+
+        .news-card {
+            display: grid; grid-template-columns: 200px 1fr; gap: 1.25rem;
+            padding: 1.25rem; border-radius: var(--radius);
+            border: 1px solid var(--border); background: var(--bg);
+            transition: border-color var(--transition), box-shadow var(--transition);
+        }
+        .news-card:hover { border-color: var(--accent); box-shadow: 0 2px 12px rgba(0,0,0,0.04); }
+
+        .news-card.featured {
+            border-color: var(--accent); background: var(--accent-bg);
+            grid-template-columns: 1fr;
+        }
+        .news-card.featured .news-photo { width: 100%; height: 200px; }
+
+        .news-photo {
+            width: 200px; height: 140px; border-radius: 8px; overflow: hidden;
+            background: var(--bg-muted); border: 1px solid var(--border);
+            display: flex; align-items: center; justify-content: center;
+            flex-shrink: 0;
+        }
+        .news-photo img { width: 100%; height: 100%; object-fit: cover; }
+        .news-photo-placeholder {
+            display: flex; flex-direction: column; align-items: center;
+            justify-content: center; gap: 0.375rem; width: 100%; height: 100%;
+            color: var(--text-muted);
+        }
+        .news-photo-placeholder svg { opacity: 0.3; }
+        .news-photo-placeholder span {
+            font-size: 0.5625rem; font-variation-settings: "MONO" 1, "CASL" 0;
+            text-transform: uppercase; letter-spacing: 0.06em; opacity: 0.5;
+        }
+
+        .news-body { display: flex; flex-direction: column; gap: 0.375rem; }
+        .news-meta {
+            display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;
+        }
+        .news-tag {
+            font-size: 0.5625rem; text-transform: uppercase; letter-spacing: 0.05em;
+            font-variation-settings: "MONO" 1, "CASL" 0; font-weight: 600;
+            padding: 0.15rem 0.5rem; border-radius: 4px;
+        }
+        .tag-conference { background: var(--accent-bg); color: var(--accent); }
+        .tag-paper { background: #e0f2fe; color: #0369a1; }
+        .tag-talk { background: #fef3c7; color: #92400e; }
+        .tag-training { background: #d1fae5; color: #065f46; }
+        .tag-award { background: #fce7f3; color: #9d174d; }
+        .tag-oss { background: #ede9fe; color: #5b21b6; }
+
+        .news-date {
+            font-size: 0.625rem; color: var(--text-muted);
+            font-variation-settings: "MONO" 1, "CASL" 0;
+        }
+        .news-title {
+            font-size: 0.9375rem; font-weight: 600; letter-spacing: -0.01em;
+            line-height: 1.35;
+        }
+        .news-title a { color: inherit; }
+        .news-title a:hover { color: var(--accent); text-decoration: none; }
+        .news-desc {
+            font-size: 0.8125rem; color: var(--text-secondary); line-height: 1.6;
+        }
+        .news-links {
+            display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.25rem;
+        }
+        .news-links a {
+            font-size: 0.625rem; font-weight: 600; letter-spacing: 0.03em;
+            font-variation-settings: "MONO" 1, "CASL" 0;
+            padding: 0.2rem 0.5rem; border-radius: 4px;
+            border: 1px solid var(--border); color: var(--text-secondary);
+            transition: border-color var(--transition), color var(--transition);
+        }
+        .news-links a:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
+
+        .news-venue {
+            font-size: 0.6875rem; color: var(--text-muted);
+            font-variation-settings: "MONO" 0.6, "CASL" 0;
+        }
+
+        /* Tabs */
+        .tab-bar {
+            display: flex; gap: 0; border-bottom: 1px solid var(--border); margin-bottom: 1.5rem;
+        }
+        .tab-btn {
+            padding: 0.625rem 1.25rem; font-size: 0.8125rem; font-weight: 600;
+            font-variation-settings: "MONO" 0.6, "CASL" 0;
+            color: var(--text-muted); background: none; border: none; cursor: pointer;
+            border-bottom: 2px solid transparent; transition: color var(--transition), border-color var(--transition);
+        }
+        .tab-btn:hover { color: var(--text-primary); }
+        .tab-btn.active { color: var(--accent); border-bottom-color: var(--accent); }
+        .tab-panel { display: none; }
+        .tab-panel.active { display: block; }
+
+        /* Year filter */
+        .year-filter {
+            display: flex; gap: 0.5rem; margin-bottom: 1.5rem; flex-wrap: wrap;
+        }
+        .year-pill {
+            padding: 0.3rem 0.75rem; font-size: 0.6875rem; font-weight: 600;
+            font-variation-settings: "MONO" 1, "CASL" 0;
+            border: 1px solid var(--border); border-radius: 20px;
+            background: var(--bg); color: var(--text-secondary);
+            cursor: pointer; transition: all var(--transition);
+        }
+        .year-pill:hover { border-color: var(--accent); color: var(--accent); }
+        .year-pill.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+        .year-section { display: none; }
+        .year-section.visible { display: block; }
+
+        .filter-bar {
+            display: flex; flex-direction: column; gap: 0.75rem;
+            margin-bottom: 1.5rem; padding: 1rem 1.25rem;
+            border: 1px solid var(--border); border-radius: var(--radius);
+            background: var(--bg-subtle);
+        }
+        .filter-group { display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; }
+        .filter-label {
+            font-size: 0.5625rem; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 0.08em; color: var(--text-muted); min-width: 36px;
+            font-variation-settings: "MONO" 1, "CASL" 0;
+        }
+        .filter-count {
+            font-size: 0.6875rem; color: var(--text-muted); margin-bottom: 1rem;
+            font-variation-settings: "MONO" 1, "CASL" 0;
+            min-height: 1.25rem;
+        }
+        .news-card.filter-hidden { display: none; }
+        .year-label.filter-hidden { display: none; }
+        .news-grid.filter-empty { display: none; }
+
+        /* Resources */
+        .resource-grid { display: grid; gap: 1.25rem; }
+        .resource-card {
+            display: grid; grid-template-columns: 64px 1fr; gap: 1rem; align-items: center;
+            padding: 1.25rem; border-radius: var(--radius);
+            border: 1px solid var(--border); background: var(--bg);
+            transition: border-color var(--transition), box-shadow var(--transition);
+        }
+        .resource-card:hover { border-color: var(--accent); box-shadow: 0 2px 12px rgba(0,0,0,0.04); }
+        .resource-icon {
+            width: 64px; height: 64px; border-radius: 8px;
+            background: var(--accent-bg); display: flex; align-items: center; justify-content: center;
+            color: var(--accent); flex-shrink: 0;
+        }
+        .resource-body { display: flex; flex-direction: column; gap: 0.25rem; }
+        .resource-title { font-size: 0.9375rem; font-weight: 600; letter-spacing: -0.01em; }
+        .resource-title a { color: inherit; }
+        .resource-title a:hover { color: var(--accent); text-decoration: none; }
+        .resource-meta {
+            font-size: 0.6875rem; color: var(--text-muted);
+            font-variation-settings: "MONO" 0.8, "CASL" 0;
+        }
+        .resource-desc { font-size: 0.8125rem; color: var(--text-secondary); line-height: 1.5; }
+        .resource-tags { display: flex; gap: 0.375rem; flex-wrap: wrap; margin-top: 0.25rem; }
+        .resource-tags span {
+            font-size: 0.5625rem; padding: 0.125rem 0.4rem; border-radius: 3px;
+            background: var(--bg-muted); color: var(--text-secondary);
+            font-variation-settings: "MONO" 1; font-weight: 500;
+        }
+
+        .page-footer {
+            padding: 2rem 0; border-top: 1px solid var(--border);
+            text-align: center; font-size: 0.6875rem; color: var(--text-muted);
+            font-variation-settings: "MONO" 0.8, "CASL" 0;
+        }
+
+        @media (max-width: 1024px) and (min-width: 641px) {
+            .container { max-width: 640px; }
+            .news-card { grid-template-columns: 160px 1fr; }
+            .news-photo { width: 160px; height: 120px; }
+        }
+        @media (max-width: 640px) {
+            .container { padding: 0 1.25rem; }
+            .page-header h1 { font-size: 1.5rem; }
+            .news-card { grid-template-columns: 1fr; }
+            .news-card.featured .news-photo,
+            .news-photo { width: 100%; height: 160px; }
+            .news-meta { gap: 0.3rem; }
+            .news-title { font-size: 0.875rem; }
+            .news-desc { font-size: 0.75rem; }
+            .news-links { gap: 0.375rem; }
+            .news-links a { font-size: 0.5625rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="back-nav">
+            <a href="index.html">&larr; Back to portfolio</a>
+        </nav>
+
+        <header class="page-header">
+            <h1>Latest Updates</h1>
+            <p class="subtitle">Conferences, papers, talks, and events — what's happening now.</p>
+        </header>
+
+        <div class="filter-bar">
+            <div class="filter-group">
+                <span class="filter-label">Year</span>
+                <div class="year-filter" id="year-filter">
+                    <button class="year-pill active" data-year="all">All</button>
+                    <button class="year-pill" data-year="2026">2026</button>
+                    <button class="year-pill" data-year="2025">2025</button>
+                </div>
+            </div>
+            <div class="filter-group">
+                <span class="filter-label">Topic</span>
+                <div class="year-filter" id="topic-filter">
+                    <button class="year-pill active" data-topic="all">All</button>
+                    <button class="year-pill" data-topic="conference">Conference</button>
+                    <button class="year-pill" data-topic="talk">Talk</button>
+                    <button class="year-pill" data-topic="publish">Publish</button>
+                    <button class="year-pill" data-topic="mentor">Mentor</button>
+                    <button class="year-pill" data-topic="award">Award</button>
+                    <button class="year-pill" data-topic="certificate">Certificate</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="filter-count" class="filter-count"></div>
+
+        <div class="news-feed" id="news-feed">
+
+            <div class="year-label" data-year-label="2026">2026</div>
+
+            <div class="news-grid" data-year-grid="2026">
+
+                <article class="news-card featured" id="cais-demo" data-year="2026" data-topics="conference publish">
+                    <div class="news-photo">
+                        <img src="assets/event-photos/cais-2026.png" alt="ACM Conference on AI and Agentic Systems — CAIS 2026, San Jose" loading="lazy">
+                    </div>
+                    <div class="news-body">
+                        <div class="news-meta">
+                            <span class="news-tag tag-conference">Conference</span>
+                            <span class="news-tag tag-paper">Demo Paper</span>
+                            <span class="news-date">May 29, 2026</span>
+                        </div>
+                        <h2 class="news-title"><a href="https://dl.acm.org/doi/10.1145/3786335.3813207">Presenting demo at ACM CAIS '26 — San Jose</a></h2>
+                        <p class="news-desc">Live demo of our tool-augmented multi-agent system for job position normalisation. The system uses MCP-based multi-agent coordination to map free-form job titles to O*NET and ESCO taxonomies — 72.5% reduction in classification time, up to 95% segment-level accuracy.</p>
+                        <p class="news-venue">ACM Conference on AI and Agentic Systems · DoubleTree by Hilton San Jose · May 26–29, 2026</p>
+                        <div class="news-links">
+                            <a href="https://dl.acm.org/doi/10.1145/3786335.3813207">ACM Digital Library</a>
+                            <a href="https://www.alphaxiv.org/abs/multi-agent-position-classification">alphaXiv</a>
+                            <a href="https://www.caisconf.org/">CAIS '26 Website</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="news-card" id="cais-paper" data-year="2026" data-topics="publish conference">
+                    <div class="news-photo">
+                        <img src="assets/photos/pms/Screenshot 2026-05-27 at 10.11.41.png" alt="Data Quality — Multi-Agent Position Classification" loading="lazy">
+                    </div>
+                    <div class="news-body">
+                        <div class="news-meta">
+                            <span class="news-tag tag-paper">Published</span>
+                            <span class="news-date">May 2026</span>
+                        </div>
+                        <h2 class="news-title"><a href="https://dl.acm.org/doi/10.1145/3786335.3813207">Tool-Augmented Multi-Agent Systems for Job Position Normalisation</a></h2>
+                        <p class="news-desc">Accepted and published in the ACM Digital Library. DOI: 10.1145/3786335.3813207. Peer-reviewed demo paper presenting a novel MCP-based architecture for cross-lingual occupation classification at enterprise scale.</p>
+                        <div class="news-links">
+                            <a href="https://dl.acm.org/doi/10.1145/3786335.3813207">DOI: 10.1145/3786335.3813207</a>
+                            <a href="https://www.alphaxiv.org/abs/multi-agent-position-classification">alphaXiv</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="news-card" id="techcareer-training" data-year="2026" data-topics="certificate mentor">
+                    <div class="news-photo">
+                        <img src="assets/photos/techcaeer-training.png" alt="Applied AI Course — Techcareer" loading="lazy">
+                    </div>
+                    <div class="news-body">
+                        <div class="news-meta">
+                            <span class="news-tag tag-training">Training</span>
+                            <span class="news-date">2026</span>
+                        </div>
+                        <h2 class="news-title">Applied AI Course — Agents, MCP, and AI-Native Development</h2>
+                        <p class="news-desc">18-hour technical training program covering custom tool design, contextual system architecture, multi-agent coordination, and production tool execution. Delivered through Techcareer platform.</p>
+                        <p class="news-venue">Techcareer · 18 hours · Istanbul</p>
+                        <div class="news-links">
+                            <a href="https://www.techcareer.net/bootcamp/uygulamali-ai-araclar-agent-lar-ve-otomasyon-egitimi-icin-bulusuyoruz">Techcareer Bootcamp</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="news-card" id="tokalator-paper" data-year="2026" data-topics="publish">
+                    <div class="news-photo">
+                        <img src="assets/event-photos/tokalator-paper.png" alt="Tokalator — Context Engineering Toolkit" loading="lazy">
+                    </div>
+                    <div class="news-body">
+                        <div class="news-meta">
+                            <span class="news-tag tag-paper">arXiv</span>
+                            <span class="news-tag tag-oss">Open Source</span>
+                            <span class="news-date">April 2026</span>
+                        </div>
+                        <h2 class="news-title"><a href="https://arxiv.org/abs/2604.08290">Tokalator: A Context Engineering Toolkit for AI Coding Assistants</a></h2>
+                        <p class="news-desc">Technical paper on arXiv introducing an open-source toolkit for token-aware context management, cost modeling, and workflow optimization. VS Code extension with 500+ installs.</p>
+                        <div class="news-links">
+                            <a href="https://arxiv.org/abs/2604.08290">arXiv:2604.08290</a>
+                            <a href="https://tokalator.wiki">tokalator.wiki</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="news-card" id="skill-paper" data-year="2026" data-topics="publish">
+                    <div class="news-photo">
+                        <img src="assets/event-photos/skill-extraction.png" alt="Skill Extraction — Turkish Labor Market" loading="lazy">
+                    </div>
+                    <div class="news-body">
+                        <div class="news-meta">
+                            <span class="news-tag tag-paper">arXiv</span>
+                            <span class="news-date">January 2026</span>
+                        </div>
+                        <h2 class="news-title"><a href="https://arxiv.org/abs/2601.22885">Leveraging LLMs For Turkish Skill Extraction</a></h2>
+                        <p class="news-desc">Large-scale empirical study on extracting structured skill signals for the Turkish labor market using modern LLM-based pipelines. First systematic benchmark for Turkish NLP in workforce analytics.</p>
+                        <div class="news-links">
+                            <a href="https://arxiv.org/abs/2601.22885">arXiv:2601.22885</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="news-card" id="builders-club-talk" data-year="2026" data-topics="talk conference">
+                    <div class="news-photo">
+                        <img src="assets/photos/only-builders.avif" alt="Context Engineering Talk — Only Builders Club" loading="lazy">
+                    </div>
+                    <div class="news-body">
+                        <div class="news-meta">
+                            <span class="news-tag tag-talk">Talk</span>
+                            <span class="news-date">2026</span>
+                        </div>
+                        <h2 class="news-title">Context Engineering for AI-Native Dev</h2>
+                        <p class="news-desc">Invited talk on designing context-aware systems for AI-native development workflows. Covering token budgeting, relevance scoring, and production deployment patterns.</p>
+                        <p class="news-venue">Only Builders Club · Istanbul</p>
+                    </div>
+                </article>
+
+                <article class="news-card" id="tev-mentor" data-year="2026" data-topics="mentor">
+                    <div class="news-photo">
+                        <img src="assets/event-photos/TEV_logo.png" alt="TEV — Turkish Education Foundation" loading="lazy">
+                    </div>
+                    <div class="news-body">
+                        <div class="news-meta">
+                            <span class="news-tag tag-training">Mentorship</span>
+                            <span class="news-date">2026</span>
+                        </div>
+                        <h2 class="news-title">AI Career Mentor — TEV (Turkish Education Foundation)</h2>
+                        <p class="news-desc">Mentoring emerging talent on AI career paths, portfolio building, and navigating the transition from traditional engineering to applied AI roles.</p>
+                    </div>
+                </article>
+
+                <article class="news-card" id="perplexity-grant" data-year="2026" data-topics="award certificate">
+                    <div class="news-photo">
+                        <img src="assets/event-photos/perplexity-fellowship.png" alt="Perplexity AI Business Fellowship" loading="lazy">
+                    </div>
+                    <div class="news-body">
+                        <div class="news-meta">
+                            <span class="news-tag tag-award">Grant</span>
+                            <span class="news-date">2026</span>
+                        </div>
+                        <h2 class="news-title">$40K Perplexity AI Enterprise Grant Secured</h2>
+                        <p class="news-desc">Secured a $40,000 enterprise AI grant from Perplexity AI for the group-wide AI transformation initiative at Kariyer.net (ilab group). Establishing baseline standards for agentic infrastructure.</p>
+                    </div>
+                </article>
+
+            </div>
+
+            <div class="year-label" data-year-label="2025">2025</div>
+
+            <div class="news-grid" data-year-grid="2025">
+
+                <article class="news-card" id="bridge-summit" data-year="2025" data-topics="talk conference">
+                    <div class="news-photo">
+                        <img src="assets/event-photos/saas-bridge.png" alt="SaaS Bridge Summit — Workshop" loading="lazy">
+                    </div>
+                    <div class="news-body">
+                        <div class="news-meta">
+                            <span class="news-tag tag-talk">Talk</span>
+                            <span class="news-date">2025</span>
+                        </div>
+                        <h2 class="news-title">Deep Agent Frameworks for SaaS — Bridge Summit '25</h2>
+                        <p class="news-desc">Invited speaker on building deep agent frameworks for SaaS platforms. Covering multi-agent orchestration, tool integration patterns, and production deployment of LLM-powered features.</p>
+                        <p class="news-venue">Bridge Summit '25</p>
+                    </div>
+                </article>
+
+                <article class="news-card" id="uni-talks" data-year="2025" data-topics="talk mentor">
+                    <div class="news-photo">
+                        <img src="assets/event-photos/kayseri.jpeg" alt="University Talk — Kayseri" loading="lazy">
+                    </div>
+                    <div class="news-body">
+                        <div class="news-meta">
+                            <span class="news-tag tag-talk">University Talk</span>
+                            <span class="news-date">2025</span>
+                        </div>
+                        <h2 class="news-title">Enterprise Prompt Engineering and Tool Design</h2>
+                        <p class="news-desc">Guest lectures on enterprise-grade prompt engineering, tool design patterns, and AI system architecture for graduate and undergraduate programs.</p>
+                        <p class="news-venue">Kayseri University &amp; Van University</p>
+                    </div>
+                </article>
+
+            </div>
+
+        </div>
+
+        <footer class="page-footer">
+            <a href="index.html">&larr; Back to portfolio</a> &nbsp;·&nbsp; Vahid Faraji &nbsp;·&nbsp; 2026
+        </footer>
+    </div>
+
+    <script>
+    (function filters() {
+        var yearBtns = document.querySelectorAll('#year-filter .year-pill');
+        var topicBtns = document.querySelectorAll('#topic-filter .year-pill');
+        var cards = document.querySelectorAll('.news-card[data-year]');
+        var yearLabels = document.querySelectorAll('[data-year-label]');
+        var yearGrids = document.querySelectorAll('[data-year-grid]');
+        var countEl = document.getElementById('filter-count');
+
+        var activeYear = 'all';
+        var activeTopic = 'all';
+
+        function setActive(group, btn) {
+            group.forEach(function(b) { b.classList.remove('active'); });
+            btn.classList.add('active');
+        }
+
+        function apply() {
+            var visible = 0;
+            cards.forEach(function(card) {
+                var y = card.getAttribute('data-year');
+                var t = card.getAttribute('data-topics').split(' ');
+                var matchYear = activeYear === 'all' || y === activeYear;
+                var matchTopic = activeTopic === 'all' || t.indexOf(activeTopic) !== -1;
+                if (matchYear && matchTopic) {
+                    card.classList.remove('filter-hidden');
+                    visible++;
+                } else {
+                    card.classList.add('filter-hidden');
+                }
+            });
+
+            yearLabels.forEach(function(label) {
+                var yr = label.getAttribute('data-year-label');
+                var grid = document.querySelector('[data-year-grid="' + yr + '"]');
+                var hasVisible = grid && grid.querySelector('.news-card:not(.filter-hidden)');
+                label.classList.toggle('filter-hidden', !hasVisible);
+                if (grid) grid.classList.toggle('filter-empty', !hasVisible);
+            });
+
+            var total = cards.length;
+            if (activeYear === 'all' && activeTopic === 'all') {
+                countEl.textContent = '';
+            } else {
+                countEl.textContent = visible + ' of ' + total + ' updates';
+            }
+        }
+
+        yearBtns.forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                activeYear = btn.getAttribute('data-year');
+                setActive(yearBtns, btn);
+                apply();
+            });
+        });
+
+        topicBtns.forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                activeTopic = btn.getAttribute('data-topic');
+                setActive(topicBtns, btn);
+                apply();
+            });
+        });
+    })();
+    </script>
+</body>
+</html>

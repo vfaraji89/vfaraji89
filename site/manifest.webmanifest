@@ -1,0 +1,16 @@
+{
+  "name": "Vahid Faraji — Applied AI Engineer",
+  "short_name": "VF",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#e3120b",
+  "description": "Senior Applied AI Specialist. Turning noisy text into structured taxonomies and scalable systems.",
+  "icons": [
+    {
+      "src": "vfoto-vahid.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    }
+  ]
+}

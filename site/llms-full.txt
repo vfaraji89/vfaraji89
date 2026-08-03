@@ -1,0 +1,137 @@
+# Vahid Faraji — Applied AI / Researcher-Builder (Full Context)
+
+> Applied AI engineer shipping production agents and publishing at ACM. Multi-agent systems, context engineering, open source.
+
+## Identity
+
+- Name: Vahid Faraji
+- Title: Senior Applied AI Specialist
+- Organization: Kariyer.net (ilab group), Istanbul, Turkey
+- Focus: Applied AI, Multi-Agent Systems, Context Engineering, MCP, LLM Systems
+- Website: https://vfaraji89.github.io
+- Email: vfaraji89@gmail.com
+
+## Professional Summary
+
+Vahid Faraji is a Senior Applied AI Specialist with 9+ years of experience shipping production systems. He bridges research and production — publishing peer-reviewed papers at ACM while deploying enterprise-scale multi-agent systems. His work focuses on context engineering, MCP-based agent architectures, and open-source AI tooling.
+
+## Publications (3 papers + 1 patent pending)
+
+### ACM CAIS '26 (Peer-Reviewed)
+- Title: Tool-Augmented Multi-Agent Systems for Job Position Normalisation
+- Authors: Vahid Faraji et al.
+- Venue: ACM Conference on AI and Agentic Systems, San Jose, May 2026
+- DOI: 10.1145/3786335.3813207
+- URL: https://dl.acm.org/doi/10.1145/3786335.3813207
+- Key results: 95% accuracy on 14K+ positions, 72.5% faster classification, 41.8% fewer API calls
+- Architecture: MCP-based multi-agent — planner, search, extraction, evaluation agents with shared caching
+
+### arXiv — Tokalator
+- Title: Tokalator: A Context Engineering Toolkit for AI Coding Assistants
+- Author: Vahid Faraji
+- ID: arXiv 2604.08290, April 2026
+- URL: https://arxiv.org/abs/2604.08290
+- Contribution: Open-source toolkit for token-aware context management, Cobb-Douglas output-quality models, caching break-even analysis
+
+### arXiv — Skill Extraction
+- Title: Leveraging LLMs For Turkish Skill Extraction
+- Authors: Vahid Faraji et al.
+- ID: arXiv 2601.22885, January 2026
+- URL: https://arxiv.org/abs/2601.22885
+- Contribution: First systematic LLM-based benchmark for Turkish NLP in workforce analytics
+
+## Projects
+
+### Tokalator — Context Engineering Toolkit
+- URL: https://tokalator.wiki
+- GitHub: github.com/vfaraji89/tokalator
+- Type: Open source (MIT)
+- Stack: Next.js, TypeScript, VS Code Extension, MCP, Token Economics
+- Metrics: 500+ VS Code installs, 17 models supported, 58 wiki articles
+- What it does: Real-time token budgeting, tab relevance scoring, Cobb-Douglas output-quality models, caching break-even analysis across 15+ LLMs
+- Grant: $40K Perplexity AI grant secured
+
+### Multi-Agent Job Classification System
+- Type: Research + production
+- Stack: MCP, LangGraph, Subagent Architecture, AI Search, Caching
+- Metrics: 95% accuracy, 14K+ positions, 72.5% faster, 41.8% fewer API calls
+- Published: ACM CAIS '26
+
+### Enterprise AI Platform (Kariyer.net)
+- Type: Enterprise, internal
+- Stack: FastAPI, LangGraph, Agno, Pydantic, Arize
+- Metrics: 60% workload reduction, 200+ users, group-wide AI standard
+- What it does: Multi-agent orchestration for text-to-SQL, report automation, AI feedback loops
+
+### 300M+ Datapoint Metadata Platform
+- Type: Data infrastructure
+- Stack: DataHub, Azure Synapse, BigQuery, Real-time Pipelines, Retool
+- Metrics: 300M+ datapoints unified
+- What it does: Metadata architecture, data governance, foundation for all AI/LLM deployments
+
+### Baachee.ai — Data Agent Platform
+- URL: https://baachee.ai
+- Role: Weekend advisor
+- Stack: Agno (Self-Learning), Text-2-SQL, Metadata, Memory, Orchestrator
+- What it does: Data agents, text-to-report pipelines, canvas flow tools, enterprise automation
+
+## Experience
+
+- 2025–now: Senior Applied AI Specialist — Kariyer.net (ilab group)
+- 2022–2025: Product Manager, Data — Kariyer.net
+- 2021–2022: Business Analyst — WorqCompany
+- 2019–2021: Co-Founder — Defaro.io (labor-market analytics startup)
+
+## Certifications
+
+- Google Generative AI Leader (Dec 2025, expires Dec 2028)
+- Anthropic Model Context Protocol (Apr 2026)
+- Anthropic Introduction to Agent Skills (Apr 2026)
+- Anthropic Building with the Claude API (Apr 2026)
+- Anthropic Claude Code in Action (Mar 2026)
+- LangChain Introduction to LangGraph (Jan 2025)
+- LangChain Introduction to LangSmith (Jan 2025)
+
+## Teaching & Talks
+
+- 18h Applied AI Course — Techcareer (2026): Custom tool design, contextual system architecture, multi-agent coordination
+- AI Career Mentor — TEV Foundation (2026)
+- Context Engineering for AI-Native Dev — Only Builders Club, Istanbul (2026)
+- Deep Agent Frameworks for SaaS — Bridge Summit '25
+- Enterprise Prompt Engineering — Kayseri University & Van University (2025)
+- 400+ people trained, 50+ courses delivered
+
+## Education
+
+- M.A. Economics — Ibn Haldun University
+- Thesis: Real-Time Labor Market Analysis
+- Teaching Assistant: Econometrics I
+
+## Languages
+
+- Turkish: Native
+- English: C1
+- Spanish: Instructor level
+- Portuguese: Basic
+- Japanese: Learning
+
+## Key Metrics
+
+- 9+ years shipping production systems
+- 95% agent accuracy (multi-agent classification)
+- 72.5% faster classification
+- 60% workload reduction (enterprise AI)
+- 300M+ datapoints unified
+- 3 publications + 1 patent pending
+- 400+ people trained
+- $40K Perplexity AI grant
+
+## Social & Links
+
+- GitHub: https://github.com/vfaraji89
+- LinkedIn: https://linkedin.com/in/vahid-faraji-jobehdar
+- X: https://x.com/vfaraji89
+- Medium: https://medium.com/@vfaraji89
+- Hugging Face: https://huggingface.co/vfaraji89
+- Substack: https://substack.com/@vfaraji899
+- Tokalator: https://tokalator.wiki

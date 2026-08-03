@@ -1,0 +1,1822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vahid Faraji | Applied AI / Researcher-Builder</title>
+    <meta name="description" content="Applied AI. Multi-agent systems, context engineering, open source.">
+    <meta name="theme-color" content="#e3120b">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'><rect x='4' y='4' width='40' height='40' rx='8' fill='none' stroke='%23e3120b' stroke-width='2.5'/><line x1='10' y1='16' x2='38' y2='16' stroke='%23ccc' stroke-width='1.5'/><line x1='10' y1='26' x2='38' y2='26' stroke='%23ccc' stroke-width='1.5'/><line x1='10' y1='36' x2='38' y2='36' stroke='%23ccc' stroke-width='1.5'/><circle cx='14' cy='16' r='3.5' fill='%23e3120b'/><circle cx='23' cy='16' r='3.5' fill='%23e3120b' opacity='0.7'/><circle cx='16' cy='26' r='3.5' fill='%23e3120b' opacity='0.8'/><circle cx='26' cy='26' r='3.5' fill='%23e3120b'/><circle cx='34' cy='26' r='3.5' fill='%23e3120b' opacity='0.5'/><circle cx='30' cy='36' r='3.5' fill='%23e3120b' opacity='0.6'/></svg>">
+    <link rel="manifest" href="manifest.webmanifest">
+
+    <meta property="og:title" content="Vahid Faraji — Applied AI / Researcher-Builder">
+    <meta property="og:description" content="Applied AI specialist. Publishes at ACM, ships production agents, builds open-source context engineering tools.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vfaraji89.github.io">
+    <meta property="og:image" content="https://vfaraji89.github.io/assets/photos/tokalator-dashboard.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@vfaraji89">
+    <meta name="twitter:title" content="Vahid Faraji — Applied AI / Researcher-Builder">
+    <meta name="twitter:description" content="Applied AI specialist. Publishes at ACM, ships production agents, builds open-source context engineering tools.">
+    <meta name="twitter:image" content="https://vfaraji89.github.io/assets/photos/tokalator-dashboard.png">
+
+    <link rel="canonical" href="https://vfaraji89.github.io/">
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <meta name="author" content="Vahid Faraji">
+    <meta name="keywords" content="Vahid Faraji, Applied AI, Multi-Agent Systems, Context Engineering, MCP, Model Context Protocol, LLM, Tokalator, ACM CAIS, AI Specialist Istanbul">
+
+    <!-- Google Analytics — replace G-GTZW5NNEZ5 with your ID -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GTZW5NNEZ5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-GTZW5NNEZ5');
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Vahid Faraji",
+        "jobTitle": "Senior Applied AI Specialist",
+        "url": "https://vfaraji89.github.io",
+        "image": "https://vfaraji89.github.io/assets/img/vfoto-vahid.jpg",
+        "email": "vfaraji89@gmail.com",
+        "sameAs": [
+            "https://github.com/vfaraji89",
+            "https://linkedin.com/in/vahid-faraji-jobehdar",
+            "https://x.com/vfaraji89",
+            "https://medium.com/@vfaraji89",
+            "https://huggingface.co/vfaraji89",
+            "https://substack.com/@vfaraji899"
+        ],
+        "worksFor": {
+            "@type": "Organization",
+            "name": "Kariyer.net (ilab group)"
+        },
+        "alumniOf": {
+            "@type": "EducationalOrganization",
+            "name": "Ibn Haldun University"
+        },
+        "knowsAbout": ["Applied AI", "Multi-Agent Systems", "Context Engineering", "MCP", "LLM Systems"],
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Istanbul",
+            "addressCountry": "TR"
+        }
+    }
+    </script>
+
+    <!-- Recursive: variable font with MONO axis (0=sans → 1=mono) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:CASL,CRSV,MONO,slnt,wght@0,0,0..1,0,300..1000&display=swap" rel="stylesheet">
+
+    <style>
+        @property --border-angle {
+            syntax: "<angle>";
+            initial-value: 0deg;
+            inherits: false;
+        }
+
+        :root {
+            --font: "Recursive", ui-monospace, "SF Mono", SFMono-Regular, monospace;
+
+            --black: #000000;
+            --grey-900: #111111;
+            --grey-800: #1a1a1a;
+            --grey-700: #333333;
+            --grey-600: #555555;
+            --grey-500: #777777;
+            --grey-400: #999999;
+            --grey-300: #bbbbbb;
+            --grey-200: #dddddd;
+            --grey-100: #f0f0f0;
+            --grey-50:  #f8f8f8;
+            --white:    #ffffff;
+
+            --red:       #e3120b;
+            --red-light: rgba(227, 18, 11, 0.08);
+
+            --bg:           var(--white);
+            --bg-subtle:    var(--grey-50);
+            --bg-muted:     var(--grey-100);
+            --border:       var(--grey-200);
+            --border-strong: var(--grey-300);
+            --text-primary: var(--black);
+            --text-secondary: var(--grey-600);
+            --text-muted:   var(--grey-400);
+            --accent:       var(--red);
+            --accent-bg:    var(--red-light);
+
+            --radius: 12px;
+            --transition: 0.2s ease;
+        }
+
+        [data-theme="dark"] {
+            --bg:           #0d0d0d;
+            --bg-subtle:    #161616;
+            --bg-muted:     #1e1e1e;
+            --border:       #2a2a2a;
+            --border-strong: #3a3a3a;
+            --text-primary: #e8e8e8;
+            --text-secondary: #a0a0a0;
+            --text-muted:   #666666;
+            --accent:       #ff4136;
+            --accent-bg:    rgba(255, 65, 54, 0.08);
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { font-size: 16px; scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+
+        /* MONO 0.3 / 380 — body: readable, less rigid */
+        body {
+            background: var(--bg); color: var(--text-primary);
+            font-family: var(--font);
+            font-variation-settings: "MONO" 0.3, "CASL" 0;
+            font-weight: 380;
+            line-height: 1.7; font-size: 0.875rem;
+            transition: background var(--transition), color var(--transition);
+        }
+
+        /* MONO 0.6 / 700 — headings: code-editor feel, refined letterforms */
+        h1, h2, h3 {
+            font-family: var(--font);
+            font-variation-settings: "MONO" 0.6, "CASL" 0;
+            font-weight: 700; letter-spacing: -0.025em; line-height: 1.15;
+            color: var(--text-primary);
+        }
+        h4 {
+            font-variation-settings: "MONO" 0.5, "CASL" 0;
+            font-weight: 500; color: var(--text-primary);
+        }
+
+        p { color: var(--text-secondary); line-height: 1.8; }
+        a { color: var(--accent); text-decoration: none; transition: color var(--transition); }
+        a:hover { text-decoration: underline; }
+
+        /* MONO 1 / 500 — code chips: crisp, fully monospaced */
+        code {
+            font-family: var(--font);
+            font-variation-settings: "MONO" 1, "CASL" 0;
+            font-weight: 500; font-size: 0.8125rem;
+            background: var(--accent-bg); color: var(--accent);
+            padding: 0.15em 0.5em; border-radius: 4px;
+            border: 1px solid rgba(227,18,11,0.12);
+        }
+
+        /* MONO 0.8 — UI chrome: labels, metadata, timestamps */
+        .ui-chrome {
+            font-variation-settings: "MONO" 0.8, "CASL" 0;
+            font-weight: 400;
+        }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 2rem; }
+        section { padding: 4rem 0; border-bottom: 1px solid var(--border); }
+        section:last-of-type { border-bottom: none; }
+        .section-label {
+            font-size: 0.6875rem; text-transform: uppercase; letter-spacing: 0.1em;
+            color: var(--text-muted); margin-bottom: 0.375rem;
+            font-variation-settings: "MONO" 0.8, "CASL" 0; font-weight: 400;
+        }
+        .section-tagline {
+            font-size: 0.9375rem; color: var(--accent); margin-bottom: 2rem;
+            font-variation-settings: "MONO" 0.5, "CASL" 0; font-weight: 500;
+        }
+
+        /* Header */
+        .site-header {
+            position: -webkit-sticky; position: sticky; top: 0; z-index: 50;
+            border-bottom: 1px solid var(--border);
+            backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+            background: rgba(255,255,255,0.85);
+            transition: background var(--transition), border-color var(--transition);
+        }
+        [data-theme="dark"] .site-header { background: rgba(13,13,13,0.85); }
+        .site-nav { display: flex; align-items: center; justify-content: space-between; height: 52px; }
+        .nav-left { display: flex; align-items: center; gap: 0.75rem; }
+        .nav-name {
+            font-size: 0.875rem; font-weight: 600; color: var(--text-primary);
+            font-variation-settings: "MONO" 0.6, "CASL" 0; letter-spacing: -0.02em;
+        }
+        .nav-name a { color: inherit; transition: opacity 0.2s ease; }
+        .nav-name a:hover { text-decoration: none; color: var(--accent); }
+        .nav-right { display: flex; align-items: center; gap: 0.5rem; }
+        .nav-icon {
+            width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--border);
+            background: transparent; color: var(--text-secondary); cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: border-color var(--transition), color var(--transition);
+            text-decoration: none;
+        }
+        .nav-icon:hover { border-color: var(--accent); color: var(--accent); }
+        .nav-icon svg { width: 15px; height: 15px; }
+        .theme-toggle { width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--border); background: transparent; color: var(--text-secondary); cursor: pointer; display: flex; align-items: center; justify-content: center; transition: border-color var(--transition), color var(--transition); }
+        .theme-toggle:hover { border-color: var(--accent); color: var(--accent); }
+        .theme-toggle svg { width: 15px; height: 15px; }
+
+        /* Hero */
+        .hero { padding: 4rem 0; position: relative; }
+
+        .latest-pill {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            font-size: 0.6875rem; letter-spacing: 0.04em;
+            font-variation-settings: "MONO" 0.8, "CASL" 0; font-weight: 420;
+            background: var(--bg); color: var(--text-secondary);
+            border: 1px solid var(--border);
+            padding: 0.375rem 0.875rem; border-radius: var(--radius); margin-bottom: 2.5rem;
+            transition: border-color var(--transition), color var(--transition);
+            text-decoration: none;
+        }
+        .latest-pill:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
+        .latest-pill .pulse { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); animation: pulse-dot 2s ease-in-out infinite; }
+        @keyframes pulse-dot { 0%,100%{opacity:1} 50%{opacity:0.4} }
+
+        .hero-label {
+            font-size: 0.6875rem; text-transform: uppercase; letter-spacing: 0.08em;
+            font-variation-settings: "MONO" 0.8, "CASL" 0; font-weight: 500;
+            color: var(--accent); margin-bottom: 0.75rem;
+        }
+        .hero-icon-row { display: flex; align-items: flex-start; gap: 1.25rem; margin-bottom: 1.25rem; }
+        .hero-icon { width: 80px; height: 80px; }
+        .hero-name { font-size: 2.5rem; font-weight: 700; letter-spacing: -0.035em; line-height: 1.1; }
+
+        /* Cycling hero chips — ticket tear */
+        .hero-snippets {
+            position: relative; height: 2.25rem; overflow: hidden;
+            display: flex; justify-content: flex-start; margin-bottom: 0.125rem;
+        }
+        .hero-chip {
+            position: absolute; left: 0; top: 0;
+            margin-bottom: 0;
+            opacity: 0; pointer-events: none;
+            will-change: transform, opacity;
+        }
+        .hero-chip.active {
+            opacity: 1; pointer-events: auto;
+            animation: slide-in 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        .hero-chip.tear-out {
+            opacity: 1; pointer-events: none;
+            animation: slide-out 0.35s cubic-bezier(0.55, 0, 1, 0.45) forwards;
+        }
+        @keyframes slide-in {
+            0% { opacity: 0; transform: translateX(24px); }
+            100% { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes slide-out {
+            0% { opacity: 1; transform: translateX(0); }
+            100% { opacity: 0; transform: translateX(-24px); }
+        }
+
+
+        .hero-rule { display: block; width: 100%; height: 3px; background: var(--accent); border: none; margin: 1.25rem 0 1rem; }
+        .hero-tagline {
+            font-size: 0.9375rem; color: var(--accent); margin-bottom: 0;
+            font-variation-settings: "MONO" 0.5, "CASL" 0; font-weight: 500;
+        }
+        .hero-bio { font-size: 0.875rem; color: var(--text-secondary); line-height: 1.8; max-width: 640px; }
+        .bio-tags {
+            display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem; margin-bottom: 0.25rem;
+        }
+        .bio-tag {
+            font-size: 0.8125rem; font-weight: 600; letter-spacing: 0.02em;
+            font-variation-settings: "MONO" 0.8, "CASL" 0;
+            padding: 0.375rem 0.875rem; border-radius: var(--radius);
+            border: 1px solid var(--border); background: var(--bg-subtle);
+            color: var(--text-secondary);
+            transition: border-color var(--transition), color var(--transition), background var(--transition);
+            cursor: pointer; display: inline-flex; align-items: center; justify-content: center;
+            box-sizing: border-box; white-space: nowrap; overflow: hidden;
+        }
+        .bio-tag.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+        .bio-tags.has-focus .bio-tag { border-color: var(--border); color: var(--text-muted); opacity: 0.5; background: var(--bg-subtle); }
+        .bio-tags.has-focus .bio-tag.active { opacity: 1; background: var(--accent); border-color: var(--accent); color: #fff; }
+        .hero-photo { width: 96px; height: 96px; border-radius: 50%; object-fit: cover; border: 2px solid var(--border); transition: border-color var(--transition); float: right; margin-left: 1.5rem; margin-top: 0.25rem; }
+        .hero-photo:hover { border-color: var(--accent); }
+
+        .metrics-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin-top: 2rem;
+        }
+        .metric-card {
+            padding: 1rem; background: var(--bg-subtle); text-align: center; cursor: pointer;
+            transition: border-color var(--transition), box-shadow 0.3s;
+        }
+        .metric-card.flipped { border-color: var(--accent); }
+        .metric-card.flipped .metric-label { color: var(--accent); font-weight: 500; }
+        .metric-num {
+            font-size: 1.5rem; font-weight: 800; line-height: 1;
+            font-variation-settings: "MONO" 1, "CASL" 0;
+            color: var(--accent);
+            min-height: 1.5rem;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .metric-label {
+            font-size: 0.625rem; text-transform: uppercase; letter-spacing: 0.06em;
+            color: var(--text-muted); margin-top: 0.375rem;
+            font-variation-settings: "MONO" 0.8, "CASL" 0; font-weight: 400;
+            transition: color 0.2s ease;
+        }
+
+        .hero-ctas { display: flex; flex-wrap: wrap; gap: 0.625rem; margin-top: 2rem; }
+        .btn {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            padding: 0.625rem 1.25rem; font-family: var(--font);
+            font-variation-settings: "MONO" 1, "CASL" 0;
+            font-size: 0.8125rem; font-weight: 500;
+            border-radius: var(--radius); text-decoration: none; transition: all var(--transition);
+            border: 1px solid transparent;
+        }
+        .btn:hover { text-decoration: none; }
+        .btn-primary { background: var(--accent); color: var(--white); border-color: var(--accent); }
+        .btn-primary:hover { background: #c50f09; border-color: #c50f09; }
+        .btn-outline { background: var(--bg); color: var(--text-primary); border-color: var(--border-strong); }
+        .btn-outline:hover { border-color: var(--text-primary); }
+        .btn-dark { background: var(--black); color: var(--white); border-color: var(--grey-700); }
+        .btn-dark:hover { background: var(--grey-800); border-color: var(--grey-600); }
+        .btn svg { width: 13px; height: 13px; }
+        [data-theme="dark"] .btn-primary { color: #0d0d0d; }
+        [data-theme="dark"] .btn-primary:hover { background: #ff6a5c; border-color: #ff6a5c; }
+        [data-theme="dark"] .btn-dark { background: var(--grey-800); border-color: var(--border); }
+
+        .hero-links { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.5rem; align-items: center; }
+        .hero-links a { display: flex; align-items: center; justify-content: center; transition: opacity var(--transition), transform var(--transition); }
+        .hero-links a:hover { opacity: 0.75; transform: scale(1.12); text-decoration: none; }
+        .hero-links svg { width: 18px; height: 18px; }
+
+        /* Abacus → Calculator → Code → Paper */
+        .hero-icon { flex-shrink: 0; margin-top: 0.125rem; }
+        .icon-abacus { animation: phase-1of4 12s ease-in-out infinite; }
+        .icon-calc   { animation: phase-2of4 12s ease-in-out infinite; }
+        .icon-code   { animation: phase-3of4 12s ease-in-out infinite; }
+        .icon-paper  { animation: phase-4of4 12s ease-in-out infinite; }
+        @keyframes phase-1of4 { 0%,20%{opacity:1} 25%,95%{opacity:0} 100%{opacity:1} }
+        @keyframes phase-2of4 { 0%,20%{opacity:0} 25%,45%{opacity:1} 50%,100%{opacity:0} }
+        @keyframes phase-3of4 { 0%,45%{opacity:0} 50%,70%{opacity:1} 75%,100%{opacity:0} }
+        @keyframes phase-4of4 { 0%,70%{opacity:0} 75%,95%{opacity:1} 100%{opacity:0} }
+
+        /* Hover: Edge Glow */
+        .hover-card {
+            position: relative; overflow: hidden;
+            border: 1px solid var(--border); border-radius: var(--radius);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .hover-card::after {
+            content: ""; position: absolute; inset: 0; pointer-events: none;
+            background: radial-gradient(600px circle at var(--glow-x, 50%) var(--glow-y, 50%), rgba(227,18,11,0.06), transparent 40%);
+            opacity: 0; transition: opacity 0.3s;
+        }
+        .hover-card:hover::after { opacity: 1; }
+        .hover-card:hover { border-color: var(--grey-400); box-shadow: 0 2px 12px rgba(0,0,0,0.04); }
+        [data-theme="dark"] .hover-card::after { background: radial-gradient(600px circle at var(--glow-x, 50%) var(--glow-y, 50%), rgba(255,65,54,0.06), transparent 40%); }
+
+        /* Case Cards */
+        .case-grid { display: grid; gap: 1.75rem; }
+        .case-card { padding: 2rem; }
+        .case-card.featured { background: var(--accent-bg); border-color: transparent; }
+        .case-card.featured::before {
+            content: ""; position: absolute; inset: 0; border-radius: var(--radius); padding: 1px;
+            background: linear-gradient(var(--border-angle), var(--accent) 0%, transparent 30%, transparent 70%, rgba(227,18,11,0.3) 100%);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor; mask-composite: exclude;
+            pointer-events: none; animation: border-rotate 8s linear infinite;
+        }
+        @keyframes border-rotate { to { --border-angle: 360deg; } }
+
+        .case-card .card-content { position: relative; z-index: 1; }
+        .case-meta { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.875rem; flex-wrap: wrap; }
+        .case-tag {
+            font-size: 0.625rem; text-transform: uppercase; letter-spacing: 0.05em;
+            font-variation-settings: "MONO" 1, "CASL" 0; font-weight: 500;
+            background: var(--bg-muted); padding: 0.2rem 0.5rem; border-radius: 4px; color: var(--text-secondary);
+        }
+        .case-card.featured .case-tag { background: rgba(227,18,11,0.12); color: var(--accent); }
+        .case-title {
+            font-size: 1.125rem; font-weight: 700; margin-bottom: 1rem; letter-spacing: -0.02em;
+            font-variation-settings: "MONO" 0.6, "CASL" 0;
+        }
+        .case-title a { color: inherit; }
+        .case-card.featured .case-title { color: var(--accent); }
+
+        .case-body { display: grid; gap: 0.625rem; }
+        .case-row { display: grid; grid-template-columns: 80px 1fr; gap: 0.75rem; font-size: 0.8125rem; opacity: 0; transform: translateX(-10px); transition: opacity 0.4s ease, transform 0.4s ease; }
+        .case-card.in-view .case-row { opacity: 1; transform: translateX(0); }
+        .case-card.in-view .case-row:nth-child(1) { transition-delay: 0.1s; }
+        .case-card.in-view .case-row:nth-child(2) { transition-delay: 0.25s; }
+        .case-card.in-view .case-row:nth-child(3) { transition-delay: 0.4s; }
+        .case-row-label {
+            font-size: 0.6875rem; color: var(--text-muted); text-transform: uppercase;
+            letter-spacing: 0.04em; padding-top: 0.15rem;
+            font-variation-settings: "MONO" 0.8, "CASL" 0; font-weight: 400;
+        }
+        .case-row-val { color: var(--text-secondary); line-height: 1.7; }
+        .case-row-val strong { color: var(--text-primary); font-weight: 600; }
+
+        .case-stack { display: flex; flex-wrap: wrap; gap: 0.375rem; margin-top: 1rem; }
+        .case-stack span {
+            font-size: 0.6875rem; color: var(--text-muted);
+            font-variation-settings: "MONO" 1, "CASL" 0;
+        }
+        .case-stats {
+            display: flex; gap: 1.25rem; margin-top: 1rem; padding-top: 0.75rem;
+            border-top: 1px solid var(--border); font-size: 0.75rem; color: var(--text-muted);
+            font-variation-settings: "MONO" 1, "CASL" 0;
+        }
+        .case-card.featured .case-stats { border-color: rgba(227,18,11,0.12); }
+        .case-stats strong { color: var(--text-primary); font-weight: 600; }
+        .case-stats .stat-live { color: var(--accent); }
+
+        /* Publications */
+        .pub-list { display: grid; gap: 0.875rem; }
+        .pub-card {
+            padding: 1.5rem; position: relative;
+            opacity: 0; transform: translateY(16px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+        .pub-card.in-view { opacity: 1; transform: translateY(0); }
+        .pub-card.in-view:nth-child(1) { transition-delay: 0.1s; }
+        .pub-card.in-view:nth-child(2) { transition-delay: 0.25s; }
+        .pub-card.in-view:nth-child(3) { transition-delay: 0.4s; }
+        .pub-card > * { position: relative; z-index: 1; }
+        .pub-card.acm { background: var(--accent-bg); border-color: transparent; }
+        .pub-card.acm::before {
+            content: ""; position: absolute; inset: 0; border-radius: var(--radius); padding: 1px;
+            background: linear-gradient(var(--border-angle), var(--accent) 0%, transparent 30%, transparent 70%, rgba(227,18,11,0.3) 100%);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor; mask-composite: exclude;
+            pointer-events: none; animation: border-rotate 8s linear infinite;
+        }
+        .pub-badge {
+            font-size: 0.625rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.07em;
+            font-variation-settings: "MONO" 1, "CASL" 0;
+            padding: 0.15rem 0.5rem; border-radius: 3px; margin-right: 0.5rem;
+        }
+        .pub-badge.acm { background: rgba(227,18,11,0.12); color: var(--accent); }
+        .pub-badge.arxiv { background: var(--bg-muted); color: var(--text-muted); }
+        .pub-title {
+            font-size: 0.9375rem; font-weight: 600; margin: 0.625rem 0 0.25rem;
+            font-variation-settings: "MONO" 0.6, "CASL" 0;
+        }
+        .pub-title a { color: inherit; }
+        .pub-title a:hover { color: var(--accent); }
+        .pub-meta {
+            font-size: 0.75rem; color: var(--text-muted);
+            font-variation-settings: "MONO" 0.8, "CASL" 0;
+        }
+
+        /* Timeline */
+        .timeline { display: flex; flex-direction: column; gap: 2rem; }
+        .timeline-item {
+            display: grid; grid-template-columns: 120px 1fr; gap: 1.5rem;
+            opacity: 0; transform: translateY(16px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+        .timeline-item.in-view { opacity: 1; transform: translateY(0); }
+        .timeline-item.in-view:nth-child(1) { transition-delay: 0.1s; }
+        .timeline-item.in-view:nth-child(2) { transition-delay: 0.2s; }
+        .timeline-item.in-view:nth-child(3) { transition-delay: 0.3s; }
+        .timeline-item.in-view:nth-child(4) { transition-delay: 0.4s; }
+        .timeline-period {
+            font-size: 0.6875rem; color: var(--text-muted); padding-top: 0.25rem;
+            font-variation-settings: "MONO" 0.8, "CASL" 0; font-weight: 400;
+        }
+        .timeline-header { display: flex; align-items: flex-start; gap: 0.75rem; }
+        .timeline-logo {
+            width: 32px; height: 32px; border-radius: 6px; flex-shrink: 0;
+            border: 1px solid var(--border); object-fit: contain;
+            background: #fff; margin-top: 0.125rem;
+        }
+        .timeline-content h3 { font-size: 0.9375rem; font-weight: 600; }
+        .timeline-content .org {
+            font-size: 0.8125rem; color: var(--text-secondary); margin-top: 0.125rem;
+            font-variation-settings: "MONO" 0.4, "CASL" 0;
+        }
+        .timeline-content .desc { font-size: 0.8125rem; color: var(--text-muted); margin-top: 0.5rem; line-height: 1.7; }
+        .timeline-content .impact {
+            display: inline-flex; align-items: center; gap: 0.3rem; margin-top: 0.5rem;
+            font-size: 0.625rem; color: var(--accent); letter-spacing: 0.04em; text-transform: uppercase;
+            font-variation-settings: "MONO" 1, "CASL" 0;
+        }
+
+
+        /* About */
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+        .about-block h4 {
+            font-size: 0.6875rem; font-weight: 500; color: var(--text-muted);
+            text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.75rem;
+            font-variation-settings: "MONO" 0.8, "CASL" 0;
+        }
+        .about-block ul { list-style: none; display: flex; flex-direction: column; gap: 0.3rem; }
+        .about-block li { font-size: 0.8125rem; color: var(--text-secondary); }
+        .about-block li.hl { color: var(--accent); font-weight: 500; }
+
+        /* Contact */
+        .contact-box { border: 1px solid var(--border); border-radius: var(--radius); padding: 2.5rem; text-align: center; background: var(--bg-subtle); }
+        .contact-box h3 { font-size: 1.25rem; margin-bottom: 0.625rem; }
+        .contact-box p { font-size: 0.875rem; max-width: 480px; margin: 0 auto 1.5rem; }
+        .contact-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 0.75rem; }
+
+        .site-footer { padding: 2rem 0; border-top: 1px solid var(--border); }
+        .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+        .footer-left { display: flex; align-items: center; gap: 0.5rem; }
+        .footer-name {
+            font-size: 0.8125rem; font-weight: 600; color: var(--text-primary);
+            font-variation-settings: "MONO" 0.6, "CASL" 0;
+        }
+        .footer-dot { color: var(--accent); font-weight: 700; }
+        .footer-role {
+            font-size: 0.6875rem; color: var(--text-muted);
+            font-variation-settings: "MONO" 0.8, "CASL" 0;
+        }
+        .footer-nav { display: flex; gap: 1.25rem; }
+        .footer-nav a {
+            font-size: 0.6875rem; color: var(--text-muted);
+            font-variation-settings: "MONO" 0.6, "CASL" 0; font-weight: 420;
+            transition: color var(--transition); text-decoration: none;
+        }
+        .footer-nav a:hover { color: var(--accent); }
+        .footer-right { display: flex; gap: 0.75rem; }
+        .footer-right a {
+            color: var(--text-muted); transition: color var(--transition);
+            display: flex; align-items: center;
+        }
+        .footer-right a:hover { color: var(--accent); }
+
+        /* Gallery — case-study format */
+        .gallery-grid { display: grid; gap: 1.75rem; }
+        .gallery-card {
+            padding: 2rem; display: grid; grid-template-columns: 340px 1fr; gap: 2rem; align-items: start;
+            opacity: 0; transform: translateY(16px);
+            transition: opacity 0.5s ease, transform 0.5s ease, border-color 0.3s, box-shadow 0.3s;
+        }
+        .gallery-card.in-view { opacity: 1; transform: translateY(0); }
+        .gallery-card.in-view:nth-child(1) { transition-delay: 0.1s; }
+        .gallery-card.in-view:nth-child(2) { transition-delay: 0.2s; }
+        .gallery-card.in-view:nth-child(3) { transition-delay: 0.3s; }
+        .gallery-card.in-view:nth-child(4) { transition-delay: 0.4s; }
+        .gallery-card.in-view:nth-child(5) { transition-delay: 0.5s; }
+        .gallery-card.no-screenshot { display: block; }
+        .gallery-screenshot { border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); transition: border-color var(--transition); cursor: pointer; position: relative; }
+        .gallery-screenshot img { width: 100%; height: auto; display: block; }
+        .gallery-card:hover .gallery-screenshot { border-color: var(--accent); }
+        .gallery-screenshot-count {
+            position: absolute; bottom: 0.5rem; right: 0.5rem;
+            background: rgba(0,0,0,0.7); color: #fff; font-size: 0.625rem;
+            padding: 0.2rem 0.5rem; border-radius: 3px;
+            font-variation-settings: "MONO" 1; pointer-events: none;
+        }
+        .gallery-info { display: flex; flex-direction: column; gap: 0.75rem; }
+        .gallery-meta { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
+        .gallery-tag {
+            font-size: 0.625rem; text-transform: uppercase; letter-spacing: 0.05em;
+            font-variation-settings: "MONO" 1, "CASL" 0; font-weight: 500;
+            background: var(--bg-muted); padding: 0.2rem 0.5rem; border-radius: 4px; color: var(--text-secondary);
+        }
+        .gallery-card.featured { background: var(--accent-bg); border-color: transparent; }
+        .gallery-card.featured::before {
+            content: ""; position: absolute; inset: 0; border-radius: var(--radius); padding: 1px;
+            background: linear-gradient(var(--border-angle), var(--accent) 0%, transparent 30%, transparent 70%, rgba(227,18,11,0.3) 100%);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor; mask-composite: exclude;
+            pointer-events: none; animation: border-rotate 8s linear infinite;
+        }
+        .gallery-card.featured .gallery-tag { background: rgba(227,18,11,0.12); color: var(--accent); }
+        .gallery-name {
+            font-size: 1.125rem; font-weight: 700; letter-spacing: -0.02em;
+            font-variation-settings: "MONO" 0.6, "CASL" 0;
+        }
+        .gallery-card.featured .gallery-name { color: var(--accent); }
+        .gallery-name a { color: inherit; }
+        .gallery-name a:hover { color: var(--accent); }
+        .gallery-desc { font-size: 0.8125rem; color: var(--text-secondary); line-height: 1.7; }
+        .gallery-stack { display: flex; flex-wrap: wrap; gap: 0.375rem; }
+        .gallery-stack span {
+            font-size: 0.6875rem; color: var(--text-muted);
+            font-variation-settings: "MONO" 1, "CASL" 0;
+        }
+        .gallery-actions { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+        .gallery-actions a {
+            font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.02em;
+            padding: 0.375rem 0.875rem; border-radius: 4px; text-decoration: none; transition: all var(--transition);
+            font-variation-settings: "MONO" 0.8;
+        }
+        .gallery-actions .ga-primary { background: var(--accent); color: #fff; }
+        .gallery-actions .ga-primary:hover { opacity: 0.85; }
+        .gallery-actions .ga-outline { border: 1px solid var(--border); color: var(--text-secondary); }
+        .gallery-actions .ga-outline:hover { border-color: var(--accent); color: var(--accent); }
+
+        /* Lightbox */
+        .lightbox-overlay {
+            position: fixed; inset: 0; z-index: 9999; background: rgba(0,0,0,0.88);
+            display: none; align-items: center; justify-content: center; padding: 2rem;
+        }
+        .lightbox-overlay.open { display: flex; }
+        .lightbox-inner { position: relative; max-width: 900px; width: 100%; }
+        .lightbox-img { width: 100%; height: auto; border-radius: 8px; display: block; }
+        .lightbox-close {
+            position: absolute; top: -2rem; right: 0; background: none; border: none;
+            color: #fff; font-size: 1.5rem; cursor: pointer; opacity: 0.7; transition: opacity 0.2s;
+        }
+        .lightbox-close:hover { opacity: 1; }
+        .lightbox-nav {
+            position: absolute; top: 50%; transform: translateY(-50%);
+            background: rgba(255,255,255,0.15); border: none; color: #fff;
+            width: 2.5rem; height: 2.5rem; border-radius: 50%; cursor: pointer;
+            font-size: 1.25rem; display: flex; align-items: center; justify-content: center;
+            transition: background 0.2s;
+        }
+        .lightbox-nav:hover { background: rgba(255,255,255,0.3); }
+        .lightbox-prev { left: -3.5rem; }
+        .lightbox-next { right: -3.5rem; }
+        .lightbox-counter {
+            text-align: center; color: rgba(255,255,255,0.6); font-size: 0.75rem;
+            margin-top: 0.75rem; font-variation-settings: "MONO" 1;
+        }
+        @media (max-width: 1024px) {
+            .lightbox-prev { left: 0.5rem; }
+            .lightbox-next { right: 0.5rem; }
+            .lightbox-nav { background: rgba(0,0,0,0.5); }
+        }
+
+        /* Time strip */
+        .time-strip {
+            display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap;
+            margin-top: 1.5rem; padding: 0.75rem 1rem; border-radius: var(--radius);
+            background: var(--bg-subtle); border: 1px solid var(--border);
+            font-size: 0.6875rem; color: var(--text-muted);
+            font-variation-settings: "MONO" 0.8, "CASL" 0; font-weight: 400;
+        }
+        .time-strip .time-block { display: flex; align-items: center; gap: 0.4rem; }
+        .time-strip .time-val {
+            font-weight: 600; color: var(--text-primary);
+            font-variation-settings: "MONO" 1, "CASL" 0;
+        }
+        .time-strip .time-dot {
+            width: 6px; height: 6px; border-radius: 50%;
+        }
+        .time-dot.online { background: #22c55e; animation: pulse-dot 2s ease-in-out infinite; }
+        .time-dot.away { background: var(--grey-400); }
+
+        .reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.5s ease, transform 0.5s ease; }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+
+        /* Publications strip */
+        .pub-strip {
+            display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;
+            margin-top: 1.25rem; padding: 0.625rem 1rem; border-radius: var(--radius);
+            background: var(--bg-subtle); border: 1px solid var(--border);
+            font-size: 0.6875rem; color: var(--text-muted);
+            font-variation-settings: "MONO" 0.8, "CASL" 0; font-weight: 400;
+        }
+        .pub-strip-label {
+            font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em;
+            font-size: 0.5625rem; color: var(--text-secondary);
+            font-variation-settings: "MONO" 1, "CASL" 0;
+        }
+        .pub-strip a {
+            display: inline-flex; align-items: center; gap: 0.3rem;
+            color: var(--text-secondary); font-weight: 500;
+            transition: color var(--transition);
+        }
+        .pub-strip a:hover { color: var(--accent); }
+        .pub-strip .pub-badge {
+            display: inline-flex; align-items: center; justify-content: center;
+            font-size: 0.5rem; font-weight: 800; letter-spacing: 0.06em;
+            padding: 0.15rem 0.4rem; border-radius: 3px;
+            border: 1px solid var(--border); background: var(--bg-muted);
+            font-variation-settings: "MONO" 1, "CASL" 0;
+        }
+        .pub-icon {
+            width: 20px; height: 20px; flex-shrink: 0;
+            border-radius: 50%; border: 1px solid var(--border);
+            background: var(--bg-muted);
+        }
+        .pub-strip .pub-dot { color: var(--border-strong); margin: 0 0.125rem; }
+
+        /* Booking modal */
+        .booking-overlay {
+            position: fixed; inset: 0; z-index: 1000;
+            background: rgba(0,0,0,0.5); backdrop-filter: blur(4px);
+            display: flex; align-items: center; justify-content: center;
+            opacity: 0; pointer-events: none; transition: opacity 0.2s ease;
+        }
+        .booking-overlay.open { opacity: 1; pointer-events: auto; }
+        .booking-box {
+            background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius);
+            padding: 2rem; width: 90%; max-width: 420px; position: relative;
+            transform: translateY(12px); transition: transform 0.2s ease;
+        }
+        .booking-overlay.open .booking-box { transform: translateY(0); }
+        .booking-close {
+            position: absolute; top: 0.75rem; right: 0.75rem;
+            background: none; border: none; color: var(--text-muted); cursor: pointer;
+            font-size: 1.25rem; line-height: 1; padding: 0.25rem;
+        }
+        .booking-close:hover { color: var(--accent); }
+        .booking-box h3 {
+            font-size: 1.125rem; margin-bottom: 0.25rem;
+            font-variation-settings: "MONO" 0.4, "CASL" 0;
+        }
+        .booking-sub {
+            font-size: 0.75rem; color: var(--text-muted); margin-bottom: 1.25rem;
+        }
+        .booking-tz {
+            display: flex; align-items: center; gap: 0.5rem; padding: 0.625rem 0.75rem;
+            background: var(--bg-subtle); border-radius: 6px; margin-bottom: 1rem;
+            font-size: 0.75rem; color: var(--text-secondary);
+            font-variation-settings: "MONO" 1;
+        }
+        .booking-tz .tz-dot { width: 6px; height: 6px; border-radius: 50%; background: #22c55e; flex-shrink: 0; }
+        .booking-form { display: flex; flex-direction: column; gap: 0.75rem; }
+        .booking-form label {
+            font-size: 0.6875rem; font-weight: 600; color: var(--text-secondary);
+            font-variation-settings: "MONO" 1, "CASL" 0; letter-spacing: 0.03em;
+            text-transform: uppercase;
+        }
+        .booking-form input, .booking-form select, .booking-form textarea {
+            width: 100%; padding: 0.5rem 0.625rem; font-size: 0.8125rem;
+            border: 1px solid var(--border); border-radius: 6px;
+            background: var(--bg-subtle); color: var(--text-primary);
+            font-family: inherit; transition: border-color var(--transition);
+            box-sizing: border-box;
+        }
+        .booking-form input:focus, .booking-form select:focus, .booking-form textarea:focus {
+            outline: none; border-color: var(--accent);
+        }
+        .booking-form textarea { resize: vertical; min-height: 48px; }
+        .booking-form .field { display: flex; flex-direction: column; gap: 0.25rem; }
+        .booking-form .row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+        .booking-actions { display: flex; gap: 0.5rem; margin-top: 0.75rem; }
+        .booking-actions .btn { flex: 1; justify-content: center; font-size: 0.8125rem; }
+        .booking-actions .btn:disabled { opacity: 0.6; cursor: not-allowed; }
+        .booking-error { font-size: 0.75rem; color: var(--accent); text-align: center; margin-top: 0.5rem; }
+
+        /* Tablet: 641px – 1024px */
+        @media (max-width: 1024px) and (min-width: 641px) {
+            .container { max-width: 680px; }
+            .hero-name { font-size: 2rem; }
+            .hero-icon { width: 64px; height: 64px; }
+            .metrics-grid { grid-template-columns: repeat(3, 1fr); gap: 0.5rem; }
+            .gallery-card { grid-template-columns: 280px 1fr; gap: 1.5rem; }
+            .about-grid { grid-template-columns: repeat(2, 1fr); }
+            .pub-strip { font-size: 0.625rem; gap: 0.5rem; }
+            .time-strip { font-size: 0.625rem; gap: 1rem; }
+        }
+
+        /* Mobile: ≤640px */
+        @media (max-width: 640px) {
+            .container { padding: 0 1.25rem; }
+            .hero { padding: 2.5rem 0; }
+            .hero-name { font-size: 1.5rem; }
+            .hero-photo { width: 64px; height: 64px; }
+            .hero-icon-row { gap: 0.75rem; }
+            .hero-icon { width: 48px; height: 48px; }
+            .hero-snippets { height: 2rem; margin-bottom: 0.125rem; }
+            .hero-chip { font-size: 0.6rem; padding: 0.25rem 0.5rem; }
+            .bio-tags {
+                gap: 0.3rem; flex-wrap: nowrap; overflow-x: auto;
+                -webkit-overflow-scrolling: touch; scrollbar-width: none;
+                padding-bottom: 0.25rem; margin: 0.5rem -1.25rem 0.25rem;
+                padding-left: 1.25rem; padding-right: 1.25rem;
+            }
+            .bio-tags::-webkit-scrollbar { display: none; }
+            .bio-tag { font-size: 0.625rem; padding: 0.2rem 0.5rem; flex-shrink: 0; }
+            .hero-ctas { flex-direction: column; }
+            .hero-ctas .btn { width: 100%; justify-content: center; }
+            .hero-links { gap: 0.75rem; flex-wrap: wrap; }
+            .hero-links a { font-size: 0.6875rem; }
+            .metrics-grid {
+                display: flex; overflow-x: auto; -webkit-overflow-scrolling: touch;
+                scrollbar-width: none; gap: 0.5rem;
+                margin: 2rem -1.25rem 0; padding: 0 1.25rem;
+            }
+            .metrics-grid::-webkit-scrollbar { display: none; }
+            .metric-card { min-width: 120px; flex-shrink: 0; padding: 0.75rem; }
+            .metric-num { font-size: 1.125rem; }
+            .metric-label { font-size: 0.5625rem; }
+            .nav-right .btn { display: none; }
+            .nav-left { gap: 0.5rem; }
+            .nav-name { font-size: 0.8125rem; }
+            .latest-pill { font-size: 0.6rem; padding: 0.3rem 0.625rem; }
+            .pub-strip { flex-direction: column; gap: 0.375rem; align-items: flex-start; padding: 0.5rem 0.75rem; }
+            .pub-strip .pub-dot { display: none; }
+            .time-strip { flex-direction: column; gap: 0.5rem; align-items: flex-start; font-size: 0.625rem; }
+            .about-grid { grid-template-columns: 1fr; }
+            .timeline-item { grid-template-columns: 1fr; gap: 0.25rem; }
+            .timeline-logo { width: 28px; height: 28px; }
+            .timeline-header { gap: 0.5rem; }
+            .case-row { grid-template-columns: 1fr; gap: 0.25rem; }
+            .case-card { padding: 1.5rem; }
+            .gallery-card { grid-template-columns: 1fr; padding: 1.5rem; }
+            .gallery-screenshot { max-width: 100%; }
+            .contact-box { padding: 1.5rem; }
+            .contact-links { flex-direction: column; }
+            .contact-links .btn { width: 100%; justify-content: center; }
+            .booking-form .row { grid-template-columns: 1fr; }
+            .booking-actions { flex-direction: column; }
+            .booking-actions .btn { width: 100%; }
+            .booking-tz { flex-wrap: wrap; }
+            section { padding: 2.5rem 0; }
+            .section-label { margin-bottom: 0.375rem; }
+            .footer-inner { flex-direction: column; text-align: center; gap: 0.75rem; }
+            .footer-nav { flex-wrap: wrap; justify-content: center; gap: 0.75rem; }
+            .footer-right { justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="site-header">
+        <nav class="site-nav container">
+            <div class="nav-left">
+                <span class="nav-name"><a href="#" id="nav-name-cycle">Vahid Faraji</a></span>
+            </div>
+            <div class="nav-right">
+                <a href="updates.html" aria-label="Updates" class="nav-icon"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M14 1a1 1 0 011 1v8a1 1 0 01-1 1h-2.5a2 2 0 00-1.6.8L8 14.333 6.1 11.8a2 2 0 00-1.6-.8H2a1 1 0 01-1-1V2a1 1 0 011-1h12zM2 0a2 2 0 00-2 2v8a2 2 0 002 2h2.5a1 1 0 01.8.4l1.9 2.533a1 1 0 001.6 0l1.9-2.533a1 1 0 01.8-.4H14a2 2 0 002-2V2a2 2 0 00-2-2H2z"/><path d="M3 3.5a.5.5 0 01.5-.5h9a.5.5 0 010 1h-9a.5.5 0 01-.5-.5zM3 6a.5.5 0 01.5-.5h9a.5.5 0 010 1h-9A.5.5 0 013 6zm0 2.5a.5.5 0 01.5-.5h5a.5.5 0 010 1h-5a.5.5 0 01-.5-.5z"/></svg></a>
+                <a href="https://wa.me/905443921474" target="_blank" rel="noopener" aria-label="WhatsApp" class="nav-icon"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M13.601 2.326A7.854 7.854 0 008.036 0C3.596 0 .003 3.59.001 8.003a7.95 7.95 0 001.078 3.997L0 16l4.12-1.08a7.987 7.987 0 003.81.965h.004c4.438 0 8.032-3.592 8.034-8.005a7.952 7.952 0 00-2.367-5.654zM8.036 14.6a6.61 6.61 0 01-3.374-.924l-.242-.144-2.508.657.67-2.443-.158-.252a6.585 6.585 0 01-1.015-3.497c.002-3.662 2.985-6.64 6.65-6.64a6.608 6.608 0 014.7 1.947 6.595 6.595 0 011.947 4.698c-.002 3.662-2.985 6.64-6.65 6.64h-.02zm3.64-4.972c-.2-.1-1.182-.583-1.365-.65-.183-.066-.316-.1-.45.1-.132.198-.515.65-.632.783-.116.133-.233.15-.432.05-.2-.1-.843-.31-1.606-.99-.593-.529-.994-1.182-1.11-1.382-.117-.2-.013-.307.088-.406.09-.088.2-.232.3-.348.099-.117.132-.2.198-.333.067-.133.034-.25-.016-.348-.05-.1-.45-1.082-.616-1.482-.162-.389-.327-.336-.45-.342l-.382-.007a.733.733 0 00-.532.25c-.183.2-.698.682-.698 1.664s.715 1.93.815 2.064c.1.133 1.408 2.15 3.413 3.015.477.206.849.329 1.139.421.478.152.914.13 1.258.079.384-.058 1.182-.484 1.35-.95.165-.467.165-.868.115-.951-.05-.084-.183-.133-.383-.233z"/></svg></a>
+                <a href="https://calendar.app.google/KWQg6gBjXetC4ofp9" target="_blank" rel="noopener" aria-label="Book a call" class="nav-icon"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M10.5 5.5l3-2.5v10l-3-2.5V13a1 1 0 01-1 1H3a1 1 0 01-1-1V3a1 1 0 011-1h6.5a1 1 0 011 1v2.5z"/></svg></a>
+                <a href="assets/cv/01-cv-vahid-faraji-202606.pdf" target="_blank" class="btn btn-outline" style="padding:0.375rem 0.875rem; font-size:0.6875rem;">CV</a>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+                    <svg id="icon-sun" viewBox="0 0 16 16" fill="currentColor" style="display:none;"><path d="M8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.5.5 0 01.5.5v2a.5.5 0 01-1 0v-2A.5.5 0 018 0zm0 13a.5.5 0 01.5.5v2a.5.5 0 01-1 0v-2A.5.5 0 018 13zm8-5a.5.5 0 01-.5.5h-2a.5.5 0 010-1h2a.5.5 0 01.5.5zM3 8a.5.5 0 01-.5.5h-2a.5.5 0 010-1h2A.5.5 0 013 8zm10.657-5.657a.5.5 0 010 .707l-1.414 1.415a.5.5 0 11-.707-.708l1.414-1.414a.5.5 0 01.707 0zm-9.193 9.193a.5.5 0 010 .707L3.05 13.657a.5.5 0 01-.707-.707l1.414-1.414a.5.5 0 01.707 0zm9.193 2.121a.5.5 0 01-.707 0l-1.414-1.414a.5.5 0 01.707-.707l1.414 1.414a.5.5 0 010 .707zM4.464 4.465a.5.5 0 01-.707 0L2.343 3.05a.5.5 0 11.707-.707l1.414 1.414a.5.5 0 010 .708z"/></svg>
+                    <svg id="icon-moon" viewBox="0 0 16 16" fill="currentColor"><path d="M6 .278a.768.768 0 01.08.858 7.208 7.208 0 00-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 01.81.316.733.733 0 01-.031.893A8.349 8.349 0 018.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 016 .278z"/></svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <section class="hero">
+            <img src="assets/img/vfoto-vahid.jpg" alt="Vahid Faraji" class="hero-photo" width="96" height="96" loading="eager">
+
+            <div class="hero-icon-row">
+                <svg class="hero-icon" viewBox="0 0 48 48" aria-hidden="true">
+                    <rect x="4" y="4" width="40" height="40" rx="8" fill="none" stroke="var(--border-strong)" stroke-width="1.5"/>
+                    <g class="icon-abacus">
+                        <line x1="10" y1="16" x2="38" y2="16" stroke="var(--border)" stroke-width="1.5"/>
+                        <line x1="10" y1="26" x2="38" y2="26" stroke="var(--border)" stroke-width="1.5"/>
+                        <line x1="10" y1="36" x2="38" y2="36" stroke="var(--border)" stroke-width="1.5"/>
+                        <circle cx="14" cy="16" r="3.5" fill="var(--accent)"/>
+                        <circle cx="23" cy="16" r="3.5" fill="var(--accent)" opacity="0.7"/>
+                        <circle cx="16" cy="26" r="3.5" fill="var(--accent)" opacity="0.8"/>
+                        <circle cx="26" cy="26" r="3.5" fill="var(--accent)"/>
+                        <circle cx="34" cy="26" r="3.5" fill="var(--accent)" opacity="0.5"/>
+                        <circle cx="30" cy="36" r="3.5" fill="var(--accent)" opacity="0.6"/>
+                    </g>
+                    <g class="icon-calc">
+                        <rect x="10" y="10" width="28" height="10" rx="3" fill="var(--bg-muted)" stroke="var(--border)" stroke-width="1"/>
+                        <text x="35" y="18" font-size="7" fill="var(--accent)" text-anchor="end" font-family="monospace" font-weight="700">47,328</text>
+                        <rect x="10" y="24" width="7.5" height="6" rx="2" fill="var(--accent)"/>
+                        <rect x="20.25" y="24" width="7.5" height="6" rx="2" fill="var(--accent)" opacity="0.7"/>
+                        <rect x="30.5" y="24" width="7.5" height="6" rx="2" fill="var(--accent)" opacity="0.5"/>
+                        <rect x="10" y="34" width="7.5" height="6" rx="2" fill="var(--accent)" opacity="0.5"/>
+                        <rect x="20.25" y="34" width="7.5" height="6" rx="2" fill="var(--accent)" opacity="0.3"/>
+                        <rect x="30.5" y="34" width="7.5" height="6" rx="2" fill="var(--accent)" opacity="0.8"/>
+                    </g>
+                    <g class="icon-code">
+                        <rect x="10" y="10" width="28" height="28" rx="4" fill="var(--bg-muted)" stroke="var(--border)" stroke-width="1"/>
+                        <circle cx="15" cy="15" r="1.3" fill="var(--accent)" opacity="0.6"/>
+                        <circle cx="19" cy="15" r="1.3" fill="var(--accent)" opacity="0.4"/>
+                        <circle cx="23" cy="15" r="1.3" fill="var(--accent)" opacity="0.3"/>
+                        <text x="14" y="27" font-size="9" fill="var(--accent)" font-family="monospace" font-weight="700">&gt;_</text>
+                        <line x1="14" y1="31" x2="32" y2="31" stroke="var(--accent)" stroke-width="0.8" opacity="0.3"/>
+                        <line x1="14" y1="35" x2="25" y2="35" stroke="var(--accent)" stroke-width="0.8" opacity="0.2"/>
+                        <rect x="26" y="23" width="1.5" height="7" rx="0.5" fill="var(--accent)" opacity="0.7"/>
+                    </g>
+                    <g class="icon-paper">
+                        <rect x="12" y="8" width="20" height="28" rx="2" fill="var(--bg-muted)" stroke="var(--border)" stroke-width="1"/>
+                        <path d="M26 8L32 14V36a2 2 0 01-2 36H14" fill="none" stroke="var(--border)" stroke-width="1"/>
+                        <rect x="12" y="8" width="20" height="28" rx="2" fill="var(--bg-muted)" stroke="var(--accent)" stroke-width="1" opacity="0.6"/>
+                        <line x1="16" y1="16" x2="28" y2="16" stroke="var(--accent)" stroke-width="0.8" opacity="0.5"/>
+                        <line x1="16" y1="20" x2="26" y2="20" stroke="var(--accent)" stroke-width="0.8" opacity="0.4"/>
+                        <line x1="16" y1="24" x2="27" y2="24" stroke="var(--accent)" stroke-width="0.8" opacity="0.3"/>
+                        <line x1="16" y1="28" x2="23" y2="28" stroke="var(--accent)" stroke-width="0.8" opacity="0.3"/>
+                        <text x="22" y="14" text-anchor="middle" font-size="5" font-weight="700" fill="var(--accent)" font-family="monospace">ACM</text>
+                    </g>
+                </svg>
+                <div>
+                    <div class="hero-label">Researcher-Builder</div>
+                    <h1 class="hero-name">Applied AI<br>from research to production</h1>
+                </div>
+            </div>
+
+            <hr class="hero-rule">
+
+            <p class="hero-tagline">Where I build, publish, and teach.</p>
+
+            <div class="hero-snippets" id="hero-snippets">
+                <a href="updates.html#cais-demo" class="latest-pill hero-chip active"><span class="pulse"></span>Demo at ACM CAIS '26 · San Jose · May 29 →</a>
+                <a href="updates.html#cais-paper" class="latest-pill hero-chip"><span class="pulse"></span>Multi-Agent Job Classification · ACM Published</a>
+                <a href="updates.html#techcareer-training" class="latest-pill hero-chip"><span class="pulse"></span>18h Applied AI Course · Techcareer</a>
+                <a href="updates.html#tokalator-paper" class="latest-pill hero-chip"><span class="pulse"></span>tokalator.wiki · 500+ installs</a>
+                <a href="context-engineering.html" class="latest-pill hero-chip"><span class="pulse"></span><span id="token-counter">16,000,000</span> tokens · 38% saved → how</a>
+                <a href="updates.html" class="latest-pill hero-chip"><span class="pulse"></span>From arXiv to ACM · 3 papers in 6 months</a>
+            </div>
+            <p class="hero-bio">
+                Turning enterprise data into production AI. Multi-agent systems, context engineering, data preparation, automation. Shipping code. Publishing research. Training teams.
+            </p>
+            <div class="bio-tags" id="bio-tags">
+                <span class="bio-tag accent" data-flip="Prototype to Prod">Applied AI</span>
+                <span class="bio-tag accent" data-flip="Anthropic">MCP Protocol</span>
+                <span class="bio-tag" data-flip="LangGraph · Agno">Multi-Agent Systems</span>
+                <span class="bio-tag" data-flip="Azure · GCP">Cloud Infrastructure</span>
+                <span class="bio-tag" data-flip="Metadata · Data Prep">Data Governance</span>
+                <span class="bio-tag accent" data-flip="Tokalator">Open Source</span>
+                <span class="bio-tag" data-flip="Flows · Pipelines">Enterprise Automation</span>
+                <span class="bio-tag" data-flip="Arize · Telemetry">Observability</span>
+                <span class="bio-tag" data-flip="BRD · PRD">Solution Architecture</span>
+                <span class="bio-tag accent" data-flip="Analytics · Dashboards">Data Products</span>
+                <span class="bio-tag" data-flip="GitHub · VS Code">Developer Tools</span>
+                <span class="bio-tag accent" data-flip="Token Budgeting">Context Engineering</span>
+                <span class="bio-tag" data-flip="Claude Code · OpenCode · Codex">AI Native</span>
+            </div>
+
+            <div class="pub-strip">
+                <span class="pub-strip-label">Published at</span>
+                <a href="https://dl.acm.org/doi/10.1145/3786335.3813207" target="_blank" rel="noopener"><svg class="pub-icon" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" fill="var(--bg-muted)" stroke="var(--border)" stroke-width="1"/><text x="10" y="13" text-anchor="middle" font-size="6.5" font-weight="800" fill="var(--accent)" font-family="monospace">ACM</text></svg> CAIS '26</a>
+                <span class="pub-dot">/</span>
+                <a href="https://arxiv.org/abs/2604.08290" target="_blank" rel="noopener"><svg class="pub-icon" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" fill="var(--bg-muted)" stroke="var(--border)" stroke-width="1"/><text x="10" y="13" text-anchor="middle" font-size="7" font-weight="700" fill="var(--text-secondary)" font-family="monospace">aX</text></svg> Tokalator</a>
+                <span class="pub-dot">/</span>
+                <a href="https://arxiv.org/abs/2601.22885" target="_blank" rel="noopener"><svg class="pub-icon" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" fill="var(--bg-muted)" stroke="var(--border)" stroke-width="1"/><text x="10" y="13" text-anchor="middle" font-size="7" font-weight="700" fill="var(--text-secondary)" font-family="monospace">aX</text></svg> Skill Extraction</a>
+            </div>
+
+            <div class="hero-ctas">
+                <a href="https://calendar.app.google/KWQg6gBjXetC4ofp9" target="_blank" rel="noopener" class="btn btn-primary">Book a call →</a>
+                <a href="#" onclick="openBooking();return false;" class="btn btn-outline">Suggest a time</a>
+                <a href="assets/cv/01-cv-vahid-faraji-202606.pdf" target="_blank" class="btn btn-dark">
+                    <svg viewBox="0 0 16 16" fill="currentColor"><path d="M.5 9.9a.5.5 0 01.5.5v2.5a1 1 0 001 1h12a1 1 0 001-1v-2.5a.5.5 0 011 0v2.5a2 2 0 01-2 2H2a2 2 0 01-2-2v-2.5a.5.5 0 01.5-.5z"/><path d="M7.646 11.854a.5.5 0 00.708 0l3-3a.5.5 0 00-.708-.708L8.5 10.293V1.5a.5.5 0 00-1 0v8.793L5.354 8.146a.5.5 0 10-.708.708l3 3z"/></svg>
+                    Download CV
+                </a>
+                <a href="#work" class="btn btn-outline">See Work</a>
+                <a href="#gallery" class="btn btn-outline">Portfolio</a>
+            </div>
+
+            <div class="metrics-grid">
+                <div class="metric-card hover-card" data-hover data-flip-num="Data → Applied AI" data-flip-label="Career path"><div class="metric-num">9+</div><div class="metric-label">Years shipping</div></div>
+                <div class="metric-card hover-card" data-hover data-flip-num="14K+ positions" data-flip-label="MCP multi-agent"><div class="metric-num">95%</div><div class="metric-label">Agent accuracy</div></div>
+                <div class="metric-card hover-card" data-hover data-flip-num="300M+" data-flip-label="Datapoints unified"><div class="metric-num">72.5%</div><div class="metric-label">Faster classification</div></div>
+                <div class="metric-card hover-card" data-hover data-flip-num="200+ colleagues" data-flip-label="Kariyer.net"><div class="metric-num">60%</div><div class="metric-label">Workload reduction</div></div>
+                <div class="metric-card hover-card" data-hover data-flip-num="ACM · arXiv" data-flip-label="1 patent pending"><div class="metric-num">3+1</div><div class="metric-label">Publications + Patent</div></div>
+                <div class="metric-card hover-card" data-hover data-flip-num="+50" data-flip-label="Courses delivered"><div class="metric-num">400+</div><div class="metric-label">People trained</div></div>
+            </div>
+
+            <div class="hero-links">
+                <a href="https://github.com/vfaraji89" target="_blank" rel="noopener" aria-label="GitHub" style="color:#24292e;"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a>
+                <a href="https://linkedin.com/in/vahid-faraji-jobehdar" target="_blank" rel="noopener" aria-label="LinkedIn" style="color:#0a66c2;"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/></svg></a>
+                <a href="https://x.com/vfaraji89" target="_blank" rel="noopener" aria-label="X" style="color:#000000;"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"/></svg></a>
+                <a href="https://huggingface.co/vfaraji89" target="_blank" rel="noopener" aria-label="Hugging Face" style="font-size:1rem; line-height:1; text-decoration:none;">🤗</a>
+                <a href="https://medium.com/@vfaraji89" target="_blank" rel="noopener" aria-label="Medium" style="color:#000000;"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M9.025 8c0 2.485-2.02 4.5-4.513 4.5A4.506 4.506 0 010 8c0-2.486 2.02-4.5 4.512-4.5A4.506 4.506 0 019.025 8zm4.95 0c0 2.34-1.01 4.236-2.256 4.236S9.463 10.339 9.463 8c0-2.34 1.01-4.236 2.256-4.236S13.975 5.661 13.975 8zM16 8c0 2.096-.355 3.795-.794 3.795-.438 0-.793-1.7-.793-3.795 0-2.096.355-3.795.793-3.795.44 0 .794 1.7.794 3.795z"/></svg></a>
+                <a href="https://substack.com/@vfaraji899" target="_blank" rel="noopener" aria-label="Substack" style="color:#ff6719;"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M15 3.604H1V1.72h14v1.884zM1 5.456v1.884h14V5.456H1zM1 9.15v6.1l7-3.862 7 3.861V9.15H1z"/></svg></a>
+                <a href="https://tokalator.wiki" target="_blank" rel="noopener" aria-label="Tokalator" style="color:var(--accent);"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="1.5" y="1.5" width="13" height="13" rx="2.5"/><line x1="3.5" y1="5.5" x2="12.5" y2="5.5"/><line x1="3.5" y1="8.5" x2="12.5" y2="8.5"/><line x1="3.5" y1="11.5" x2="12.5" y2="11.5"/><circle cx="5.5" cy="5.5" r="1.2" fill="currentColor" stroke="none"/><circle cx="8.5" cy="5.5" r="1.2" fill="currentColor" stroke="none"/><circle cx="6" cy="8.5" r="1.2" fill="currentColor" stroke="none"/><circle cx="10" cy="8.5" r="1.2" fill="currentColor" stroke="none"/><circle cx="9" cy="11.5" r="1.2" fill="currentColor" stroke="none"/></svg></a>
+            </div>
+
+            <div class="time-strip" id="time-strip">
+                <div class="time-block">
+                    <span class="time-dot" id="avail-dot"></span>
+                    <span>Istanbul</span>
+                    <span class="time-val" id="ist-time">--:--</span>
+                </div>
+                <div class="time-block">
+                    <span>You</span>
+                    <span class="time-val" id="visitor-time">--:--</span>
+                    <span id="visitor-tz"></span>
+                </div>
+                <div class="time-block"><span id="time-diff"></span></div>
+                <div class="time-block" id="avail-status"></div>
+            </div>
+        </section>
+
+        <section id="work" class="reveal">
+            <div class="section-label">Case Studies</div>
+            <p class="section-tagline">Problems I solved end to end.</p>
+            <div class="case-grid">
+                <div class="case-card hover-card featured" data-hover>
+                    <div class="card-content">
+                        <div class="case-meta"><span class="case-tag">Open Source</span><span class="case-tag">Shipped</span></div>
+                        <div class="case-title"><a href="https://tokalator.wiki" target="_blank" rel="noopener">Tokalator — Context Engineering Toolkit</a></div>
+                        <div class="case-body">
+                            <div class="case-row"><span class="case-row-label">Problem</span><span class="case-row-val">AI coding assistants burn tokens blindly — no visibility into context cost, no budget guardrails, no cross-model comparison.</span></div>
+                            <div class="case-row"><span class="case-row-label">Approach</span><span class="case-row-val">Real-time token budgeting, tab relevance scoring, Cobb-Douglas output-quality models, caching break-even analysis across <strong>15+ LLMs</strong>.</span></div>
+                            <div class="case-row"><span class="case-row-label">Result</span><span class="case-row-val"><strong>VS Code extension + web platform</strong> shipped. arXiv paper published. $40K Perplexity AI grant secured.</span></div>
+                        </div>
+                        <div class="case-stats">
+                            <span><strong class="stat-live" id="tok-installs">500+</strong> installs</span>
+                            <span><strong id="tok-stars">--</strong> GitHub stars</span>
+                            <span><strong>17</strong> models</span>
+                            <span><strong>MIT</strong> license</span>
+                        </div>
+                        <div class="case-stack"><span>Next.js</span><span>·</span><span>TypeScript</span><span>·</span><span>VS Code Extension</span><span>·</span><span>Token Economics</span><span>·</span><span>MCP</span></div>
+                    </div>
+                </div>
+                <div class="case-card hover-card featured" data-hover>
+                    <div class="card-content">
+                        <div class="case-meta"><span class="case-tag">Research</span><span class="case-tag">ACM CAIS '26</span></div>
+                        <div class="case-title">Multi-Agent Job Classification System</div>
+                        <div class="case-body">
+                            <div class="case-row"><span class="case-row-label">Problem</span><span class="case-row-val">Free-form job titles in multiple languages can't be reliably mapped to O*NET/ESCO taxonomies at scale.</span></div>
+                            <div class="case-row"><span class="case-row-label">Approach</span><span class="case-row-val">MCP-based multi-agent system: planner, search, extraction, and evaluation agents with shared caching layer.</span></div>
+                            <div class="case-row"><span class="case-row-label">Result</span><span class="case-row-val"><strong>95% accuracy</strong> on 14K+ positions. 72.5% faster classification. 41.8% fewer API calls. Accepted at ACM.</span></div>
+                        </div>
+                        <div class="case-stack"><span>MCP</span><span>·</span><span>LangGraph</span><span>·</span><span>Subagent Architecture</span><span>·</span><span>AI Search</span><span>·</span><span>Caching</span></div>
+                    </div>
+                </div>
+                <div class="case-card hover-card" data-hover>
+                    <div class="card-content">
+                        <div class="case-meta"><span class="case-tag">Enterprise</span><span class="case-tag">Production</span></div>
+                        <div class="case-title">Enterprise AI Transformation</div>
+                        <div class="case-body">
+                            <div class="case-row"><span class="case-row-label">Problem</span><span class="case-row-val">Manual reporting workflows across Sales, Finance, R&D consuming analyst time with no self-service capability.</span></div>
+                            <div class="case-row"><span class="case-row-label">Approach</span><span class="case-row-val">Multi-agent orchestration (LangGraph, MCP, Agno) for text-to-SQL, report automation, and AI feedback loops with human checkpoints.</span></div>
+                            <div class="case-row"><span class="case-row-label">Result</span><span class="case-row-val"><strong>60% reduction</strong> in manual workload. 100+ users served. Adopted as group-wide AI standard.</span></div>
+                        </div>
+                        <div class="case-stack"><span>FastAPI</span><span>·</span><span>LangGraph</span><span>·</span><span>Agno</span><span>·</span><span>Pydantic</span><span>·</span><span>Arize</span></div>
+                    </div>
+                </div>
+                <div class="case-card hover-card" data-hover>
+                    <div class="card-content">
+                        <div class="case-meta"><span class="case-tag">Data Product</span><span class="case-tag">Infrastructure</span></div>
+                        <div class="case-title">300M+ Datapoint Metadata Platform</div>
+                        <div class="case-body">
+                            <div class="case-row"><span class="case-row-label">Problem</span><span class="case-row-val">No unified metadata layer across a live job platform — fragmented schemas, no lineage, analytics bottlenecked by ad-hoc queries.</span></div>
+                            <div class="case-row"><span class="case-row-label">Approach</span><span class="case-row-val">Designed metadata architecture with DataHub governance, real-time pipelines, and product-analytics instrumentation for strategic decisions.</span></div>
+                            <div class="case-row"><span class="case-row-label">Result</span><span class="case-row-val"><strong>300M+ datapoints</strong> unified. Became the foundation for all later AI/LLM deployments — embedding generation, RAG retrieval, and context grounding at scale.</span></div>
+                        </div>
+                        <div class="case-stack"><span>DataHub</span><span>·</span><span>Azure Synapse</span><span>·</span><span>BigQuery</span><span>·</span><span>Real-time Pipelines</span><span>·</span><span>Retool</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="publications" class="reveal">
+            <div class="section-label">Publications</div>
+            <p class="section-tagline">Peer-reviewed and cited.</p>
+            <div class="pub-list">
+                <div class="pub-card hover-card acm" data-hover>
+                    <div><span class="pub-badge acm">ACM CAIS '26</span><span class="pub-badge arxiv">peer-reviewed</span></div>
+                    <div class="pub-title"><a href="https://dl.acm.org/doi/10.1145/3786335.3813207" target="_blank" rel="noopener">Tool-Augmented Multi-Agent Systems for Job Position Normalisation</a></div>
+                    <div class="pub-meta" style="margin-top:0.25rem"><a href="https://www.alphaxiv.org/abs/multi-agent-position-classification" target="_blank" rel="noopener" style="font-size:0.6875rem; color:var(--text-muted);">alphaxiv discussion</a></div>
+                    <div class="pub-meta">Vahid Faraji et al. · ACM Conference on AI and Agentic Systems, San Jose 2026</div>
+                </div>
+                <div class="pub-card hover-card" data-hover>
+                    <div><span class="pub-badge arxiv">arXiv</span></div>
+                    <div class="pub-title"><a href="https://arxiv.org/abs/2604.08290" target="_blank" rel="noopener">Tokalator: A Context Engineering Toolkit for AI Coding Assistants</a></div>
+                    <div class="pub-meta">Vahid Faraji · arXiv 2604.08290 · April 2026</div>
+                </div>
+                <div class="pub-card hover-card" data-hover>
+                    <div><span class="pub-badge arxiv">arXiv</span></div>
+                    <div class="pub-title"><a href="https://arxiv.org/abs/2601.22885" target="_blank" rel="noopener">Leveraging LLMs For Turkish Skill Extraction</a></div>
+                    <div class="pub-meta">Vahid Faraji et al. · arXiv 2601.22885 · January 2026</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="reveal">
+            <div class="section-label">Experience</div>
+            <p class="section-tagline">Where I built it.</p>
+            <div class="timeline">
+                <div class="timeline-item"><div class="timeline-period">2025 — now</div><div class="timeline-content"><div class="timeline-header"><img src="https://www.google.com/s2/favicons?domain=kariyer.net&sz=64" alt="Kariyer.net" class="timeline-logo" loading="lazy"><div><h3>Senior Applied AI Specialist</h3><div class="org">Kariyer.net (ilab group)</div></div></div><div class="desc">Lead AI/LLM initiatives across Sales, Finance, R&D. Multi-agent orchestration adopted as group-wide standard. Secured $40K Perplexity AI grant.</div><div class="impact">Google GenAI Leader · $40K Grant</div></div></div>
+                <div class="timeline-item"><div class="timeline-period">2022 — 2025</div><div class="timeline-content"><div class="timeline-header"><img src="https://www.google.com/s2/favicons?domain=kariyer.net&sz=64" alt="Kariyer.net" class="timeline-logo" loading="lazy"><div><h3>Product Manager — Data</h3><div class="org">Kariyer.net</div></div></div><div class="desc">Metadata architecture serving 300M+ datapoints. AI strategy alignment. Pipeline infrastructure enabling later LLM deployments at scale.</div></div></div>
+                <div class="timeline-item"><div class="timeline-period">2021 — 2022</div><div class="timeline-content"><div class="timeline-header"><img src="https://www.google.com/s2/favicons?domain=worqcompany.com&sz=64" alt="WorqCompany" class="timeline-logo" loading="lazy"><div><h3>Business Analyst</h3><div class="org">WorqCompany</div></div></div><div class="desc">Forecasting models, dashboards, and process automation for finance and operations.</div></div></div>
+                <div class="timeline-item"><div class="timeline-period">2019 — 2021</div><div class="timeline-content"><div class="timeline-header"><img src="assets/img/defaro-icon.jpg" alt="Defaro.io" class="timeline-logo" loading="lazy"><div><h3>Co-Founder</h3><div class="org">Defaro.io</div></div></div><div class="desc">Labour-market analytics startup — compensation intelligence and career pathway analytics. Data pipelines, benchmarking models, product strategy from scratch.</div></div></div>
+            </div>
+        </section>
+
+
+        <section id="gallery" class="reveal">
+            <div class="section-label">Portfolio</div>
+            <p class="section-tagline">Live products and demos.</p>
+            <div class="gallery-grid">
+
+                <div class="gallery-card hover-card featured" data-hover>
+                    <div class="gallery-screenshot" data-lightbox="tokalator" data-images='["assets/photos/tokalator-dashboard.png","assets/photos/tokalator-wiki.png","assets/photos/tokalator-calculator.png"]'>
+                        <img src="assets/photos/tokalator-dashboard.png" alt="Tokalator — Team Dashboard" loading="lazy">
+                        <span class="gallery-screenshot-count">1 / 3</span>
+                    </div>
+                    <div class="gallery-info">
+                        <div class="gallery-meta"><span class="gallery-tag">Open Source</span><span class="gallery-tag">Shipped</span></div>
+                        <div class="gallery-name"><a href="https://tokalator.wiki" target="_blank" rel="noopener">Tokalator — Context Engineering Toolkit</a></div>
+                        <div class="gallery-desc">VS Code extension, wiki with 58 articles, and token calculator. Real-time token budgeting, tab relevance scoring, and cost modeling across 17 LLMs.</div>
+                        <div class="gallery-stack"><span>Next.js</span><span>·</span><span>Scala</span><span>·</span><span>Python</span><span>·</span><span>Cobb-Douglas</span><span>·</span><span>VS Code Extension</span></div>
+                        <div class="gallery-actions">
+                            <a href="https://tokalator.wiki" target="_blank" rel="noopener" class="ga-primary">Live Site</a>
+                            <a href="https://arxiv.org/abs/2604.08290" target="_blank" rel="noopener" class="ga-outline">arXiv Paper</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-card hover-card featured" data-hover>
+                    <div class="gallery-screenshot" data-lightbox="pms" data-images='["assets/photos/pms-dashboard.png","assets/photos/pms-architect.png","assets/photos/pms-quality.png"]'>
+                        <img src="assets/photos/pms-dashboard.png" alt="Multi-Agent Classification — Dashboard" loading="lazy">
+                        <span class="gallery-screenshot-count">1 / 3</span>
+                    </div>
+                    <div class="gallery-info">
+                        <div class="gallery-meta"><span class="gallery-tag">Research</span><span class="gallery-tag">ACM CAIS '26</span></div>
+                        <div class="gallery-name"><a href="https://vimeo.com/1173321359" target="_blank" rel="noopener">Multi-Agent Job Classification</a></div>
+                        <div class="gallery-desc">MCP-based multi-agent system for cross-lingual job title normalization to O*NET and ESCO taxonomies. 95% accuracy on 14K+ positions with 72.5% faster classification.</div>
+                        <div class="gallery-stack"><span>Next.js</span><span>·</span><span>MCP</span><span>·</span><span>Gemini Agent Garden</span><span>·</span><span>Hooks</span><span>·</span><span>Vercel AI</span><span>·</span><span>Anthropic SDK</span></div>
+                        <div class="gallery-actions">
+                            <a href="https://vimeo.com/1173321359" target="_blank" rel="noopener" class="ga-primary">Live Demo</a>
+                            <a href="https://dl.acm.org/doi/10.1145/3786335.3813207" target="_blank" rel="noopener" class="ga-outline">ACM Paper</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-card hover-card" data-hover>
+                    <div class="gallery-screenshot" data-lightbox="baachee" data-images='["assets/photos/baachee-data-agent.png","assets/photos/baachee-studio.png","assets/photos/baachee-flow.png"]'>
+                        <img src="assets/photos/baachee-data-agent.png" alt="Baachee.ai — Data Agent" loading="lazy">
+                        <span class="gallery-screenshot-count">1 / 3</span>
+                    </div>
+                    <div class="gallery-info">
+                        <div class="gallery-meta"><span class="gallery-tag">Advisor</span><span class="gallery-tag">Agent Studio</span></div>
+                        <div class="gallery-name"><a href="https://baachee.ai" target="_blank" rel="noopener">Baachee.ai — Data Agent Platform</a></div>
+                        <div class="gallery-desc">Weekend advisor role. Architecting data agents, text-to-report pipelines, canvas flow tools, and enterprise automation workflows.</div>
+                        <div class="gallery-stack"><span>Agno (Self-Learning)</span><span>·</span><span>Text-2-SQL</span><span>·</span><span>Metadata</span><span>·</span><span>Memory</span><span>·</span><span>Orchestrator</span></div>
+                        <div class="gallery-actions">
+                            <a href="https://baachee.ai" target="_blank" rel="noopener" class="ga-primary">Live Site</a>
+                            <a href="assets/photos/baachee-text2report-demo.mp4" target="_blank" class="ga-outline">Data Agent Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-card hover-card no-screenshot" data-hover>
+                    <div class="gallery-info">
+                        <div class="gallery-meta"><span class="gallery-tag">Enterprise</span><span class="gallery-tag">Internal</span></div>
+                        <div class="gallery-name">Enterprise AI Platform</div>
+                        <div class="gallery-desc">AI transformation across Sales, Finance, and R&D at Kariyer.net. Business flow automation, text-to-SQL self-service reporting, and AI-powered feedback loops. Serving 200+ colleagues — from prototype to solution design to ship.</div>
+                        <div class="gallery-stack"><span>FastAPI</span><span>·</span><span>LangGraph</span><span>·</span><span>Agno</span><span>·</span><span>Pydantic</span><span>·</span><span>Arize</span></div>
+                    </div>
+                </div>
+
+                <div class="gallery-card hover-card no-screenshot" data-hover>
+                    <div class="gallery-info">
+                        <div class="gallery-meta"><span class="gallery-tag">Data Product</span><span class="gallery-tag">Infrastructure</span></div>
+                        <div class="gallery-name">Working with 300M+ Datapoints</div>
+                        <div class="gallery-desc">Unified metadata architecture at Kariyer.net with DataHub governance and real-time pipelines. Large-scale salary normalization, unstructured position text classification, and taxonomy preparation. Foundation for all AI/LLM deployments.</div>
+                        <div class="gallery-stack"><span>DataHub</span><span>·</span><span>Azure Synapse</span><span>·</span><span>BigQuery</span><span>·</span><span>Pipelines</span></div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="reveal">
+            <div class="section-label">About</div>
+            <p class="section-tagline">The person behind the systems.</p>
+            <div class="about-grid">
+                <div class="about-block"><h4>Education</h4><ul><li>M.A. Economics — Ibn Haldun University</li><li>Thesis: Real-Time Labor Market Analysis</li><li>Teaching Asst., Econometrics I</li></ul></div>
+                <div class="about-block"><h4>Certifications</h4><ul><li class="hl">Google Generative AI Leader</li><li>Anthropic — MCP, Agents, Claude API, Claude Code</li><li>LangChain — LangGraph, LangSmith</li></ul></div>
+                <div class="about-block"><h4>Languages</h4><ul><li>Turkish — Native</li><li>English — C1</li><li>Spanish — Instructor</li><li>Portuguese — Basic</li><li>Japanese — Learning</li></ul></div>
+                <div class="about-block"><h4>Teaching</h4><ul><li class="hl">18h Applied AI Course — Techcareer</li><li>AI Career Mentor — TEV Foundation</li><li>Enterprise prompt engineering — Universities</li></ul></div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-left">
+                <span class="footer-name">Vahid Faraji</span>
+                <span class="footer-dot">/</span>
+                <span class="footer-role">Applied AI</span>
+            </div>
+            <nav class="footer-nav">
+                <a href="#work">Work</a>
+                <a href="#publications">Publications</a>
+                <a href="#gallery">Portfolio</a>
+                <a href="context-engineering.html">Context Engineering</a>
+                <a href="updates.html">Updates</a>
+            </nav>
+            <div class="footer-right">
+                <a href="https://github.com/vfaraji89" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 16 16" fill="currentColor" width="14" height="14"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a>
+                <a href="https://linkedin.com/in/vahid-faraji-jobehdar" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 16 16" fill="currentColor" width="14" height="14"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/></svg></a>
+                <a href="https://x.com/vfaraji89" target="_blank" rel="noopener" aria-label="X"><svg viewBox="0 0 16 16" fill="currentColor" width="14" height="14"><path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"/></svg></a>
+            </div>
+        </div>
+    </footer>
+
+
+    <div class="booking-overlay" id="booking-modal">
+        <div class="booking-box">
+            <button class="booking-close" id="booking-close" aria-label="Close">&times;</button>
+            <h3>Suggest a time</h3>
+            <p class="booking-sub">Pick a slot in your timezone — I'll confirm within 24h.</p>
+            <div class="booking-tz">
+                <span class="tz-dot"></span>
+                <span>Istanbul <strong id="bk-ist-time">--:--</strong></span>
+                <span style="color:var(--border-strong);">·</span>
+                <span>You <strong id="bk-you-time">--:--</strong> <span id="bk-you-tz"></span></span>
+            </div>
+            <form class="booking-form" id="booking-form">
+                <div class="row">
+                    <div class="field">
+                        <label for="bk-date">Date <span id="bk-tz-label" style="text-transform:none;font-weight:400;color:var(--text-muted)"></span></label>
+                        <input type="date" id="bk-date" required>
+                    </div>
+                    <div class="field">
+                        <label for="bk-time">Time (your tz)</label>
+                        <select id="bk-time"></select>
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="bk-name">Name</label>
+                    <input type="text" id="bk-name" required placeholder="Your name">
+                </div>
+                <div class="field">
+                    <label for="bk-email">Email</label>
+                    <input type="email" id="bk-email" required placeholder="you@company.com">
+                </div>
+                <div class="field">
+                    <label for="bk-topic">Topic <span style="text-transform:none;font-weight:400;color:var(--text-muted)">(optional)</span></label>
+                    <textarea id="bk-topic" placeholder="Role, project, or question"></textarea>
+                </div>
+                <div class="booking-actions">
+                    <button type="submit" class="btn btn-primary" id="bk-submit">Propose this time</button>
+                </div>
+            </form>
+            <div id="bk-success" style="display:none; text-align:center; padding:2rem 0;">
+                <div style="font-size:1.5rem; margin-bottom:0.75rem;">&#10003;</div>
+                <h4 style="font-size:1rem; margin-bottom:0.375rem;">Time proposed</h4>
+                <p style="font-size:0.8125rem; color:var(--text-secondary);">I'll confirm within 24h via email.</p>
+            </div>
+            <p style="font-size:0.6875rem; color:var(--text-muted); text-align:center; margin-top:0.75rem; font-variation-settings:'MONO' 1;">or <a href="https://calendar.app.google/KWQg6gBjXetC4ofp9" target="_blank" rel="noopener" style="color:var(--accent);">book directly on my calendar</a></p>
+        </div>
+    </div>
+
+    <div class="lightbox-overlay" id="lightbox">
+        <div class="lightbox-inner">
+            <button class="lightbox-close" aria-label="Close">&times;</button>
+            <button class="lightbox-nav lightbox-prev" aria-label="Previous">&#8249;</button>
+            <img class="lightbox-img" src="" alt="">
+            <button class="lightbox-nav lightbox-next" aria-label="Next">&#8250;</button>
+            <div class="lightbox-counter"></div>
+        </div>
+    </div>
+
+    <script>
+    function openBooking() {
+        var overlay = document.getElementById('booking-modal');
+        updateBookingTz();
+        overlay.classList.add('open');
+    }
+    function updateBookingTz() {
+        var now = new Date();
+        var vtz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        var fmt = function(tz) { return now.toLocaleTimeString('en-GB', { hour:'2-digit', minute:'2-digit', timeZone: tz }); };
+        var el1 = document.getElementById('bk-ist-time');
+        var el2 = document.getElementById('bk-you-time');
+        var el3 = document.getElementById('bk-you-tz');
+        var el4 = document.getElementById('bk-tz-label');
+        if (el1) el1.textContent = fmt('Europe/Istanbul');
+        if (el2) el2.textContent = fmt(vtz);
+        var city = vtz.split('/').pop().replace(/_/g, ' ');
+        if (el3) el3.textContent = city;
+        if (el4) el4.textContent = '(' + city + ')';
+    }
+    (function bookingModal() {
+        var FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbwXBc5jY6I4dplL-8czIfnR-fVGgABioYEv8-TnAUWPKXuOMsiEw-buj9E1N3JndUnlwA/exec';
+        var overlay = document.getElementById('booking-modal');
+        var form = document.getElementById('booking-form');
+        var dateInput = document.getElementById('bk-date');
+        var timeSelect = document.getElementById('bk-time');
+        var submitBtn = document.getElementById('bk-submit');
+        var successEl = document.getElementById('bk-success');
+
+        var tomorrow = new Date();
+        tomorrow.setDate(tomorrow.getDate() + 1);
+        dateInput.min = tomorrow.toISOString().split('T')[0];
+        dateInput.value = tomorrow.toISOString().split('T')[0];
+
+        for (var h = 8; h <= 20; h++) {
+            for (var m = 0; m < 60; m += 30) {
+                var val = String(h).padStart(2,'0') + ':' + String(m).padStart(2,'0');
+                var opt = document.createElement('option');
+                opt.value = val;
+                opt.textContent = val;
+                if (h === 10 && m === 0) opt.selected = true;
+                timeSelect.appendChild(opt);
+            }
+        }
+
+        function closeModal() {
+            overlay.classList.remove('open');
+            setTimeout(function() {
+                form.style.display = '';
+                successEl.style.display = 'none';
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Propose this time';
+            }, 300);
+        }
+
+        document.getElementById('booking-close').addEventListener('click', closeModal);
+        overlay.addEventListener('click', function(e) {
+            if (e.target === overlay) closeModal();
+        });
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && overlay.classList.contains('open')) closeModal();
+        });
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            var name = document.getElementById('bk-name').value.trim();
+            var email = document.getElementById('bk-email').value.trim();
+            var date = document.getElementById('bk-date').value;
+            var time = document.getElementById('bk-time').value;
+            var topic = document.getElementById('bk-topic').value.trim();
+            var vtz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+            var proposed = new Date(date + 'T' + time + ':00');
+            var istTime = proposed.toLocaleTimeString('en-GB', { hour:'2-digit', minute:'2-digit', timeZone:'Europe/Istanbul' });
+
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending...';
+
+            var old = document.querySelector('.booking-error');
+            if (old) old.remove();
+
+            var payload = {
+                name: name,
+                _replyto: email,
+                _subject: 'Meeting request: ' + name + ' — ' + date + ' ' + time,
+                date: date,
+                time_local: time + ' (' + vtz + ')',
+                time_istanbul: istTime + ' Istanbul',
+                topic: topic || '—',
+                message: 'Proposed: ' + date + ' at ' + time + ' (' + vtz + ') → ' + istTime + ' Istanbul.\nTopic: ' + (topic || 'General') + '\nReply to: ' + email
+            };
+
+            fetch(FORM_ENDPOINT, {
+                method: 'POST',
+                headers: { 'Content-Type': 'text/plain' },
+                body: JSON.stringify(payload)
+            }).then(function(res) {
+                if (res.ok) {
+                    form.style.display = 'none';
+                    successEl.style.display = 'block';
+                    form.reset();
+                    dateInput.value = tomorrow.toISOString().split('T')[0];
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            }).catch(function() {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Propose this time';
+                var err = document.createElement('p');
+                err.className = 'booking-error';
+                err.textContent = 'Could not send — try the calendar link below or email directly.';
+                form.appendChild(err);
+            });
+        });
+    })();
+
+    (function(){
+        const btn = document.getElementById('theme-toggle');
+        const sun = document.getElementById('icon-sun');
+        const moon = document.getElementById('icon-moon');
+        const root = document.documentElement;
+        let dark = false;
+        function apply(d) {
+            root.setAttribute('data-theme', d ? 'dark' : 'light');
+            sun.style.display  = d ? 'block' : 'none';
+            moon.style.display = d ? 'none'  : 'block';
+        }
+        apply(dark);
+        btn.addEventListener('click', () => { dark = !dark; apply(dark); });
+    })();
+
+    document.querySelectorAll('[data-hover]').forEach(card => {
+        card.addEventListener('mousemove', e => {
+            const r = card.getBoundingClientRect();
+            card.style.setProperty('--glow-x', ((e.clientX - r.left) / r.width * 100) + '%');
+            card.style.setProperty('--glow-y', ((e.clientY - r.top) / r.height * 100) + '%');
+        });
+    });
+
+    const obs = new IntersectionObserver((entries) => {
+        entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); obs.unobserve(entry.target); } });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+    const caseObs = new IntersectionObserver((entries) => {
+        entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('in-view'); caseObs.unobserve(entry.target); } });
+    }, { threshold: 0.2 });
+    document.querySelectorAll('.case-card, .pub-card, .timeline-item, .gallery-card').forEach(el => caseObs.observe(el));
+
+
+    fetch('https://api.github.com/repos/vfaraji89/tokalator')
+        .then(r => r.ok ? r.json() : null)
+        .then(d => { if (d && d.stargazers_count !== undefined) { const el = document.getElementById('tok-stars'); if (el) el.textContent = d.stargazers_count; } })
+        .catch(() => {});
+
+    (function clock() {
+        function fmt(d, tz) {
+            return d.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit', timeZone: tz });
+        }
+        function tzAbbr() {
+            try { return Intl.DateTimeFormat().resolvedOptions().timeZone.split('/').pop().replace(/_/g, ' '); } catch(e) { return ''; }
+        }
+        function tick() {
+            var now = new Date();
+            var visitorTz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+            var istH = parseInt(now.toLocaleString('en-GB', { hour: '2-digit', hour12: false, timeZone: 'Europe/Istanbul' }));
+            var visH = parseInt(now.toLocaleString('en-GB', { hour: '2-digit', hour12: false, timeZone: visitorTz }));
+            document.getElementById('ist-time').textContent = fmt(now, 'Europe/Istanbul');
+            document.getElementById('visitor-time').textContent = fmt(now, visitorTz);
+            document.getElementById('visitor-tz').textContent = tzAbbr();
+            var diff = istH - visH;
+            var diffEl = document.getElementById('time-diff');
+            if (diff === 0) {
+                diffEl.textContent = 'Same timezone';
+            } else {
+                diffEl.textContent = (diff > 0 ? '+' : '') + diff + 'h from you';
+            }
+            var dot = document.getElementById('avail-dot');
+            var status = document.getElementById('avail-status');
+            status.innerHTML = '<a href="#" onclick="openBooking();return false;" style="color:var(--accent);text-decoration:underline;text-underline-offset:2px;font-weight:500;">Suggest a time</a>';
+            dot.className = 'time-dot online';
+        }
+        tick();
+        setInterval(tick, 30000);
+    })();
+
+    (function nameCycle() {
+        var el = document.getElementById('nav-name-cycle');
+        if (!el) return;
+        var names = [
+            {t: 'Vahid Faraji', color: 'var(--text-primary)', mono: false},
+            {t: '/build', color: 'var(--accent)', mono: true},
+            {t: '/context', color: '#7c3aed', mono: true},
+            {t: '/ship', color: '#16a34a', mono: true},
+            {t: '/teach', color: '#b8860b', mono: true},
+            {t: '/research', color: '#0a66c2', mono: true},
+            {t: '/optimize tokens', color: 'var(--accent)', mono: true},
+            {t: '/mentor', color: '#16a34a', mono: true},
+            {t: '@vfaraji89', color: 'var(--text-secondary)', mono: true},
+            {t: 'ヴァヒド', color: 'var(--text-primary)', mono: false},
+            {t: '・ファラジ', color: 'var(--text-primary)', mono: false, append: true},
+            {t: 'Vahid Faraji', color: 'var(--text-primary)', mono: false}
+        ];
+        var idx = 0;
+        var latin = '/@#$%&*=+<>_~^|:.';
+        var kana = 'アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
+        function randFor(ch) {
+            if (ch === '・' || ch === ' ') return ch;
+            var code = ch.charCodeAt(0);
+            if (code >= 0x30A0 && code <= 0x30FF) return kana[Math.floor(Math.random() * kana.length)];
+            return latin[Math.floor(Math.random() * latin.length)];
+        }
+        function scrambleIn(text, color, mono, append, cb) {
+            var base = append ? el.textContent : '';
+            if (!append) el.textContent = '';
+            el.style.color = color;
+            if (mono) {
+                el.style.fontFamily = "'Recursive', monospace";
+                el.style.fontVariationSettings = '"MONO" 1, "CASL" 0';
+                el.style.letterSpacing = '0.02em';
+            } else {
+                el.style.fontFamily = '';
+                el.style.fontVariationSettings = '';
+                el.style.letterSpacing = '';
+            }
+            var resolved = 0;
+            var cycles = 0;
+            var maxCycles = text.length * 3;
+            var iv = setInterval(function() {
+                var out = '';
+                for (var i = 0; i < text.length; i++) {
+                    if (i < resolved) out += text[i];
+                    else out += randFor(text[i]);
+                }
+                el.textContent = base + out;
+                cycles++;
+                if (cycles % 3 === 0 && resolved < text.length) resolved++;
+                if (resolved >= text.length) {
+                    el.textContent = base + text;
+                    clearInterval(iv);
+                    if (cb) cb();
+                }
+            }, 35);
+        }
+        function scrambleOut(cb) {
+            var text = el.textContent;
+            var len = text.length;
+            var remaining = len;
+            var cycles = 0;
+            var iv = setInterval(function() {
+                var out = '';
+                for (var i = 0; i < len; i++) {
+                    if (i < remaining) {
+                        out += randFor(text[i]);
+                    }
+                }
+                el.textContent = out;
+                cycles++;
+                if (cycles % 2 === 0 && remaining > 0) remaining--;
+                if (remaining <= 0) {
+                    el.textContent = '';
+                    clearInterval(iv);
+                    if (cb) cb();
+                }
+            }, 30);
+        }
+        var done = false;
+        var showingJP = false;
+        function next() {
+            idx++;
+            if (idx >= names.length) { done = true; return; }
+            var n = names[idx];
+            var isAppend = !!n.append;
+            scrambleIn(n.t, n.color, n.mono, isAppend, function() {
+                if (idx < names.length - 1 && !names[idx + 1].append) {
+                    setTimeout(function() { scrambleOut(function() { setTimeout(next, 150); }); }, 2000);
+                } else if (idx < names.length - 1) {
+                    setTimeout(next, 400);
+                } else {
+                    done = true;
+                }
+            });
+        }
+        var flipping = false;
+        function flipToJP() {
+            if (!done || showingJP || flipping) return;
+            flipping = true;
+            showingJP = true;
+            scrambleOut(function() {
+                scrambleIn('ヴァヒド・ファラジ', 'var(--text-primary)', false, false, function() { flipping = false; });
+            });
+        }
+        function flipBack() {
+            if (!done || !showingJP || flipping) return;
+            flipping = true;
+            showingJP = false;
+            scrambleOut(function() {
+                scrambleIn('Vahid Faraji', 'var(--text-primary)', false, false, function() { flipping = false; });
+            });
+        }
+        el.addEventListener('mouseenter', flipToJP);
+        el.addEventListener('mouseleave', flipBack);
+        el.addEventListener('click', function(e) { e.preventDefault(); });
+        el.addEventListener('click', function() {
+            if (showingJP) flipBack(); else flipToJP();
+        });
+        setTimeout(function() {
+            scrambleOut(function() { setTimeout(next, 150); });
+        }, 2500);
+    })();
+
+    (function snippets() {
+        var items = document.querySelectorAll('#hero-snippets .hero-chip');
+        if (items.length < 2) return;
+        var idx = 0;
+        var transitioning = false;
+        setInterval(function() {
+            if (transitioning) return;
+            transitioning = true;
+            var current = items[idx];
+            current.classList.remove('active');
+            current.classList.add('tear-out');
+            setTimeout(function() {
+                current.classList.remove('tear-out');
+                idx = (idx + 1) % items.length;
+                items[idx].classList.add('active');
+                transitioning = false;
+            }, 400);
+        }, 3000);
+    })();
+
+    (function bioTagFlip() {
+        var tags = document.querySelectorAll('#bio-tags .bio-tag');
+        if (!tags.length) return;
+        var glyphs = '/@#$%&*=+<>_~^|:.';
+        function rand() { return glyphs[Math.floor(Math.random() * glyphs.length)]; }
+        function scrambleTo(tag, text, cb) {
+            if (tag._iv) clearInterval(tag._iv);
+            var resolved = 0;
+            var tick = 0;
+            tag._iv = setInterval(function() {
+                var out = '';
+                for (var i = 0; i < text.length; i++) {
+                    if (i < resolved) out += text[i];
+                    else if (text[i] === ' ' || text[i] === '·') out += text[i];
+                    else out += rand();
+                }
+                tag.textContent = out;
+                tick++;
+                if (tick % 3 === 0) resolved++;
+                if (resolved > text.length) {
+                    tag.textContent = text;
+                    clearInterval(tag._iv);
+                    tag._iv = null;
+                    if (cb) cb();
+                }
+            }, 20);
+        }
+        var container = document.getElementById('bio-tags');
+        function init(tag) {
+            var label = tag.textContent;
+            tag.setAttribute('data-label', label);
+            var tech = tag.getAttribute('data-flip');
+            tag.style.width = 'auto';
+            var w1 = tag.offsetWidth;
+            tag.textContent = tech || label;
+            var w2 = tag.offsetWidth;
+            tag.textContent = label;
+            tag.style.width = Math.max(w1, w2) + 'px';
+            tag.addEventListener('mouseenter', function() {
+                container.classList.add('has-focus');
+                tag.classList.add('active');
+                if (tech) scrambleTo(tag, tech);
+            });
+            tag.addEventListener('mouseleave', function() {
+                container.classList.remove('has-focus');
+                tag.classList.remove('active');
+                scrambleTo(tag, label);
+            });
+            tag.addEventListener('click', function() {
+                var showing = tag.textContent === tech;
+                if (!showing) {
+                    container.classList.add('has-focus');
+                    tag.classList.add('active');
+                } else {
+                    container.classList.remove('has-focus');
+                    tag.classList.remove('active');
+                }
+                scrambleTo(tag, showing ? label : tech);
+            });
+        }
+        for (var i = 0; i < tags.length; i++) { init(tags[i]); }
+        var hinted = false;
+        var hintQueue = [];
+        var hintIdx = 0;
+        function shuffleQueue() {
+            hintQueue = [];
+            for (var j = 0; j < tags.length; j++) hintQueue.push(j);
+            for (var j = hintQueue.length - 1; j > 0; j--) {
+                var k = Math.floor(Math.random() * (j + 1));
+                var tmp = hintQueue[j]; hintQueue[j] = hintQueue[k]; hintQueue[k] = tmp;
+            }
+            hintIdx = 0;
+        }
+        shuffleQueue();
+        function autoHint() {
+            if (hinted) return;
+            if (hintIdx >= hintQueue.length) shuffleQueue();
+            var tag = tags[hintQueue[hintIdx++]];
+            var tech = tag.getAttribute('data-flip');
+            var label = tag.getAttribute('data-label');
+            if (!tech || tag._iv) return;
+            tag.classList.add('active');
+            scrambleTo(tag, tech, function() {
+                setTimeout(function() {
+                    tag.classList.remove('active');
+                    scrambleTo(tag, label);
+                }, 1200);
+            });
+        }
+        setTimeout(autoHint, 1000);
+        setInterval(autoHint, 2500);
+        var resumeTimer;
+        document.getElementById('bio-tags').addEventListener('mouseenter', function() {
+            hinted = true;
+            clearTimeout(resumeTimer);
+        });
+        document.getElementById('bio-tags').addEventListener('mouseleave', function() {
+            resumeTimer = setTimeout(function() { hinted = false; }, 3000);
+        });
+    })();
+
+    (function metricFlip() {
+        var cards = document.querySelectorAll('.metric-card[data-flip-num]');
+        if (!cards.length) return;
+        var glyphs = '/@#$%&*=+<>_~^|:.';
+        function rand() { return glyphs[Math.floor(Math.random() * glyphs.length)]; }
+        function scrambleTo(el, text, cb) {
+            if (el._miv) clearInterval(el._miv);
+            var resolved = 0;
+            var tick = 0;
+            el._miv = setInterval(function() {
+                var out = '';
+                for (var i = 0; i < text.length; i++) {
+                    if (i < resolved) out += text[i];
+                    else if (text[i] === ' ' || text[i] === '·' || text[i] === '→') out += text[i];
+                    else out += rand();
+                }
+                el.textContent = out;
+                tick++;
+                if (tick % 3 === 0) resolved++;
+                if (resolved > text.length) {
+                    el.textContent = text;
+                    clearInterval(el._miv);
+                    el._miv = null;
+                    if (cb) cb();
+                }
+            }, 20);
+        }
+        cards.forEach(function(card) {
+            var numEl = card.querySelector('.metric-num');
+            var labelEl = card.querySelector('.metric-label');
+            var origNum = numEl.textContent;
+            var origLabel = labelEl.textContent;
+            var flipNum = card.getAttribute('data-flip-num');
+            var flipLabel = card.getAttribute('data-flip-label');
+            card.addEventListener('mouseenter', function() {
+                card.classList.add('flipped');
+                scrambleTo(numEl, flipNum);
+                scrambleTo(labelEl, flipLabel);
+            });
+            card.addEventListener('mouseleave', function() {
+                card.classList.remove('flipped');
+                scrambleTo(numEl, origNum);
+                scrambleTo(labelEl, origLabel);
+            });
+            card.addEventListener('click', function() {
+                var isFlipped = card.classList.contains('flipped');
+                card.classList.toggle('flipped', !isFlipped);
+                scrambleTo(numEl, isFlipped ? origNum : flipNum);
+                scrambleTo(labelEl, isFlipped ? origLabel : flipLabel);
+            });
+        });
+    })();
+
+    (function mobileAutoScroll() {
+        if (window.innerWidth > 640) return;
+        var targets = [
+            document.getElementById('bio-tags'),
+            document.querySelector('.metrics-grid')
+        ];
+        targets.forEach(function(el) {
+            if (!el) return;
+            var touched = false;
+            el.addEventListener('touchstart', function() { touched = true; }, {passive: true});
+            var step = 130;
+            setInterval(function() {
+                if (touched) return;
+                var max = el.scrollWidth - el.clientWidth;
+                if (max <= 0) return;
+                var next = el.scrollLeft + step;
+                if (next >= max) next = 0;
+                el.scrollTo({ left: next, behavior: 'smooth' });
+            }, 2000);
+        });
+    })();
+
+    (function tokenCounter() {
+        var el = document.getElementById('token-counter');
+        if (!el) return;
+        var base = 16000000;
+        var rate = 1.2;
+        function fmt(n) { return Math.floor(n).toLocaleString('en-US'); }
+        el.textContent = fmt(base);
+        setInterval(function() {
+            base += rate;
+            el.textContent = fmt(base);
+        }, 1000);
+    })();
+
+    (function lightbox() {
+        var overlay = document.getElementById('lightbox');
+        if (!overlay) return;
+        var img = overlay.querySelector('.lightbox-img');
+        var counter = overlay.querySelector('.lightbox-counter');
+        var images = [];
+        var idx = 0;
+
+        function show(i) {
+            idx = i;
+            img.src = images[idx];
+            counter.textContent = (idx + 1) + ' / ' + images.length;
+        }
+
+        document.querySelectorAll('[data-lightbox]').forEach(function(el) {
+            el.addEventListener('click', function(e) {
+                e.preventDefault();
+                images = JSON.parse(el.getAttribute('data-images'));
+                show(0);
+                overlay.classList.add('open');
+            });
+        });
+
+        overlay.querySelector('.lightbox-close').addEventListener('click', function() {
+            overlay.classList.remove('open');
+        });
+        overlay.querySelector('.lightbox-prev').addEventListener('click', function() {
+            show((idx - 1 + images.length) % images.length);
+        });
+        overlay.querySelector('.lightbox-next').addEventListener('click', function() {
+            show((idx + 1) % images.length);
+        });
+        overlay.addEventListener('click', function(e) {
+            if (e.target === overlay) overlay.classList.remove('open');
+        });
+        document.addEventListener('keydown', function(e) {
+            if (!overlay.classList.contains('open')) return;
+            if (e.key === 'Escape') overlay.classList.remove('open');
+            if (e.key === 'ArrowLeft') show((idx - 1 + images.length) % images.length);
+            if (e.key === 'ArrowRight') show((idx + 1) % images.length);
+        });
+    })();
+    </script>
+</body>
+</html>

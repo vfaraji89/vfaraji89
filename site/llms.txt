@@ -1,0 +1,60 @@
+# Vahid Faraji — Applied AI / Researcher-Builder
+
+> Applied AI engineer shipping production agents and publishing at ACM. Multi-agent systems, context engineering, open source.
+
+## About
+
+Vahid Faraji is a Senior Applied AI Specialist at Kariyer.net (ilab group), Istanbul. He builds production multi-agent systems, publishes peer-reviewed research, and trains teams on AI-native development. His work spans enterprise AI transformation, open-source tooling, and labor market analytics.
+
+## Current Role
+
+- Senior Applied AI Specialist at Kariyer.net (ilab group), 2025–present
+- Lead AI/LLM initiatives across Sales, Finance, R&D
+- Multi-agent orchestration adopted as group-wide standard
+- Secured $40K Perplexity AI enterprise grant
+
+## Publications
+
+- Tool-Augmented Multi-Agent Systems for Job Position Normalisation — ACM CAIS '26, peer-reviewed. DOI: 10.1145/3786335.3813207
+- Tokalator: A Context Engineering Toolkit for AI Coding Assistants — arXiv 2604.08290, April 2026
+- Leveraging LLMs For Turkish Skill Extraction — arXiv 2601.22885, January 2026
+
+## Key Projects
+
+- Tokalator (tokalator.wiki): Open-source context engineering toolkit. VS Code extension with 500+ installs. Token budgeting, cost modeling across 17 LLMs. MIT license.
+- Multi-Agent Job Classification: MCP-based system achieving 95% accuracy on 14K+ positions, 72.5% faster classification. Published at ACM.
+- Enterprise AI Platform: Multi-agent orchestration (LangGraph, MCP, Agno) for text-to-SQL, report automation. 60% workload reduction, 200+ users.
+- 300M+ Datapoint Metadata Platform: DataHub governance, Azure Synapse, BigQuery. Foundation for all AI/LLM deployments.
+
+## Certifications
+
+- Google Generative AI Leader (Dec 2025)
+- Anthropic: MCP, Introduction to Agent Skills, Building with Claude API, Claude Code in Action (2026)
+- LangChain: LangGraph, LangSmith (Jan 2025)
+
+## Teaching
+
+- 18h Applied AI Course — Techcareer (2026)
+- AI Career Mentor — TEV Foundation
+- Enterprise prompt engineering — University guest lectures
+
+## Education
+
+- M.A. Economics — Ibn Haldun University
+- Thesis: Real-Time Labor Market Analysis
+
+## Contact
+
+- Email: vfaraji89@gmail.com
+- GitHub: github.com/vfaraji89
+- LinkedIn: linkedin.com/in/vahid-faraji-jobehdar
+- X: x.com/vfaraji89
+- Website: vfaraji89.github.io
+
+## Links
+
+- [Full Portfolio](https://vfaraji89.github.io)
+- [Updates](https://vfaraji89.github.io/updates.html)
+- [Tokalator](https://tokalator.wiki)
+- [ACM Paper](https://dl.acm.org/doi/10.1145/3786335.3813207)
+- [llms-full.txt](https://vfaraji89.github.io/llms-full.txt)

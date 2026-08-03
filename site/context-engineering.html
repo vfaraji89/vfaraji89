@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Context Engineering Methodology — Vahid Faraji</title>
+    <meta name="description" content="How I saved 38% on LLM token spend across 16M+ tokens using context engineering: compaction, pollution control, incremental management, and knowledge graphs.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'><rect x='4' y='4' width='40' height='40' rx='8' fill='none' stroke='%23e3120b' stroke-width='2.5'/><line x1='10' y1='16' x2='38' y2='16' stroke='%23ccc' stroke-width='1.5'/><line x1='10' y1='26' x2='38' y2='26' stroke='%23ccc' stroke-width='1.5'/><line x1='10' y1='36' x2='38' y2='36' stroke='%23ccc' stroke-width='1.5'/><circle cx='14' cy='16' r='3.5' fill='%23e3120b'/><circle cx='23' cy='16' r='3.5' fill='%23e3120b' opacity='0.7'/><circle cx='16' cy='26' r='3.5' fill='%23e3120b' opacity='0.8'/><circle cx='26' cy='26' r='3.5' fill='%23e3120b'/><circle cx='34' cy='26' r='3.5' fill='%23e3120b' opacity='0.5'/><circle cx='30' cy='36' r='3.5' fill='%23e3120b' opacity='0.6'/></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:CASL,CRSV,MONO,slnt,wght@0,0,0..1,0,300..1000&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --font: "Recursive", ui-monospace, "SF Mono", SFMono-Regular, monospace;
+            --black: #000000; --grey-900: #111111; --grey-800: #1a1a1a;
+            --grey-600: #555555; --grey-400: #999999; --grey-300: #bbbbbb;
+            --grey-200: #dddddd; --grey-100: #f0f0f0; --grey-50: #f8f8f8; --white: #ffffff;
+            --red: #e3120b; --red-light: rgba(227,18,11,0.08);
+            --bg: var(--white); --bg-subtle: var(--grey-50); --bg-muted: var(--grey-100);
+            --border: var(--grey-200); --border-strong: var(--grey-300);
+            --text-primary: var(--black); --text-secondary: var(--grey-600); --text-muted: var(--grey-400);
+            --accent: var(--red); --accent-bg: var(--red-light);
+            --radius: 12px; --transition: 0.2s ease;
+        }
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: var(--font); background: var(--bg); color: var(--text-primary);
+            font-size: 15px; line-height: 1.7; -webkit-font-smoothing: antialiased;
+            font-variation-settings: "MONO" 0.4, "CASL" 0;
+        }
+        .container { max-width: 720px; margin: 0 auto; padding: 0 1.5rem; }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        code {
+            font-family: var(--font); font-variation-settings: "MONO" 1, "CASL" 0;
+            font-size: 0.875em; background: var(--bg-muted); padding: 0.15em 0.4em;
+            border-radius: 4px; border: 1px solid var(--border);
+        }
+
+        .back-nav {
+            padding: 1.25rem 0; border-bottom: 1px solid var(--border);
+            font-size: 0.8125rem; font-variation-settings: "MONO" 0.8, "CASL" 0;
+        }
+        .back-nav a { color: var(--text-secondary); }
+        .back-nav a:hover { color: var(--accent); }
+
+        .page-header { padding: 3rem 0 2rem; }
+        .page-header h1 {
+            font-size: 2rem; font-weight: 700; letter-spacing: -0.03em; line-height: 1.15;
+            margin-bottom: 0.75rem;
+        }
+        .page-header .subtitle {
+            font-size: 0.875rem; color: var(--text-muted); max-width: 560px;
+            font-variation-settings: "MONO" 0.6, "CASL" 0;
+        }
+
+        .stats-bar {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;
+            padding: 1.25rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+            margin-bottom: 2.5rem;
+        }
+        .stat { text-align: center; }
+        .stat-num {
+            font-size: 1.5rem; font-weight: 800; color: var(--accent);
+            font-variation-settings: "MONO" 1, "CASL" 0;
+        }
+        .stat-label {
+            font-size: 0.6875rem; color: var(--text-muted); text-transform: uppercase;
+            letter-spacing: 0.04em; font-variation-settings: "MONO" 1, "CASL" 0;
+        }
+
+        section { margin-bottom: 2.5rem; }
+        section h2 {
+            font-size: 1.125rem; font-weight: 700; letter-spacing: -0.02em;
+            margin-bottom: 0.75rem; color: var(--text-primary);
+        }
+        section h2 .num {
+            color: var(--accent); font-variation-settings: "MONO" 1, "CASL" 0;
+            margin-right: 0.3rem;
+        }
+        section p { color: var(--text-secondary); margin-bottom: 0.75rem; }
+
+        .principle-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem;
+        }
+        .principle-card {
+            padding: 1.25rem; border-radius: var(--radius);
+            border: 1px solid var(--border); background: var(--bg-subtle);
+            transition: border-color var(--transition);
+        }
+        .principle-card:hover { border-color: var(--accent); }
+        .principle-card h3 {
+            font-size: 0.8125rem; font-weight: 600; margin-bottom: 0.375rem;
+        }
+        .principle-card p {
+            font-size: 0.75rem; color: var(--text-muted); line-height: 1.6; margin: 0;
+        }
+
+        .graph-container {
+            padding: 2rem; border-radius: var(--radius);
+            border: 1px solid var(--border); background: var(--bg-subtle);
+            margin-top: 1rem; text-align: center;
+        }
+        .graph-container svg { max-width: 100%; height: auto; }
+
+        .pill-row { display: flex; flex-wrap: wrap; gap: 0.375rem; margin-top: 0.75rem; }
+        .pill-row span {
+            font-size: 0.625rem; text-transform: uppercase; letter-spacing: 0.04em;
+            font-variation-settings: "MONO" 1, "CASL" 0; font-weight: 500;
+            background: var(--bg-muted); color: var(--text-muted);
+            padding: 0.2rem 0.5rem; border-radius: 4px; border: 1px solid var(--border);
+        }
+
+        .page-footer {
+            padding: 2rem 0; border-top: 1px solid var(--border);
+            text-align: center; font-size: 0.6875rem; color: var(--text-muted);
+            font-variation-settings: "MONO" 0.8, "CASL" 0;
+        }
+
+        /* Abacus simulator */
+        .abacus-box {
+            border: 1px solid var(--border); border-radius: var(--radius);
+            background: var(--bg-subtle); padding: 1.5rem; margin-top: 1rem;
+        }
+        .abacus-input {
+            width: 100%; min-height: 100px; padding: 0.75rem; font-family: var(--font);
+            font-size: 0.8125rem; font-variation-settings: "MONO" 0.6, "CASL" 0;
+            border: 1px solid var(--border); border-radius: 8px; background: var(--bg);
+            color: var(--text-primary); resize: vertical; line-height: 1.6;
+            transition: border-color var(--transition);
+        }
+        .abacus-input:focus { outline: none; border-color: var(--accent); }
+        .abacus-input::placeholder { color: var(--text-muted); }
+        .abacus-readout {
+            display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem;
+            margin-top: 1rem;
+        }
+        .abacus-stat {
+            text-align: center; padding: 0.75rem 0.5rem;
+            border-radius: 8px; border: 1px solid var(--border); background: var(--bg);
+        }
+        .abacus-stat-num {
+            font-size: 1.25rem; font-weight: 800;
+            font-variation-settings: "MONO" 1, "CASL" 0;
+            transition: color 0.3s ease;
+        }
+        .abacus-stat-num.accent { color: var(--accent); }
+        .abacus-stat-num.green { color: #16a34a; }
+        .abacus-stat-label {
+            font-size: 0.5625rem; color: var(--text-muted); text-transform: uppercase;
+            letter-spacing: 0.04em; font-variation-settings: "MONO" 1, "CASL" 0;
+            margin-top: 0.125rem;
+        }
+        .abacus-visual {
+            margin-top: 1.25rem; padding: 1rem; border-radius: 8px;
+            border: 1px solid var(--border); background: var(--bg);
+            display: flex; flex-direction: column; gap: 0.5rem;
+        }
+        .abacus-rod {
+            display: flex; align-items: center; gap: 0.5rem; height: 24px;
+        }
+        .abacus-rod-label {
+            width: 80px; font-size: 0.625rem; color: var(--text-muted);
+            font-variation-settings: "MONO" 1, "CASL" 0; text-align: right;
+            flex-shrink: 0;
+        }
+        .abacus-rod-track {
+            flex: 1; height: 4px; background: var(--bg-muted);
+            border-radius: 2px; position: relative; overflow: visible;
+        }
+        .abacus-rod-fill {
+            height: 100%; border-radius: 2px; transition: width 0.4s ease;
+            position: absolute; left: 0; top: 0;
+        }
+        .abacus-rod-beads {
+            position: absolute; top: -6px; display: flex; gap: 2px;
+            transition: left 0.4s ease;
+        }
+        .abacus-bead {
+            width: 16px; height: 16px; border-radius: 50%;
+            border: 2px solid; transition: background 0.3s ease;
+        }
+        .abacus-bar-label {
+            font-size: 0.5625rem; color: var(--text-muted);
+            font-variation-settings: "MONO" 1, "CASL" 0;
+            position: absolute; right: 0; top: -14px;
+        }
+        .abacus-legend {
+            display: flex; gap: 1.25rem; justify-content: center;
+            margin-top: 0.75rem; font-size: 0.625rem; color: var(--text-muted);
+            font-variation-settings: "MONO" 0.8, "CASL" 0;
+        }
+        .abacus-legend span { display: flex; align-items: center; gap: 0.3rem; }
+        .legend-dot {
+            width: 8px; height: 8px; border-radius: 50%; display: inline-block;
+        }
+
+        @media (max-width: 1024px) and (min-width: 641px) {
+            .container { max-width: 600px; }
+            .graph-container { padding: 1.25rem; }
+            .graph-container svg { max-width: 100%; }
+        }
+        @media (max-width: 640px) {
+            .container { padding: 0 1.25rem; }
+            .page-header h1 { font-size: 1.5rem; }
+            .stats-bar { grid-template-columns: 1fr; gap: 0.75rem; }
+            .principle-grid { grid-template-columns: 1fr; }
+            .stat-num { font-size: 1.25rem; }
+            .abacus-readout { grid-template-columns: repeat(2, 1fr); }
+            .abacus-rod-label { width: 60px; font-size: 0.5625rem; }
+            .abacus-input { min-height: 80px; font-size: 0.75rem; }
+            .abacus-stat-num { font-size: 1rem; }
+            .abacus-legend { flex-direction: column; align-items: flex-start; gap: 0.375rem; }
+            .graph-container { padding: 1rem; overflow-x: auto; }
+            .pill-row { gap: 0.25rem; }
+            .pill-row span { font-size: 0.5625rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="back-nav">
+            <a href="index.html">&larr; Back to portfolio</a>
+        </nav>
+
+        <header class="page-header">
+            <h1>How I save 38% on LLM tokens</h1>
+            <p class="subtitle">A context engineering methodology applied across 16M+ tokens of real production workloads — not theory, measured results.</p>
+        </header>
+
+        <div class="stats-bar">
+            <div class="stat">
+                <div class="stat-num" id="live-tokens">16,000,000</div>
+                <div class="stat-label">Tokens processed</div>
+            </div>
+            <div class="stat">
+                <div class="stat-num">38%</div>
+                <div class="stat-label">Token savings</div>
+            </div>
+            <div class="stat">
+                <div class="stat-num">~6.1M</div>
+                <div class="stat-label">Tokens avoided</div>
+            </div>
+        </div>
+
+        <section>
+            <h2><span class="num">01</span> The problem</h2>
+            <p>Most LLM-powered systems treat context as unlimited. They dump full documents, conversation history, and tool outputs into prompts without measuring cost or relevance. The result: token burn, degraded accuracy from context pollution, and unpredictable latency.</p>
+            <p>Working across enterprise deployments at Kariyer.net — Sales, Finance, R&D — I needed a systematic approach to context that scales.</p>
+        </section>
+
+        <section>
+            <h2><span class="num">02</span> The methodology</h2>
+            <p>Five principles, applied together as a system:</p>
+
+            <div class="principle-grid">
+                <div class="principle-card">
+                    <h3>Right context engineering</h3>
+                    <p>Select only the context that directly serves the current task. Score relevance, filter aggressively, and validate that every token in the window earns its place.</p>
+                </div>
+                <div class="principle-card">
+                    <h3>On-time compaction</h3>
+                    <p>Compress conversation history and intermediate outputs before they accumulate. Summarize completed reasoning chains. Retain decisions, discard derivations.</p>
+                </div>
+                <div class="principle-card">
+                    <h3>Context pollution control</h3>
+                    <p>Prevent irrelevant tool outputs, stale cache entries, and redundant instructions from entering the context window. Gate every injection point.</p>
+                </div>
+                <div class="principle-card">
+                    <h3>Incremental context management</h3>
+                    <p>Build context progressively rather than loading everything upfront. Start minimal, expand as needed, compact as you go. Match context lifecycle to task lifecycle.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2><span class="num">03</span> The infrastructure layer</h2>
+            <p>Methodology alone isn't enough — you need supporting infrastructure that makes these principles the default, not an afterthought:</p>
+
+            <div class="principle-grid">
+                <div class="principle-card">
+                    <h3>Clean knowledge base</h3>
+                    <p>Curated, deduplicated, and version-controlled data sources. No stale documents. No conflicting definitions. Every fact traceable to a source.</p>
+                </div>
+                <div class="principle-card">
+                    <h3>Glossary as contract</h3>
+                    <p>A shared vocabulary across agents, tools, and humans. Eliminates ambiguity in multi-agent handoffs. Reduces re-explanation tokens to near-zero.</p>
+                </div>
+                <div class="principle-card">
+                    <h3>Wiki as ground truth</h3>
+                    <p>Structured organizational knowledge accessible to agents via RAG. Maintained like code — PRs, reviews, deprecation cycles. Not a document dump.</p>
+                </div>
+                <div class="principle-card">
+                    <h3>Context as graph</h3>
+                    <p>Model relationships between entities, decisions, and documents as a graph. Agents traverse edges to find relevant context instead of scanning flat text.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2><span class="num">04</span> Context as a graph</h2>
+            <p>The core insight: context isn't a flat window — it's a connected graph. Each node carries meaning, each edge carries relevance. Agents navigate the graph to assemble exactly the right context for each step.</p>
+
+            <div class="graph-container">
+                <svg viewBox="0 0 560 320" fill="none">
+                    <!-- Nodes -->
+                    <circle cx="280" cy="160" r="28" fill="var(--accent-bg)" stroke="var(--accent)" stroke-width="2"/>
+                    <text x="280" y="165" text-anchor="middle" font-size="11" font-weight="700" fill="var(--accent)" font-family="monospace">TASK</text>
+
+                    <circle cx="120" cy="80" r="22" fill="var(--bg-muted)" stroke="var(--border-strong)" stroke-width="1.5"/>
+                    <text x="120" y="84" text-anchor="middle" font-size="9" font-weight="600" fill="var(--text-secondary)" font-family="monospace">KB</text>
+
+                    <circle cx="440" cy="80" r="22" fill="var(--bg-muted)" stroke="var(--border-strong)" stroke-width="1.5"/>
+                    <text x="440" y="84" text-anchor="middle" font-size="9" font-weight="600" fill="var(--text-secondary)" font-family="monospace">Wiki</text>
+
+                    <circle cx="80" cy="200" r="22" fill="var(--bg-muted)" stroke="var(--border-strong)" stroke-width="1.5"/>
+                    <text x="80" y="204" text-anchor="middle" font-size="9" font-weight="600" fill="var(--text-secondary)" font-family="monospace">Gloss</text>
+
+                    <circle cx="480" cy="200" r="22" fill="var(--bg-muted)" stroke="var(--border-strong)" stroke-width="1.5"/>
+                    <text x="480" y="204" text-anchor="middle" font-size="9" font-weight="600" fill="var(--text-secondary)" font-family="monospace">Tools</text>
+
+                    <circle cx="180" cy="280" r="22" fill="var(--bg-muted)" stroke="var(--border-strong)" stroke-width="1.5"/>
+                    <text x="180" y="284" text-anchor="middle" font-size="9" font-weight="600" fill="var(--text-secondary)" font-family="monospace">History</text>
+
+                    <circle cx="380" cy="280" r="22" fill="var(--bg-muted)" stroke="var(--border-strong)" stroke-width="1.5"/>
+                    <text x="380" y="284" text-anchor="middle" font-size="9" font-weight="600" fill="var(--text-secondary)" font-family="monospace">Cache</text>
+
+                    <!-- Edges -->
+                    <line x1="142" y1="92" x2="254" y2="146" stroke="var(--border-strong)" stroke-width="1" stroke-dasharray="4 3"/>
+                    <line x1="418" y1="92" x2="306" y2="146" stroke="var(--border-strong)" stroke-width="1" stroke-dasharray="4 3"/>
+                    <line x1="100" y1="192" x2="254" y2="166" stroke="var(--border-strong)" stroke-width="1" stroke-dasharray="4 3"/>
+                    <line x1="460" y1="192" x2="306" y2="166" stroke="var(--border-strong)" stroke-width="1" stroke-dasharray="4 3"/>
+                    <line x1="198" y1="268" x2="260" y2="180" stroke="var(--border-strong)" stroke-width="1" stroke-dasharray="4 3"/>
+                    <line x1="362" y1="268" x2="300" y2="180" stroke="var(--border-strong)" stroke-width="1" stroke-dasharray="4 3"/>
+
+                    <!-- Active edges (scored relevant) -->
+                    <line x1="142" y1="92" x2="254" y2="146" stroke="var(--accent)" stroke-width="2" opacity="0.4"/>
+                    <line x1="418" y1="92" x2="306" y2="146" stroke="var(--accent)" stroke-width="2" opacity="0.3"/>
+                    <line x1="100" y1="192" x2="254" y2="166" stroke="var(--accent)" stroke-width="2" opacity="0.5"/>
+
+                    <!-- Labels on edges -->
+                    <text x="185" y="108" font-size="7" fill="var(--accent)" font-family="monospace" opacity="0.7">relevance: 0.92</text>
+                    <text x="350" y="108" font-size="7" fill="var(--text-muted)" font-family="monospace" opacity="0.7">relevance: 0.61</text>
+                    <text x="140" y="188" font-size="7" fill="var(--accent)" font-family="monospace" opacity="0.7">relevance: 0.87</text>
+                    <text x="380" y="230" font-size="7" fill="var(--text-muted)" font-family="monospace" opacity="0.5">compacted</text>
+                    <text x="170" y="240" font-size="7" fill="var(--text-muted)" font-family="monospace" opacity="0.5">summarized</text>
+                </svg>
+            </div>
+            <div class="pill-row">
+                <span>Knowledge base</span><span>Glossary</span><span>Wiki</span><span>Tool outputs</span><span>History</span><span>Cache</span><span>Relevance scoring</span><span>Graph traversal</span>
+            </div>
+        </section>
+
+        <section>
+            <h2><span class="num">05</span> Results</h2>
+            <p>Applied across enterprise LLM deployments at Kariyer.net (100+ internal users), this methodology delivers:</p>
+            <div class="principle-grid">
+                <div class="principle-card">
+                    <h3>38% token reduction</h3>
+                    <p>Measured across 16M+ tokens of production workloads. Not cherry-picked benchmarks — real queries, real users, real cost savings.</p>
+                </div>
+                <div class="principle-card">
+                    <h3>Higher factual accuracy</h3>
+                    <p>Less context pollution means fewer hallucinations. Agents work with relevant, curated context instead of noisy document dumps.</p>
+                </div>
+                <div class="principle-card">
+                    <h3>Predictable latency</h3>
+                    <p>Smaller, targeted context windows mean faster inference. No surprises from bloated prompts hitting rate limits.</p>
+                </div>
+                <div class="principle-card">
+                    <h3>Reproducible framework</h3>
+                    <p>Adopted as organizational standard. Documented in <a href="https://tokalator.wiki">Tokalator</a> and published at <a href="https://arxiv.org/abs/2604.08290">arXiv:2604.08290</a>.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2><span class="num">06</span> Try it — abacus simulator</h2>
+            <p>Paste any prompt or text below. The abacus counts tokens (estimated) and shows what context engineering saves at 38% efficiency.</p>
+
+            <div class="abacus-box">
+                <textarea class="abacus-input" id="abacus-input" placeholder="Paste your prompt, system message, or any text here..."></textarea>
+
+                <div class="abacus-readout">
+                    <div class="abacus-stat">
+                        <div class="abacus-stat-num accent" id="ab-raw">0</div>
+                        <div class="abacus-stat-label">Raw tokens</div>
+                    </div>
+                    <div class="abacus-stat">
+                        <div class="abacus-stat-num green" id="ab-optimized">0</div>
+                        <div class="abacus-stat-label">After optimization</div>
+                    </div>
+                    <div class="abacus-stat">
+                        <div class="abacus-stat-num green" id="ab-saved">0</div>
+                        <div class="abacus-stat-label">Tokens saved</div>
+                    </div>
+                    <div class="abacus-stat">
+                        <div class="abacus-stat-num" id="ab-cost" style="color:var(--text-secondary)">$0.000</div>
+                        <div class="abacus-stat-label">Cost saved (GPT-4o)</div>
+                    </div>
+                </div>
+
+                <div class="abacus-visual" id="abacus-visual">
+                    <div class="abacus-rod">
+                        <div class="abacus-rod-label">Raw</div>
+                        <div class="abacus-rod-track">
+                            <div class="abacus-rod-fill" id="ab-bar-raw" style="width:0%; background:var(--accent);"></div>
+                            <div class="abacus-rod-beads" id="ab-beads-raw" style="left:0%;"></div>
+                            <span class="abacus-bar-label" id="ab-bar-raw-pct"></span>
+                        </div>
+                    </div>
+                    <div class="abacus-rod">
+                        <div class="abacus-rod-label">Optimized</div>
+                        <div class="abacus-rod-track">
+                            <div class="abacus-rod-fill" id="ab-bar-opt" style="width:0%; background:#16a34a;"></div>
+                            <div class="abacus-rod-beads" id="ab-beads-opt" style="left:0%;"></div>
+                            <span class="abacus-bar-label" id="ab-bar-opt-pct"></span>
+                        </div>
+                    </div>
+                    <div class="abacus-rod">
+                        <div class="abacus-rod-label">Saved</div>
+                        <div class="abacus-rod-track">
+                            <div class="abacus-rod-fill" id="ab-bar-saved" style="width:0%; background:var(--accent); opacity:0.3;"></div>
+                            <div class="abacus-rod-beads" id="ab-beads-saved" style="left:0%;"></div>
+                            <span class="abacus-bar-label" id="ab-bar-saved-pct"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="abacus-legend">
+                    <span><span class="legend-dot" style="background:var(--accent);"></span> Raw tokens</span>
+                    <span><span class="legend-dot" style="background:#16a34a;"></span> After context engineering</span>
+                    <span><span class="legend-dot" style="background:var(--accent); opacity:0.3;"></span> Tokens saved</span>
+                </div>
+            </div>
+
+            <p style="margin-top:1rem; font-size:0.8125rem;">For production-grade token counting, use <a href="https://tokalator.wiki">Tokalator</a> — the open-source VS Code extension with real-time budgeting, tab relevance scoring, and multi-model cost comparison. 500+ installs.</p>
+            <div class="pill-row">
+                <span>VS Code</span><span>TypeScript</span><span>Token budgeting</span><span>Relevance scoring</span><span>Open source</span>
+            </div>
+        </section>
+
+        <footer class="page-footer">
+            <a href="index.html">&larr; Back to portfolio</a> &nbsp;·&nbsp; Vahid Faraji &nbsp;·&nbsp; 2026
+        </footer>
+    </div>
+
+    <script>
+    (function() {
+        var el = document.getElementById('live-tokens');
+        if (!el) return;
+        var base = 16000000;
+        var rate = 1.2;
+        function fmt(n) { return Math.floor(n).toLocaleString('en-US'); }
+        el.textContent = fmt(base);
+        setInterval(function() {
+            base += rate;
+            el.textContent = fmt(base);
+        }, 1000);
+    })();
+
+    (function abacus() {
+        var input = document.getElementById('abacus-input');
+        var SAVE_RATE = 0.38;
+        var COST_PER_TOKEN = 2.50 / 1000000; // GPT-4o input pricing
+
+        function estimateTokens(text) {
+            if (!text || !text.trim()) return 0;
+            var words = text.trim().split(/\s+/).length;
+            var chars = text.length;
+            return Math.ceil(words * 1.3 + chars * 0.05);
+        }
+
+        function makeBeads(count, color) {
+            var html = '';
+            var n = Math.min(count, 10);
+            for (var i = 0; i < n; i++) {
+                html += '<div class="abacus-bead" style="background:' + color + '; border-color:' + color + '; opacity:' + (0.4 + 0.6 * (i + 1) / n) + ';"></div>';
+            }
+            return html;
+        }
+
+        function update() {
+            var text = input.value;
+            var raw = estimateTokens(text);
+            var saved = Math.floor(raw * SAVE_RATE);
+            var optimized = raw - saved;
+            var costSaved = saved * COST_PER_TOKEN;
+
+            document.getElementById('ab-raw').textContent = raw.toLocaleString('en-US');
+            document.getElementById('ab-optimized').textContent = optimized.toLocaleString('en-US');
+            document.getElementById('ab-saved').textContent = saved.toLocaleString('en-US');
+            document.getElementById('ab-cost').textContent = '$' + costSaved.toFixed(4);
+
+            var max = Math.max(raw, 1);
+            var rawPct = 100;
+            var optPct = (optimized / max) * 100;
+            var savedPct = (saved / max) * 100;
+
+            document.getElementById('ab-bar-raw').style.width = rawPct + '%';
+            document.getElementById('ab-bar-opt').style.width = optPct + '%';
+            document.getElementById('ab-bar-saved').style.width = savedPct + '%';
+
+            var rawBeadCount = Math.ceil(raw / Math.max(Math.floor(raw / 8), 1));
+            var optBeadCount = Math.ceil(optimized / Math.max(Math.floor(raw / 8), 1));
+            var savedBeadCount = rawBeadCount - optBeadCount;
+
+            document.getElementById('ab-beads-raw').innerHTML = makeBeads(rawBeadCount, '#e3120b');
+            document.getElementById('ab-beads-raw').style.left = Math.min(rawPct, 95) + '%';
+
+            document.getElementById('ab-beads-opt').innerHTML = makeBeads(optBeadCount, '#16a34a');
+            document.getElementById('ab-beads-opt').style.left = Math.min(optPct, 95) + '%';
+
+            document.getElementById('ab-beads-saved').innerHTML = makeBeads(Math.max(savedBeadCount, 0), '#e3120b');
+            document.getElementById('ab-beads-saved').style.left = Math.min(savedPct, 95) + '%';
+
+            document.getElementById('ab-bar-raw-pct').textContent = raw > 0 ? raw.toLocaleString('en-US') : '';
+            document.getElementById('ab-bar-opt-pct').textContent = raw > 0 ? optimized.toLocaleString('en-US') : '';
+            document.getElementById('ab-bar-saved-pct').textContent = raw > 0 ? '-' + saved.toLocaleString('en-US') : '';
+        }
+
+        input.addEventListener('input', update);
+        update();
+    })();
+    </script>
+</body>
+</html>
