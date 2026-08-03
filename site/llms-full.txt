@@ -49,7 +49,8 @@ Vahid Faraji is a Senior Applied AI Specialist with 9+ years of experience shipp
 - URL: https://tokalator.wiki/applied-ai
 - GitHub: github.com/vfaraji89/awesome-applied-ai
 - Type: Open source, curated reference
-- What it is: A working map of applied AI for the enterprise — six layers: Guardrails & Governance, Evaluation & Observability, Orchestration, Caching, Memory, Retrieval. Includes a live tool index, equations, dictionary, commands, design problems and research findings.
+- What it is: A working map of applied AI for the enterprise. Six layers: Guardrails and Governance, Evaluation and Observability, Orchestration, Caching, Memory, and Retrieval. Includes a live tool index, equations, dictionary, commands, design problems and research findings.
+- Scope: The tools, protocols, benchmarks and regulation that decide what a system knows, what it costs, and what you can prove about it.
 - Scope: What decides what a system knows, what it costs, and what you can prove about it.
 
 ### Tokalator — Context Engineering Toolkit
@@ -58,7 +59,7 @@ Vahid Faraji is a Senior Applied AI Specialist with 9+ years of experience shipp
 - Type: Open source (MIT)
 - Stack: Next.js, TypeScript, VS Code Extension, MCP, Token Economics
 - Metrics: 500+ VS Code installs, 17 models supported, 58 wiki articles
-- What it does: Real-time token budgeting, tab relevance scoring, Cobb-Douglas output-quality models, caching break-even analysis across 15+ LLMs
+- What it does: Real-time token budgeting, tab relevance scoring, Cobb-Douglas output-quality models, caching break-even analysis across 17 LLMs
 - Grant: $40K Perplexity AI grant secured
 
 ### Multi-Agent Job Classification System

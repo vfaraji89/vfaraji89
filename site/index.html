@@ -170,7 +170,7 @@
     <!-- Recursive: variable font with MONO axis (0=sans → 1=mono) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Recursive:CASL,CRSV,MONO,slnt,wght@0,0,0..1,0,300..1000&family=Newsreader:ital,opsz,wght@0,6..72,200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:CASL,CRSV,MONO,slnt,wght@0,0,0..1,0,300..1000&family=Sora:wght@100..800&display=swap" rel="stylesheet">
 
     <style>
         @property --border-angle {
@@ -180,8 +180,8 @@
         }
 
         :root {
-            --font: "Recursive", ui-monospace, "SF Mono", SFMono-Regular, monospace;
-            --font-serif: "Newsreader", Georgia, "Times New Roman", serif;
+            --font: "Sora", "Recursive", ui-monospace, "SF Mono", monospace;
+            --font-display: "Sora", "Recursive", ui-monospace, "SF Mono", monospace;
 
             --black: #000000;
             --grey-900: #111111;
@@ -240,10 +240,9 @@
             transition: background var(--transition), color var(--transition);
         }
 
-        /* MONO 0.6 / 700 — headings: code-editor feel, refined letterforms */
+        /* Sora / 700 - headings: tech, geometric */
         h1, h2, h3 {
-            font-family: var(--font-serif);
-            font-variation-settings: "MONO" 0.6, "CASL" 0;
+            font-family: var(--font-display);
             font-weight: 700; letter-spacing: -0.025em; line-height: 1.15;
             color: var(--text-primary);
         }
@@ -373,8 +372,9 @@
 
         .hero-rule { display: block; width: 100%; height: 3px; background: var(--accent); border: none; margin: 1.25rem 0 1rem; }
         .hero-tagline {
-            font-size: 0.9375rem; color: var(--accent); margin-bottom: 0;
-            font-variation-settings: "MONO" 0.5, "CASL" 0; font-weight: 500;
+            font-size: 1.125rem; color: var(--text-secondary); margin-bottom: 0;
+            font-variation-settings: "MONO" 0.2, "CASL" 0.2; font-weight: 500;
+            max-width: 34rem;
         }
         .hero-bio { font-size: 0.875rem; color: var(--text-secondary); line-height: 1.8; max-width: 640px; }
         .bio-tags {
@@ -406,20 +406,46 @@
         .metric-card.flipped { border-color: var(--accent); }
         .metric-card.flipped .metric-label { color: var(--accent); font-weight: 500; }
         .metric-num {
-            font-size: 1.5rem; font-weight: 800; line-height: 1;
+            font-size: 1.5rem; font-weight: 800; line-height: 1.15;
             font-variation-settings: "MONO" 1, "CASL" 0;
             color: var(--accent);
-            min-height: 1.5rem;
+            min-height: 2.75rem;
             display: flex; align-items: center; justify-content: center;
+            transition: font-size 0.3s ease;
         }
+        .metric-card.flipped .metric-num { font-size: 0.9375rem; }
         .metric-label {
             font-size: 0.625rem; text-transform: uppercase; letter-spacing: 0.06em;
             color: var(--text-muted); margin-top: 0.375rem;
             font-variation-settings: "MONO" 0.8, "CASL" 0; font-weight: 400;
             transition: color 0.2s ease;
+            min-height: 1.75rem; display: flex; align-items: center; justify-content: center;
+            line-height: 1.4;
         }
 
         .hero-ctas { display: flex; flex-wrap: wrap; gap: 0.625rem; margin-top: 2rem; }
+        .cta-band {
+            border: 1px solid var(--border);
+            background: var(--bg-subtle);
+            border-radius: var(--radius);
+            padding: 2.25rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-band::before {
+            content: "";
+            position: absolute; inset: 0;
+            background: radial-gradient(560px 160px at 88% 0%, var(--accent-bg), transparent);
+            pointer-events: none;
+        }
+        .cta-label {
+            font-size: 0.6875rem; text-transform: uppercase; letter-spacing: 0.08em;
+            color: var(--accent); font-variation-settings: "MONO" 1, "CASL" 0;
+            display: flex; align-items: center; gap: 0.5rem;
+        }
+        .cta-band h3 { font-size: 1.5rem; margin: 0.75rem 0 0.5rem; }
+        .cta-band p { margin-bottom: 1.5rem; max-width: 34rem; }
+        .cta-actions { display: flex; flex-wrap: wrap; gap: 0.625rem; }
         .btn {
             display: inline-flex; align-items: center; gap: 0.5rem;
             padding: 0.625rem 1.25rem; font-family: var(--font);
@@ -460,12 +486,12 @@
         .hover-card {
             position: relative; overflow: hidden;
             border: 1px solid var(--border); border-radius: var(--radius);
-            transition: border-color 0.3s, box-shadow 0.3s;
+            transition: border-color 0.45s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1);
         }
         .hover-card::after {
             content: ""; position: absolute; inset: 0; pointer-events: none;
             background: radial-gradient(600px circle at var(--glow-x, 50%) var(--glow-y, 50%), rgba(227,18,11,0.06), transparent 40%);
-            opacity: 0; transition: opacity 0.3s;
+            opacity: 0; transition: opacity 0.45s ease;
         }
         .hover-card:hover::after { opacity: 1; }
         .hover-card:hover { border-color: var(--grey-400); box-shadow: 0 2px 12px rgba(0,0,0,0.04); }
@@ -601,15 +627,38 @@
 
 
         /* About */
-        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
-        .about-block h4 {
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+        .about-card { padding: 1.5rem; }
+        .about-head { display: flex; align-items: center; gap: 0.625rem; margin-bottom: 1rem; }
+        .about-icon {
+            width: 2rem; height: 2rem; border-radius: 8px; flex-shrink: 0;
+            display: flex; align-items: center; justify-content: center;
+            background: var(--accent-bg); color: var(--accent);
+            border: 1px solid var(--border);
+        }
+        .about-head h4 {
             font-size: 0.6875rem; font-weight: 500; color: var(--text-muted);
-            text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.75rem;
+            text-transform: uppercase; letter-spacing: 0.08em;
             font-variation-settings: "MONO" 0.8, "CASL" 0;
         }
-        .about-block ul { list-style: none; display: flex; flex-direction: column; gap: 0.3rem; }
-        .about-block li { font-size: 0.8125rem; color: var(--text-secondary); }
-        .about-block li.hl { color: var(--accent); font-weight: 500; }
+        .about-count {
+            margin-left: auto; font-size: 0.625rem; font-weight: 700;
+            color: var(--accent); font-variation-settings: "MONO" 1, "CASL" 0;
+            background: var(--bg-muted); border: 1px solid var(--border);
+            padding: 0.1rem 0.5rem; border-radius: 999px; line-height: 1.4;
+        }
+        .about-list { list-style: none; display: flex; flex-direction: column; gap: 0.55rem; }
+        .about-list li {
+            font-size: 0.8125rem; color: var(--text-secondary);
+            display: flex; gap: 0.625rem; line-height: 1.5;
+        }
+        .about-list li::before {
+            content: ""; width: 5px; height: 5px; border-radius: 50%;
+            background: var(--accent); opacity: 0.55;
+            margin-top: 0.45em; flex-shrink: 0;
+        }
+        .about-list li.hl { color: var(--accent); font-weight: 500; }
+        .about-list li.hl::before { opacity: 1; box-shadow: 0 0 8px var(--accent); }
 
         /* Contact */
         .contact-box { border: 1px solid var(--border); border-radius: var(--radius); padding: 2.5rem; text-align: center; background: var(--bg-subtle); }
@@ -1003,7 +1052,7 @@
 
             <hr class="hero-rule">
 
-            <p class="hero-tagline">Where I build, publish, and teach.</p>
+            <p class="hero-tagline">Helping enterprise teams ship production agent systems, from multi-agent orchestration to context engineering.</p>
 
             <div class="hero-snippets" id="hero-snippets">
                 <a href="updates.html#awesome-applied-ai" class="latest-pill hero-chip active"><span class="pulse"></span>awesome-applied-ai · 6-layer applied AI map →</a>
@@ -1088,6 +1137,18 @@
             </div>
         </section>
 
+        <section class="reveal">
+            <div class="cta-band">
+                <div class="cta-label">awesome-applied-ai · July 2026</div>
+                <h3>A working map of applied AI for the enterprise</h3>
+                <p>Six layers: Guardrails and Governance, Evaluation and Observability, Orchestration, Caching, Memory, and Retrieval. Includes a live tool index, equations, dictionary, and research for enterprise AI architects.</p>
+                <div class="cta-actions">
+                    <a href="https://tokalator.wiki/applied-ai" target="_blank" rel="noopener" class="btn btn-primary">Explore the map →</a>
+                    <a href="https://github.com/vfaraji89/awesome-applied-ai" target="_blank" rel="noopener" class="btn btn-outline">GitHub</a>
+                </div>
+            </div>
+        </section>
+
         <section id="work" class="reveal">
             <div class="section-label">Case Studies</div>
             <p class="section-tagline">Problems I solved end to end.</p>
@@ -1098,11 +1159,11 @@
                         <div class="case-title"><a href="https://tokalator.wiki" target="_blank" rel="noopener">Tokalator — Context Engineering Toolkit</a></div>
                         <div class="case-body">
                             <div class="case-row"><span class="case-row-label">Problem</span><span class="case-row-val">AI coding assistants burn tokens blindly — no visibility into context cost, no budget guardrails, no cross-model comparison.</span></div>
-                            <div class="case-row"><span class="case-row-label">Approach</span><span class="case-row-val">Real-time token budgeting, tab relevance scoring, Cobb-Douglas output-quality models, caching break-even analysis across <strong>15+ LLMs</strong>.</span></div>
+                            <div class="case-row"><span class="case-row-label">Approach</span><span class="case-row-val">Real-time token budgeting, tab relevance scoring, Cobb-Douglas output-quality models, caching break-even analysis across <strong>17 LLMs</strong>.</span></div>
                             <div class="case-row"><span class="case-row-label">Result</span><span class="case-row-val"><strong>VS Code extension + web platform</strong> shipped. arXiv paper published. $40K Perplexity AI grant secured.</span></div>
                         </div>
                         <div class="case-stats">
-                            <span><strong class="stat-live" id="tok-installs">500+</strong> installs</span>
+                            <span><strong class="stat-live" id="tok-installs">500+</strong> <a href="https://marketplace.visualstudio.com/items?itemName=vfaraji89.tokalator" target="_blank" rel="noopener">installs</a></span>
                             <span><strong id="tok-stars">--</strong> GitHub stars</span>
                             <span><strong>17</strong> models</span>
                             <span><strong>MIT</strong> license</span>
@@ -1201,6 +1262,7 @@
                         <div class="gallery-stack"><span>Next.js</span><span>·</span><span>Scala</span><span>·</span><span>Python</span><span>·</span><span>Cobb-Douglas</span><span>·</span><span>VS Code Extension</span></div>
                         <div class="gallery-actions">
                             <a href="https://tokalator.wiki" target="_blank" rel="noopener" class="ga-primary">Live Site</a>
+                            <a href="https://marketplace.visualstudio.com/items?itemName=vfaraji89.tokalator" target="_blank" rel="noopener" class="ga-outline">VS Code Marketplace</a>
                             <a href="https://arxiv.org/abs/2604.08290" target="_blank" rel="noopener" class="ga-outline">arXiv Paper</a>
                         </div>
                     </div>
@@ -1265,10 +1327,56 @@
             <div class="section-label">About</div>
             <p class="section-tagline">The person behind the systems.</p>
             <div class="about-grid">
-                <div class="about-block"><h4>Education</h4><ul><li>M.A. Economics — Ibn Haldun University</li><li>Thesis: Real-Time Labor Market Analysis</li><li>Teaching Asst., Econometrics I</li></ul></div>
-                <div class="about-block"><h4>Certifications</h4><ul><li class="hl">Google Generative AI Leader</li><li>Anthropic — MCP, Agents, Claude API, Claude Code</li><li>LangChain — LangGraph, LangSmith</li></ul></div>
-                <div class="about-block"><h4>Languages</h4><ul><li>Turkish — Native</li><li>English — C1</li><li>Spanish — Instructor</li><li>Portuguese — Basic</li><li>Japanese — Learning</li></ul></div>
-                <div class="about-block"><h4>Teaching</h4><ul><li class="hl">18h Applied AI Course — Techcareer</li><li>AI Career Mentor — TEV Foundation</li><li>Enterprise prompt engineering — Universities</li></ul></div>
+                <div class="about-card hover-card" data-hover>
+                    <div class="about-head">
+                        <span class="about-icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/><path d="M22 10v6"/></svg></span>
+                        <h4>Education</h4>
+                        <span class="about-count">03</span>
+                    </div>
+                    <ul class="about-list">
+                        <li>M.A. Economics — Ibn Haldun University</li>
+                        <li>Thesis: Real-Time Labor Market Analysis</li>
+                        <li>Teaching Asst., Econometrics I</li>
+                    </ul>
+                </div>
+                <div class="about-card hover-card" data-hover>
+                    <div class="about-head">
+                        <span class="about-icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.5 13.5 17 22l-5-3-5 3 1.5-8.5"/></svg></span>
+                        <h4>Certifications</h4>
+                        <span class="about-count">03</span>
+                    </div>
+                    <ul class="about-list">
+                        <li class="hl">Google Generative AI Leader</li>
+                        <li>Anthropic — MCP, Agents, Claude API, Claude Code</li>
+                        <li>LangChain — LangGraph, LangSmith</li>
+                    </ul>
+                </div>
+                <div class="about-card hover-card" data-hover>
+                    <div class="about-head">
+                        <span class="about-icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span>
+                        <h4>Languages</h4>
+                        <span class="about-count">05</span>
+                    </div>
+                    <ul class="about-list">
+                        <li>Turkish — Native</li>
+                        <li>English — C1</li>
+                        <li>Spanish — Instructor</li>
+                        <li>Portuguese — Basic</li>
+                        <li>Japanese — Learning</li>
+                    </ul>
+                </div>
+                <div class="about-card hover-card" data-hover>
+                    <div class="about-head">
+                        <span class="about-icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg></span>
+                        <h4>Teaching</h4>
+                        <span class="about-count">03</span>
+                    </div>
+                    <ul class="about-list">
+                        <li class="hl">18h Applied AI Course — Techcareer</li>
+                        <li>AI Career Mentor — TEV Foundation</li>
+                        <li>Enterprise prompt engineering — Universities</li>
+                    </ul>
+                </div>
             </div>
         </section>
 
@@ -1690,10 +1798,10 @@
         var glyphs = '/@#$%&*=+<>_~^|:.';
         function rand() { return glyphs[Math.floor(Math.random() * glyphs.length)]; }
         function scrambleTo(tag, text, cb) {
-            if (tag._iv) clearInterval(tag._iv);
+            if (tag._iv) cancelAnimationFrame(tag._iv);
             var resolved = 0;
             var tick = 0;
-            tag._iv = setInterval(function() {
+            function frame() {
                 var out = '';
                 for (var i = 0; i < text.length; i++) {
                     if (i < resolved) out += text[i];
@@ -1705,11 +1813,13 @@
                 if (tick % 3 === 0) resolved++;
                 if (resolved > text.length) {
                     tag.textContent = text;
-                    clearInterval(tag._iv);
                     tag._iv = null;
                     if (cb) cb();
+                    return;
                 }
-            }, 20);
+                tag._iv = requestAnimationFrame(frame);
+            }
+            tag._iv = requestAnimationFrame(frame);
         }
         var container = document.getElementById('bio-tags');
         function init(tag) {
@@ -1791,10 +1901,10 @@
         var glyphs = '/@#$%&*=+<>_~^|:.';
         function rand() { return glyphs[Math.floor(Math.random() * glyphs.length)]; }
         function scrambleTo(el, text, cb) {
-            if (el._miv) clearInterval(el._miv);
+            if (el._miv) cancelAnimationFrame(el._miv);
             var resolved = 0;
             var tick = 0;
-            el._miv = setInterval(function() {
+            function frame() {
                 var out = '';
                 for (var i = 0; i < text.length; i++) {
                     if (i < resolved) out += text[i];
@@ -1806,11 +1916,12 @@
                 if (tick % 3 === 0) resolved++;
                 if (resolved > text.length) {
                     el.textContent = text;
-                    clearInterval(el._miv);
-                    el._miv = null;
                     if (cb) cb();
+                    return;
                 }
-            }, 20);
+                el._miv = requestAnimationFrame(frame);
+            }
+            el._miv = requestAnimationFrame(frame);
         }
         cards.forEach(function(card) {
             var numEl = card.querySelector('.metric-num');

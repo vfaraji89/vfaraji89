@@ -26,11 +26,11 @@
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'><rect x='4' y='4' width='40' height='40' rx='8' fill='none' stroke='%23e3120b' stroke-width='2.5'/><line x1='10' y1='16' x2='38' y2='16' stroke='%23ccc' stroke-width='1.5'/><line x1='10' y1='26' x2='38' y2='26' stroke='%23ccc' stroke-width='1.5'/><line x1='10' y1='36' x2='38' y2='36' stroke='%23ccc' stroke-width='1.5'/><circle cx='14' cy='16' r='3.5' fill='%23e3120b'/><circle cx='23' cy='16' r='3.5' fill='%23e3120b' opacity='0.7'/><circle cx='16' cy='26' r='3.5' fill='%23e3120b' opacity='0.8'/><circle cx='26' cy='26' r='3.5' fill='%23e3120b'/><circle cx='34' cy='26' r='3.5' fill='%23e3120b' opacity='0.5'/><circle cx='30' cy='36' r='3.5' fill='%23e3120b' opacity='0.6'/></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Recursive:CASL,CRSV,MONO,slnt,wght@0,0,0..1,0,300..1000&family=Newsreader:ital,opsz,wght@0,6..72,200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:CASL,CRSV,MONO,slnt,wght@0,0,0..1,0,300..1000&family=Sora:wght@100..800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --font: "Recursive", ui-monospace, "SF Mono", SFMono-Regular, monospace;
-            --font-serif: "Newsreader", Georgia, "Times New Roman", serif;
+            --font: "Sora", "Recursive", ui-monospace, "SF Mono", monospace;
+            --font-display: "Sora", "Recursive", ui-monospace, "SF Mono", monospace;
             --black: #000000; --grey-900: #111111; --grey-800: #1a1a1a;
             --grey-600: #555555; --grey-400: #999999; --grey-300: #bbbbbb;
             --grey-200: #dddddd; --grey-100: #f0f0f0; --grey-50: #f8f8f8; --white: #ffffff;
@@ -60,7 +60,7 @@
 
         .page-header { padding: 3rem 0 1.5rem; }
         .page-header h1 {
-            font-family: var(--font-serif);
+            font-family: var(--font-display);
             font-size: 2rem; font-weight: 700; letter-spacing: -0.03em; line-height: 1.15;
             margin-bottom: 0.5rem;
         }
@@ -83,7 +83,7 @@
             display: grid; grid-template-columns: 200px 1fr; gap: 1.25rem;
             padding: 1.25rem; border-radius: var(--radius);
             border: 1px solid var(--border); background: var(--bg);
-            transition: border-color var(--transition), box-shadow var(--transition);
+            transition: border-color 0.45s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1);
         }
         .news-card:hover { border-color: var(--accent); box-shadow: 0 2px 12px rgba(0,0,0,0.04); }
 
@@ -132,7 +132,7 @@
             font-variation-settings: "MONO" 1, "CASL" 0;
         }
         .news-title {
-            font-family: var(--font-serif);
+            font-family: var(--font-display);
             font-size: 0.9375rem; font-weight: 600; letter-spacing: -0.01em;
             line-height: 1.35;
         }
@@ -216,7 +216,7 @@
             display: grid; grid-template-columns: 64px 1fr; gap: 1rem; align-items: center;
             padding: 1.25rem; border-radius: var(--radius);
             border: 1px solid var(--border); background: var(--bg);
-            transition: border-color var(--transition), box-shadow var(--transition);
+            transition: border-color 0.45s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1);
         }
         .resource-card:hover { border-color: var(--accent); box-shadow: 0 2px 12px rgba(0,0,0,0.04); }
         .resource-icon {
@@ -321,10 +321,10 @@
                     <div class="news-body">
                         <div class="news-meta">
                             <span class="news-tag tag-oss">Open Source</span>
-                            <span class="news-date">August 2026</span>
+                            <span class="news-date">July 2026</span>
                         </div>
-                        <h2 class="news-title"><a href="https://tokalator.wiki/applied-ai">awesome-applied-ai — a working map of applied AI for the enterprise</a></h2>
-                        <p class="news-desc">A public taxonomy of applied AI: six layers — Guardrails &amp; Governance, Evaluation &amp; Observability, Orchestration, Caching, Memory, Retrieval — with a live tool index, formulas, dictionary, commands, and research. It maps what decides what a system knows, what it costs, and what you can prove about it.</p>
+                        <h2 class="news-title"><a href="https://tokalator.wiki/applied-ai">awesome-applied-ai: a working map of applied AI for the enterprise</a></h2>
+                        <p class="news-desc">A public taxonomy of applied AI. Six layers: Guardrails and Governance, Evaluation and Observability, Orchestration, Caching, Memory, and Retrieval. Includes a live tool index, formulas, dictionary, commands, and research for enterprise AI architects.</p>
                         <p class="news-venue">tokalator.wiki/applied-ai · github.com/vfaraji89/awesome-applied-ai</p>
                         <div class="news-links">
                             <a href="https://tokalator.wiki/applied-ai">Live site</a>
