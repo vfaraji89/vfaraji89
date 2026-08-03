@@ -170,7 +170,7 @@
     <!-- Recursive: variable font with MONO axis (0=sans → 1=mono) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Recursive:CASL,CRSV,MONO,slnt,wght@0,0,0..1,0,300..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:CASL,CRSV,MONO,slnt,wght@0,0,0..1,0,300..1000&family=Newsreader:ital,opsz,wght@0,6..72,200..800&display=swap" rel="stylesheet">
 
     <style>
         @property --border-angle {
@@ -181,6 +181,7 @@
 
         :root {
             --font: "Recursive", ui-monospace, "SF Mono", SFMono-Regular, monospace;
+            --font-serif: "Newsreader", Georgia, "Times New Roman", serif;
 
             --black: #000000;
             --grey-900: #111111;
@@ -241,7 +242,7 @@
 
         /* MONO 0.6 / 700 — headings: code-editor feel, refined letterforms */
         h1, h2, h3 {
-            font-family: var(--font);
+            font-family: var(--font-serif);
             font-variation-settings: "MONO" 0.6, "CASL" 0;
             font-weight: 700; letter-spacing: -0.025em; line-height: 1.15;
             color: var(--text-primary);
@@ -1005,7 +1006,8 @@
             <p class="hero-tagline">Where I build, publish, and teach.</p>
 
             <div class="hero-snippets" id="hero-snippets">
-                <a href="updates.html#cais-demo" class="latest-pill hero-chip active"><span class="pulse"></span>Demo at ACM CAIS '26 · San Jose · May 29 →</a>
+                <a href="updates.html#awesome-applied-ai" class="latest-pill hero-chip active"><span class="pulse"></span>awesome-applied-ai · 6-layer applied AI map →</a>
+                <a href="updates.html#cais-demo" class="latest-pill hero-chip"><span class="pulse"></span>Demo at ACM CAIS '26 · San Jose · May 29 →</a>
                 <a href="updates.html#cais-paper" class="latest-pill hero-chip"><span class="pulse"></span>Multi-Agent Job Classification · ACM Published</a>
                 <a href="updates.html#techcareer-training" class="latest-pill hero-chip"><span class="pulse"></span>18h Applied AI Course · Techcareer</a>
                 <a href="updates.html#tokalator-paper" class="latest-pill hero-chip"><span class="pulse"></span>tokalator.wiki · 500+ installs</a>

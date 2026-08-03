@@ -45,6 +45,13 @@ Vahid Faraji is a Senior Applied AI Specialist with 9+ years of experience shipp
 
 ## Projects
 
+### awesome-applied-ai — Applied AI Taxonomy
+- URL: https://tokalator.wiki/applied-ai
+- GitHub: github.com/vfaraji89/awesome-applied-ai
+- Type: Open source, curated reference
+- What it is: A working map of applied AI for the enterprise — six layers: Guardrails & Governance, Evaluation & Observability, Orchestration, Caching, Memory, Retrieval. Includes a live tool index, equations, dictionary, commands, design problems and research findings.
+- Scope: What decides what a system knows, what it costs, and what you can prove about it.
+
 ### Tokalator — Context Engineering Toolkit
 - URL: https://tokalator.wiki
 - GitHub: github.com/vfaraji89/tokalator
@@ -138,3 +145,4 @@ Vahid Faraji is a Senior Applied AI Specialist with 9+ years of experience shipp
 - Hugging Face: https://huggingface.co/vfaraji89
 - Substack: https://substack.com/@vfaraji899
 - Tokalator: https://tokalator.wiki
+- awesome-applied-ai: https://tokalator.wiki/applied-ai
