@@ -21,7 +21,7 @@ Vahid Faraji is a Senior Applied AI Specialist at Kariyer.net (ilab group), Ista
 
 ## Key Projects
 
-- awesome-applied-ai (tokalator.wiki/applied-ai): Public taxonomy of applied AI for the enterprise. Six layers: Guardrails and Governance, Evaluation and Observability, Orchestration, Caching, Memory, and Retrieval. Includes a live tool index, formulas, dictionary, and research.
+- awesome-applied-ai (vfaraji89.github.io/awesome-applied-ai): Public taxonomy of applied AI for the enterprise. Six layers: Guardrails and Governance, Evaluation and Observability, Orchestration, Caching, Memory, and Retrieval. Includes a live tool index, formulas, dictionary, and research.
 - Tokalator (tokalator.wiki): Open-source context engineering toolkit. VS Code extension with 500+ installs. Token budgeting, cost modeling across 17 LLMs. MIT license.
 - Multi-Agent Job Classification: MCP-based system achieving 95% accuracy on 14K+ positions, 72.5% faster classification. Published at ACM.
 - Enterprise AI Platform: Multi-agent orchestration (LangGraph, MCP, Agno) for text-to-SQL, report automation. 60% workload reduction, 200+ users.
@@ -57,7 +57,7 @@ Vahid Faraji is a Senior Applied AI Specialist at Kariyer.net (ilab group), Ista
 - [Full Portfolio](https://vfaraji89.github.io/)
 - [Updates](https://vfaraji89.github.io/updates.html)
 - [Tokalator](https://tokalator.wiki)
-- [awesome-applied-ai](https://tokalator.wiki/applied-ai)
+- [awesome-applied-ai](https://vfaraji89.github.io/awesome-applied-ai/)
 - [ACM Paper](https://dl.acm.org/doi/10.1145/3786335.3813207)
 - [Paper: Job Position Normalisation](https://vfaraji89.github.io/papers/cais-2026.html)
 - [Paper: Tokalator Toolkit](https://vfaraji89.github.io/papers/tokalator.html)
