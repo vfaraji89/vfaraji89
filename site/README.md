@@ -58,7 +58,7 @@ focus: [AI_agents, productivity_tools, automation]
 ```bash
 $ echo "vfaraji89@gmail.com"
 $ curl https://linkedin.com/in/vahid-faraji-jobehdar
-$ open https://vfaraji89.github.io
+$ open https://vfaraji89.github.io/vfaraji89/
 ```
 
 ---
